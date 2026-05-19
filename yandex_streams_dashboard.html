@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Яндекс Стримы — Дашборд</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#0d0b12; --surface:#161222; --surface2:#1e1930; --border:#2a2440;
+      --accent:#7c3aed; --accent2:#a855f7; --accent3:#c084fc;
+      --text:#e4daf5; --muted:#7b6fa0;
+      --pos:#34d399; --neu:#a78bfa; --neg:#f87171; --radius:12px;
+    }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,-apple-system,sans-serif; min-height:100vh; padding:36px 28px 72px; max-width:1280px; margin:0 auto; }
+    .header { display:flex; align-items:center; gap:16px; margin-bottom:44px; }
+    .logo { width:44px; height:44px; background:linear-gradient(135deg,var(--accent),var(--accent3)); border-radius:11px; display:grid; place-items:center; font-size:22px; font-weight:900; color:#fff; flex-shrink:0; box-shadow:0 0 20px rgba(124,58,237,.4); }
+    .header-title { font-size:22px; font-weight:700; }
+    .header-sub { font-size:13px; color:var(--muted); margin-top:3px; }
+    .tabs { display:flex; gap:8px; margin-bottom:36px; flex-wrap:wrap; }
+    .tab { padding:9px 20px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--muted); font-size:13px; font-weight:500; cursor:pointer; transition:all .18s; white-space:nowrap; user-select:none; }
+    .tab:hover { border-color:var(--accent2); color:var(--text); }
+    .tab.active { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 0 18px rgba(124,58,237,.38); }
+    .panel { display:none; }
+    .panel.active { display:block; animation:fadeIn .22s ease; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    .section-label { font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent3); margin-bottom:16px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(175px,1fr)); gap:14px; margin-bottom:40px; }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px 16px; transition:border-color .18s,box-shadow .18s; }
+    .card:hover { border-color:var(--accent2); box-shadow:0 0 14px rgba(168,85,247,.1); }
+    .card-label { font-size:12px; color:var(--muted); margin-bottom:7px; font-weight:500; }
+    .card-value { font-size:24px; font-weight:700; line-height:1; color:var(--text); }
+    .card-value.accent { color:var(--accent3); }
+    .card-sub { font-size:12px; color:var(--muted); margin-top:6px; line-height:1.4; }
+    hr.divider { border:none; border-top:1px solid var(--border); margin:4px 0 38px; }
+    .note { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent2); border-radius:var(--radius); padding:12px 16px; font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:28px; }
+    .note strong { color:var(--accent3); }
+    .stats-row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+    .stat-pill { background:var(--surface2); border:1px solid var(--border); border-radius:20px; padding:5px 14px; font-size:13px; color:var(--muted); }
+    .stat-pill span { color:var(--text); font-weight:600; }
+    .sentiment-row { display:grid; grid-template-columns:1fr 220px; gap:32px; margin-bottom:40px; align-items:start; }
+    @media(max-width:680px){.sentiment-row{grid-template-columns:1fr;}}
+    .bar-group { display:flex; flex-direction:column; gap:18px; }
+    .bar-row { display:flex; flex-direction:column; gap:7px; }
+    .bar-meta { display:flex; justify-content:space-between; font-size:13px; }
+    .bar-meta .lbl { font-weight:600; }
+    .bar-meta .pct { color:var(--muted); }
+    .bar-track { height:8px; background:var(--surface2); border-radius:4px; overflow:hidden; }
+    .bar-fill { height:100%; border-radius:4px; transition:width .7s cubic-bezier(.4,0,.2,1); }
+    .bar-fill.pos { background:linear-gradient(90deg,var(--pos),#6ee7b7); }
+    .bar-fill.neu { background:linear-gradient(90deg,var(--neu),#c4b5fd); }
+    .bar-fill.neg { background:linear-gradient(90deg,var(--neg),#fca5a5); }
+    .donut-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
+    .legend { display:flex; flex-direction:column; gap:8px; width:100%; }
+    .legend-item { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
+    .legend-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+    .donut-center-text { font-size:15px; fill:var(--text); font-weight:700; font-family:inherit; }
+    .donut-center-sub { font-size:10.5px; fill:var(--muted); font-family:inherit; }
+    .quotes-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(255px,1fr)); gap:12px; margin-bottom:40px; }
+    .q-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px 14px 42px; font-size:13px; line-height:1.55; color:var(--text); position:relative; }
+    .q-badge { position:absolute; left:12px; top:14px; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:11px; font-weight:700; }
+    .q-badge.pos { background:rgba(52,211,153,.14); color:var(--pos); }
+    .q-badge.neu { background:rgba(167,139,250,.14); color:var(--neu); }
+    .q-badge.neg { background:rgba(248,113,113,.14); color:var(--neg); }
+    .q-source { font-size:11px; color:var(--muted); margin-top:6px; }
+    .topics { display:flex; flex-direction:column; gap:10px; margin-bottom:40px; }
+    .t-row { display:flex; align-items:center; gap:12px; }
+    .t-label { font-size:13px; color:var(--muted); width:260px; flex-shrink:0; }
+    .t-track { flex:1; height:6px; background:var(--surface2); border-radius:3px; overflow:hidden; }
+    .t-fill { height:100%; border-radius:3px; background:linear-gradient(90deg,var(--accent),var(--accent3)); }
+    .t-pct { font-size:13px; font-weight:600; color:var(--accent3); width:38px; text-align:right; flex-shrink:0; }
+    .empty { background:var(--surface); border:1px dashed var(--border); border-radius:var(--radius); padding:42px 24px; text-align:center; color:var(--muted); font-size:14px; line-height:1.7; }
+    ::-webkit-scrollbar{width:6px} ::-webkit-scrollbar-track{background:transparent} ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">Я</div>
+  <div>
+    <div class="header-title">Яндекс Стримы — Аналитика</div>
+    <div class="header-sub">Мониторинг Twitch-трансляций · 5 стримов</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab(0)">21 апреля</button>
+  <button class="tab" onclick="switchTab(1)">22 апреля — RnD</button>
+  <button class="tab" onclick="switchTab(2)">23 апреля — Дипинс</button>
+  <button class="tab" onclick="switchTab(3)">30 апреля — Q&amp;A</button>
+  <button class="tab" onclick="switchTab(4)">14 мая — Алгосы</button>
+</div>
+
+<!-- ══════════════ 21 АПРЕЛЯ ══════════════ -->
+<div class="panel active">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">21 апреля 2025</div>
+      <div class="card-sub">Автономный транспорт</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">15 681</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">12 718</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">75 263</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">2 801</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">484 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 001</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">155</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="empty">Массив комментариев для этого стрима не предоставлен.</div>
+</div>
+
+<!-- ══════════════ 22 АПРЕЛЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">22 апреля 2025</div>
+      <div class="card-sub">Крафт с Крастером в RnD</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">10 848</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 721</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">41 947</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 173</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">229 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 232</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">182</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>2 083</span></div>
+    <div class="stat-pill">После фильтрации: <span>~450</span></div>
+    <div class="stat-pill">Флуд: <span>~78%</span></div>
+  </div>
+  <div class="note"><strong>Методология:</strong> исключены приветствия (ку/хай), ASCII-арты, ботовые анонсы, команды бота, рейд-сообщения, сообщения менее 3 значимых слов.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">62% · ~279 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:62%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">31% · ~140 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:31%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">7% · ~31 сообщение</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:7%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="218.15 133.71" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="109.08 242.78" stroke-dashoffset="-130.19" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="24.63 327.23" stroke-dashoffset="-239.27" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~450</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 62%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 31%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 7%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>Я не думал, что стримы яндекса будет так интересно смотреть) Молодцы, ребят!<div class="q-source">позитив · одобрение формата</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Качество будто бы ролик смотришь! Формат пушка<div class="q-source">позитив · качество продакшна</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Ля, неплохой офис, вообще интересно смотреть за таким румтуром)<div class="q-source">позитив · интерес к контенту</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Когда в Москве поменяете самокаты? Уже разломали все.<div class="q-source">нейтраль · вопрос о продукте</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Будет ли стримерский яндекс-рюкзак? / Есть ли у вас котик для позитивчика?<div class="q-source">нейтраль · юмор / вопросы</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Яндекс, когда норм электрокары по адекватной цене? На вас одна надежда<div class="q-source">негатив · претензия / запрос</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Самокаты / RnD / производство</div><div class="t-track"><div class="t-fill" style="width:38%"></div></div><div class="t-pct">38%</div></div>
+    <div class="t-row"><div class="t-label">Реакции / юмор на стрим</div><div class="t-track"><div class="t-fill" style="width:27%"></div></div><div class="t-pct">27%</div></div>
+    <div class="t-row"><div class="t-label">Похвала стриму / формату</div><div class="t-track"><div class="t-fill" style="width:22%"></div></div><div class="t-pct">22%</div></div>
+    <div class="t-row"><div class="t-label">Жалобы на сервисы (Алиса, браузер)</div><div class="t-track"><div class="t-fill" style="width:8%"></div></div><div class="t-pct">8%</div></div>
+    <div class="t-row"><div class="t-label">Вакансии / хочу к вам работать</div><div class="t-track"><div class="t-fill" style="width:5%"></div></div><div class="t-pct">5%</div></div>
+  </div>
+</div>
+
+<!-- ══════════════ 23 АПРЕЛЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">23 апреля 2025</div>
+      <div class="card-sub">IRL-стрим Дипинса в МИРЭА</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">54 320</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">30 841</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">655 502</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">9 168</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">140 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">9 132</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">7 070</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>59 124</span></div>
+    <div class="stat-pill">После фильтрации: <span>~4 000</span></div>
+    <div class="stat-pill">Флуд: <span>~93%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> IRL-стрим с фан-аудиторией Дипинса. Высокий флуд — норма для такого формата: счётчики, «ХАХАХАХ», «ЛИДА», «67», прощания «бб». Значимые сообщения — реакции на события, эмоциональные высказывания.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">55% · ~2 200 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:55%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">28% · ~1 120 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:28%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">17% · ~680 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:17%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="193.52 158.34" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="98.53 253.33" stroke-dashoffset="-105.56" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="59.82 292.04" stroke-dashoffset="-204.09" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~4 000</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 55%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 28%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 17%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>ЕЕЕЕ ЛИДАААА! / WW Лида / концерт вайбик / это было очень круто<div class="q-source">позитив · реакция на концерт Лиды</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Миша вы очень крутой! / Зам главы мили / Зарина красотка<div class="q-source">позитив · реакция на участников</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Как будто сама там побывала / лучший стрим в моей жизни<div class="q-source">позитив · эффект присутствия</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Запись будет? / Сколько стрим будет идти? / Где Зарина?<div class="q-source">нейтраль · технические вопросы</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>А лекция будет? / Когда майн? / Слово дня будет?<div class="q-source">нейтраль · запросы контента</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Хоть бы побрился / ты как бомж / прическу поправь<div class="q-source">негатив · троллинг внешнего вида</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>звук / лагает / не слышно / шумно / плохо слышно<div class="q-source">негатив · жалобы на качество стрима</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Восторг от концерта Лиды / слэма</div><div class="t-track"><div class="t-fill" style="width:28%"></div></div><div class="t-pct">28%</div></div>
+    <div class="t-row"><div class="t-label">Реакции на Зарину и Мишу (шеф)</div><div class="t-track"><div class="t-fill" style="width:18%"></div></div><div class="t-pct">18%</div></div>
+    <div class="t-row"><div class="t-label">Вопросы о стриме / записи / контенте</div><div class="t-track"><div class="t-fill" style="width:16%"></div></div><div class="t-pct">16%</div></div>
+    <div class="t-row"><div class="t-label">Критика внешнего вида / троллинг</div><div class="t-track"><div class="t-fill" style="width:13%"></div></div><div class="t-pct">13%</div></div>
+    <div class="t-row"><div class="t-label">Жалобы на звук / лаги</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">Запросы песни / этажи / слово дня</div><div class="t-track"><div class="t-fill" style="width:8%"></div></div><div class="t-pct">8%</div></div>
+    <div class="t-row"><div class="t-label">Реакции на роботов / машинку-фуру</div><div class="t-track"><div class="t-fill" style="width:5%"></div></div><div class="t-pct">5%</div></div>
+  </div>
+</div>
+
+<!-- ══════════════ 30 АПРЕЛЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">30 апреля 2025</div>
+      <div class="card-sub">Q&amp;A с командой Team Yandex</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 666</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">26 792</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">47 078</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">902</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">92 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">476</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">350</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>887</span></div>
+    <div class="stat-pill">После фильтрации: <span>~220</span></div>
+    <div class="stat-pill">Флуд: <span>~75%</span></div>
+  </div>
+  <div class="note"><strong>Методология:</strong> исключены приветствия, ASCII-арты гусей, ботовые анонсы Team Yandex, команды бота, рейд-сообщения, сообщения менее 3 значимых слов.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">42% · ~92 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:42%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">42% · ~92 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:42%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">16% · ~36 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:16%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="147.78 204.08" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="147.78 204.08" stroke-dashoffset="-59.82" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="56.30 295.56" stroke-dashoffset="-207.60" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~220</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 42%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 42%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 16%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>яндекс, я вас люблю / приятно видеть что яндекс идут в ногу с временем<div class="q-source">позитив · поддержка канала</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Планируете ли вы внедрять нейросети в тренировочный процесс?<div class="q-source">позитив · интерес к технологиям</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Когда команда по КС? / Будет ли состав по дедлоку? / Собираетесь в EWC?<div class="q-source">нейтраль · запросы дисциплин</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Как вы ищете и собираете игроков? Как попасть в команду?<div class="q-source">нейтраль · вопросы о рекрутинге</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>а с Дипинсом онлайн 8–13к был, а щас еле 400<div class="q-source">негатив · сравнение с прошлым контентом</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>смысл создавать команду по Доте, если игра уже почти мертва<div class="q-source">негатив · скептицизм</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Вопросы о составе / рекрутинге</div><div class="t-track"><div class="t-fill" style="width:29%"></div></div><div class="t-pct">29%</div></div>
+    <div class="t-row"><div class="t-label">Новые дисциплины (КС, дедлок, EWC)</div><div class="t-track"><div class="t-fill" style="width:20%"></div></div><div class="t-pct">20%</div></div>
+    <div class="t-row"><div class="t-label">Поддержка / позитивные реакции</div><div class="t-track"><div class="t-fill" style="width:15%"></div></div><div class="t-pct">15%</div></div>
+    <div class="t-row"><div class="t-label">Сравнение с Дипинсом / разочарование</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">Жалобы на сервисы Яндекса</div><div class="t-track"><div class="t-fill" style="width:10%"></div></div><div class="t-pct">10%</div></div>
+    <div class="t-row"><div class="t-label">Просьбы о работе / попасть в команду</div><div class="t-track"><div class="t-fill" style="width:9%"></div></div><div class="t-pct">9%</div></div>
+    <div class="t-row"><div class="t-label">Скептицизм о Доте / стратегии</div><div class="t-track"><div class="t-fill" style="width:7%"></div></div><div class="t-pct">7%</div></div>
+  </div>
+</div>
+
+<!-- ══════════════ 14 МАЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">14 мая 2025</div>
+      <div class="card-sub">Ботаем олимпиады — алгоритмический стрим</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">17 311</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">13 603</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">19 178</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">129</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">220 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">287</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">80</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>1 266</span></div>
+    <div class="stat-pill">После фильтрации: <span>~500</span></div>
+    <div class="stat-pill">Флуд: <span>~60%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Технический стрим с разбором алгоритмических задач на C++ (анаграммы, деревья, скользящее окно). Аудитория — программисты и студенты. Высокая доля содержательных технических дискуссий.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">45% · ~225 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:45%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">40% · ~200 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:40%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">15% · ~75 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:15%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="158.34 193.52" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="140.74 211.12" stroke-dashoffset="-70.38" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="52.78 299.08" stroke-dashoffset="-211.12" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~500</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 45%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 40%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 15%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>Яндекс вы офигенные) правда) мне 35 лет и пользуюсь всеми вашими приложениями<div class="q-source">позитив · лояльность к бренду</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Я считаю яндекс самая лучшая российская компания / Было хорошо, мне понравилось<div class="q-source">позитив · оценка стрима</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>ого yandex вот это уровень / Иван крутой, спасибо ему за уделенное время<div class="q-source">позитив · оценка гостя</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Сложно было попасть на стажировку в Яндекс? / Яндекс убрали алгосы с собесов?<div class="q-source">нейтраль · вопросы о карьере</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Есть вопрос. Зачем это уметь, когда это прекрасно делает нейронка?<div class="q-source">нейтраль · дискуссия ИИ vs алгоритмы</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>а будете ещё задачки разбирать? / пойдем в доту нафиг эти алгосы<div class="q-source">нейтраль · запросы / юмор</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Нафиг эти многочасовые АЛГО секции на собесах, тындекс это абузит по полной<div class="q-source">негатив · критика алго-собесов Яндекса</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>УВАЖАЕМЫЙ ЯНДЕКС, КАКОГО ЛЕШЕГО ПЛЮС СТОИТ ПОЧТИ 500Р?? ЗА ЧТО??<div class="q-source">негатив · жалоба на цену Плюса</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Яндекс ваши hr надоели, что надо сделать, чтобы перестали писать?<div class="q-source">негатив · ирония про HR</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Технические дискуссии по задачам</div><div class="t-track"><div class="t-fill" style="width:35%"></div></div><div class="t-pct">35%</div></div>
+    <div class="t-row"><div class="t-label">Собеседования / алгосы / стажировки</div><div class="t-track"><div class="t-fill" style="width:22%"></div></div><div class="t-pct">22%</div></div>
+    <div class="t-row"><div class="t-label">Поддержка Яндекса / позитив о бренде</div><div class="t-track"><div class="t-fill" style="width:18%"></div></div><div class="t-pct">18%</div></div>
+    <div class="t-row"><div class="t-label">Критика алго-собесов / скептицизм</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">Вопросы про Яндекс-сервисы / цены</div><div class="t-track"><div class="t-fill" style="width:8%"></div></div><div class="t-pct">8%</div></div>
+    <div class="t-row"><div class="t-label">Запросы записи / будущих стримов</div><div class="t-track"><div class="t-fill" style="width:5%"></div></div><div class="t-pct">5%</div></div>
+  </div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  function switchTab(idx) {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tabs[idx].classList.add('active');
+    panels[idx].classList.add('active');
+  }
+</script>
+</body>
+</html>
