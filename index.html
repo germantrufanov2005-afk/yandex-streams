@@ -17,12 +17,27 @@
     .logo { width:44px; height:44px; background:linear-gradient(135deg,var(--accent),var(--accent3)); border-radius:11px; display:grid; place-items:center; font-size:22px; font-weight:900; color:#fff; flex-shrink:0; box-shadow:0 0 20px rgba(124,58,237,.4); }
     .header-title { font-size:22px; font-weight:700; }
     .header-sub { font-size:13px; color:var(--muted); margin-top:3px; }
-    .tabs { display:flex; gap:8px; margin-bottom:36px; flex-wrap:wrap; }
-    .tab { padding:9px 20px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--muted); font-size:13px; font-weight:500; cursor:pointer; transition:all .18s; white-space:nowrap; user-select:none; }
+    /* ── Месячная навигация ── */
+    .month-nav { display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+    .month-tab { padding:9px 24px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--muted); font-size:14px; font-weight:600; cursor:pointer; transition:all .18s; white-space:nowrap; user-select:none; }
+    .month-tab:hover { border-color:var(--accent2); color:var(--text); }
+    .month-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 0 18px rgba(124,58,237,.38); }
+    .month-group { display:none; }
+    .month-group.active { display:block; animation:fadeIn .22s ease; }
+    /* ── Вкладки стримов внутри месяца ── */
+    .stream-tabs { display:flex; gap:7px; margin-bottom:32px; flex-wrap:wrap; padding-left:2px; }
+    .tab { padding:7px 16px; border-radius:7px; border:1px solid var(--border); background:var(--surface2); color:var(--muted); font-size:12px; font-weight:500; cursor:pointer; transition:all .18s; white-space:nowrap; user-select:none; }
     .tab:hover { border-color:var(--accent2); color:var(--text); }
-    .tab.active { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 0 18px rgba(124,58,237,.38); }
+    .tab.active { background:var(--accent); border-color:var(--accent); color:#fff; box-shadow:0 0 12px rgba(124,58,237,.3); }
+    .tab.summary { border-color:var(--accent3); color:var(--accent3); }
+    .tab.summary.active { background:linear-gradient(135deg,#6d28d9,var(--accent2)); border-color:var(--accent2); color:#fff; }
     .panel { display:none; }
     .panel.active { display:block; animation:fadeIn .22s ease; }
+    /* ── Сводка месяца ── */
+    .summary-banner { background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(168,85,247,.1)); border:1px solid var(--accent); border-radius:var(--radius); padding:18px 22px; margin-bottom:32px; display:flex; align-items:center; gap:14px; }
+    .summary-icon { font-size:26px; flex-shrink:0; }
+    .summary-title { font-size:16px; font-weight:700; color:var(--accent3); }
+    .summary-desc { font-size:13px; color:var(--muted); margin-top:3px; }
     @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
     .section-label { font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent3); margin-bottom:16px; }
     .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(175px,1fr)); gap:14px; margin-bottom:40px; }
@@ -83,18 +98,22 @@
   </div>
 </div>
 
-<div class="tabs">
-  <button class="tab active" onclick="switchTab(0)">21 апреля</button>
-  <button class="tab" onclick="switchTab(1)">22 апреля — RnD</button>
-  <button class="tab" onclick="switchTab(2)">23 апреля — Дипинс</button>
-  <button class="tab" onclick="switchTab(3)">30 апреля — Q&amp;A</button>
-  <button class="tab" onclick="switchTab(4)">14 мая — Алгосы</button>
-  <button class="tab" onclick="switchTab(5)">19 мая — Братишкин</button>
-  <button class="tab" onclick="switchTab(6)">20 мая — Выбираем</button>
-  <button class="tab" onclick="switchTab(7)">26 мая — Инклюзия</button>
-  <button class="tab" onclick="switchTab(8)">2 июня — Разбор Станции</button>
-  <button class="tab" onclick="switchTab(9)">3 июня — Босс самокатов</button>
+<!-- Месячные вкладки -->
+<div class="month-nav">
+  <button class="month-tab active" onclick="switchMonth('apr')">Апрель · 4 стрима</button>
+  <button class="month-tab" onclick="switchMonth('may')">Май · 4 стрима</button>
+  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 2 стрима</button>
 </div>
+
+<!-- ═══════════════ АПРЕЛЬ ═══════════════ -->
+<div class="month-group active" id="group-apr">
+  <div class="stream-tabs">
+    <button class="tab active" onclick="switchTab('apr',0)">21 апреля</button>
+    <button class="tab" onclick="switchTab('apr',1)">22 апреля — RnD</button>
+    <button class="tab" onclick="switchTab('apr',2)">23 апреля — Дипинс</button>
+    <button class="tab" onclick="switchTab('apr',3)">30 апреля — Q&amp;A</button>
+    <button class="tab summary" onclick="switchTab('apr',4)">★ Итоги апреля</button>
+  </div>
 
 <!-- ══════════════ 21 АПРЕЛЯ ══════════════ -->
 <div class="panel active">
@@ -347,6 +366,85 @@
     <div class="t-row"><div class="t-label">Скептицизм о Доте / стратегии</div><div class="t-track"><div class="t-fill" style="width:7%"></div></div><div class="t-pct">7%</div></div>
   </div>
 </div>
+
+<!-- ══════════════ ИТОГИ АПРЕЛЯ ══════════════ -->
+<div class="panel">
+  <div class="summary-banner">
+    <div class="summary-icon">📅</div>
+    <div>
+      <div class="summary-title">Итоги апреля 2026</div>
+      <div class="summary-desc">4 стрима · 21, 22, 23 и 30 апреля</div>
+    </div>
+  </div>
+  <div class="section-label">Суммарная статистика</div>
+  <div class="cards">
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">113 515</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">79 072</div><div class="card-sub">суммарно по 4 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">819 790</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">13 841</div></div>
+    <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">9 168</div><div class="card-sub">23 апреля — Дипинс</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">~1 939</div><div class="card-sub">с учётом пика Дипинса</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">4</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Общая тональность комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Значимых сообщений: <span>~4 670</span></div>
+    <div class="stat-pill">Без 21.04 (нет данных)</div>
+    <div class="stat-pill">Флуд в среднем: <span>~82%</span></div>
+  </div>
+  <div class="note"><strong>Методология:</strong> Тональность усреднена по трём стримам с данными (22.04, 23.04, 30.04). Стрим 21.04 без массива комментариев не учтён. Апрель отличается самым высоким процентом позитива — во многом благодаря стриму Дипинса с фан-аудиторией.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">53% · ~2 475 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:53%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">33% · ~1 541 сообщение</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:33%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">14% · ~654 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:14%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="186.50 165.36" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="116.18 235.68" stroke-dashoffset="-98.54" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="49.27 302.59" stroke-dashoffset="-214.72" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~4 670</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 53%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 33%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 14%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Главные события месяца</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Стрим с Дипинсом — пик охвата (9 168 онлайн)</div><div class="t-track"><div class="t-fill" style="width:100%"></div></div><div class="t-pct">9 168</div></div>
+    <div class="t-row"><div class="t-label">Q&A Team Yandex — старт киберспортивного направления</div><div class="t-track"><div class="t-fill" style="width:34%"></div></div><div class="t-pct">902</div></div>
+    <div class="t-row"><div class="t-label">Крафт с Крастером — лучший позитив месяца (62%)</div><div class="t-track"><div class="t-fill" style="width:13%"></div></div><div class="t-pct">62%+</div></div>
+    <div class="t-row"><div class="t-label">21.04 Автономный транспорт — рекордная длительность (484 мин)</div><div class="t-track"><div class="t-fill" style="width:53%"></div></div><div class="t-pct">484 мин</div></div>
+    <div class="t-row"><div class="t-label">Новые фолловеры — 9 132 только с одного стрима Дипинса</div><div class="t-track"><div class="t-fill" style="width:66%"></div></div><div class="t-pct">+9 132</div></div>
+  </div>
+</div>
+</div><!-- /group-apr -->
+
+<!-- ═══════════════ МАЙ ═══════════════ -->
+<div class="month-group" id="group-may">
+  <div class="stream-tabs">
+    <button class="tab active" onclick="switchTab('may',0)">14 мая — Алгосы</button>
+    <button class="tab" onclick="switchTab('may',1)">19 мая — Братишкин</button>
+    <button class="tab" onclick="switchTab('may',2)">20 мая — Выбираем</button>
+    <button class="tab" onclick="switchTab('may',3)">26 мая — Инклюзия</button>
+    <button class="tab summary" onclick="switchTab('may',4)">★ Итоги мая</button>
+  </div>
 
 <!-- ══════════════ 14 МАЯ ══════════════ -->
 <div class="panel">
@@ -664,6 +762,82 @@
   </div>
 </div>
 
+<!-- ══════════════ ИТОГИ МАЯ ══════════════ -->
+<div class="panel">
+  <div class="summary-banner">
+    <div class="summary-icon">📅</div>
+    <div>
+      <div class="summary-title">Итоги мая 2026</div>
+      <div class="summary-desc">4 стрима · 14, 19, 20 и 26 мая</div>
+    </div>
+  </div>
+  <div class="section-label">Суммарная статистика</div>
+  <div class="cards">
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">222 851</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">161 338</div><div class="card-sub">суммарно по 4 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">998 180</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">3 383</div></div>
+    <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">3 331</div><div class="card-sub">19 мая — Братишкин</div></div>
+    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~1 330</div><div class="card-sub">по 4 стримам</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">4</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Общая тональность комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Значимых сообщений: <span>~7 415</span></div>
+    <div class="stat-pill">Флуд в среднем: <span>~77%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Май — самый результативный месяц по просмотрам и охвату. Два крупных IRL-стрима с Братишкиным и Дипинсом дали большую позитивную аудиторию. Стрим по инклюзии привнёс содержательные профессиональные дискуссии. Общая тональность мая — преимущественно позитивная (49%).</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">49% · ~3 633 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:49%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">32% · ~2 373 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:32%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">19% · ~1 409 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:19%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="172.52 179.34" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="112.65 239.21" stroke-dashoffset="-84.56" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="66.91 285.95" stroke-dashoffset="-197.21" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~7 415</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 49%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 32%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 19%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Главные события месяца</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Стрим с Братишкиным — рост аудитории и охвата (414K мин)</div><div class="t-track"><div class="t-fill" style="width:100%"></div></div><div class="t-pct">49 315</div></div>
+    <div class="t-row"><div class="t-label">Young Con — рекордные просмотры месяца (78 833)</div><div class="t-track"><div class="t-fill" style="width:100%"></div></div><div class="t-pct">78 833</div></div>
+    <div class="t-row"><div class="t-label">Инклюзия — максимальный охват уникальных зрителей (63 760)</div><div class="t-track"><div class="t-fill" style="width:81%"></div></div><div class="t-pct">63 760</div></div>
+    <div class="t-row"><div class="t-label">14.05 Алгосы — самый маленький онлайн, но лояльная аудитория</div><div class="t-track"><div class="t-fill" style="width:4%"></div></div><div class="t-pct">80 ср.</div></div>
+    <div class="t-row"><div class="t-label">Май превысил апрель по просмотрам в 2× (222К vs 113К)</div><div class="t-track"><div class="t-fill" style="width:72%"></div></div><div class="t-pct">×2</div></div>
+  </div>
+</div>
+</div><!-- /group-may -->
+
+<!-- ═══════════════ ИЮНЬ ═══════════════ -->
+<div class="month-group" id="group-jun">
+  <div class="stream-tabs">
+    <button class="tab active" onclick="switchTab('jun',0)">2 июня — Разбор Станции</button>
+    <button class="tab" onclick="switchTab('jun',1)">3 июня — Босс самокатов</button>
+    <button class="tab summary" onclick="switchTab('jun',2)">★ Итоги июня</button>
+  </div>
+
 <!-- ══════════════ 2 ИЮНЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
@@ -820,10 +994,100 @@
   </div>
 </div>
 
+<!-- ══════════════ ИТОГИ ИЮНЯ ══════════════ -->
+<div class="panel">
+  <div class="summary-banner">
+    <div class="summary-icon">📅</div>
+    <div>
+      <div class="summary-title">Итоги июня 2026</div>
+      <div class="summary-desc">2 стрима · 2 и 3 июня (месяц в процессе)</div>
+    </div>
+  </div>
+  <div class="section-label">Суммарная статистика</div>
+  <div class="cards">
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">79 373</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">67 586</div><div class="card-sub">суммарно по 2 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">242 954</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">950</div></div>
+    <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">2 076</div><div class="card-sub">2 июня — Разбор Станции</div></div>
+    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~779</div><div class="card-sub">по 2 стримам</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">2</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Общая тональность комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Значимых сообщений: <span>~3 675</span></div>
+    <div class="stat-pill">Флуд в среднем: <span>~65%</span></div>
+    <div class="stat-pill">Месяц продолжается</div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Июнь начался с двух контентно насыщенных стримов: инженерный разбор Яндекс Станции 3 и IRL-стрим с энерджайзером самокатов. Оба формата — нишевые, но вовлечённые. Особенность июня — самый высокий процент содержательных технических вопросов. Флуд ниже среднего (~65% vs ~80% в апреле–мае). Месяц в процессе — итоги будут обновляться.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">38% · ~1 397 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:38%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">35% · ~1 286 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:35%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">27% · ~992 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:27%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="133.86 217.99" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="123.32 228.53" stroke-dashoffset="-45.90" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="95.09 256.77" stroke-dashoffset="-169.22" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~3 675</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 38%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 35%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 27%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Главные события месяца</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Разбор Станции 3 — высокая вовлечённость инженерной аудитории</div><div class="t-track"><div class="t-fill" style="width:100%"></div></div><div class="t-pct">40 688</div></div>
+    <div class="t-row"><div class="t-label">Рейд Стинта (2 482 чел.) — крупнейший рейд за все стримы</div><div class="t-track"><div class="t-fill" style="width:74%"></div></div><div class="t-pct">2 482</div></div>
+    <div class="t-row"><div class="t-label">Босс самокатов — Братишкин в чате, жалобы реальных работяг</div><div class="t-track"><div class="t-fill" style="width:95%"></div></div><div class="t-pct">38 685</div></div>
+    <div class="t-row"><div class="t-label">Июнь — самый низкий флуд (~65%), самое высокое качество вопросов</div><div class="t-track"><div class="t-fill" style="width:65%"></div></div><div class="t-pct">~65%</div></div>
+    <div class="t-row"><div class="t-label">Негатив в июне выше (27%) — рост критики от сотрудников и пользователей</div><div class="t-track"><div class="t-fill" style="width:27%"></div></div><div class="t-pct">27%</div></div>
+  </div>
+</div>
+</div><!-- /group-jun -->
+
 <script>
-  const tabs = document.querySelectorAll('.tab');
-  const panels = document.querySelectorAll('.panel');
-  function switchTab(idx) {
+  // Переключение месяцев
+  function switchMonth(month) {
+    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.month-group').forEach(g => g.classList.remove('active'));
+    const grp = document.getElementById('group-' + month);
+    grp.classList.add('active');
+    // активируем нужную month-tab
+    document.querySelectorAll('.month-tab').forEach(t => {
+      if (t.getAttribute('onclick').includes("'" + month + "'")) t.classList.add('active');
+    });
+    // активируем первый stream-tab и первую панель группы
+    const tabs = grp.querySelectorAll('.tab');
+    const panels = grp.querySelectorAll('.panel');
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    if (tabs.length) tabs[0].classList.add('active');
+    if (panels.length) panels[0].classList.add('active');
+  }
+
+  // Переключение вкладок стримов внутри месяца
+  function switchTab(month, idx) {
+    const grp = document.getElementById('group-' + month);
+    const tabs = grp.querySelectorAll('.tab');
+    const panels = grp.querySelectorAll('.panel');
     tabs.forEach(t => t.classList.remove('active'));
     panels.forEach(p => p.classList.remove('active'));
     tabs[idx].classList.add('active');
