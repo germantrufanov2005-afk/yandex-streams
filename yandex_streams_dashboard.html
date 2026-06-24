@@ -97,7 +97,7 @@
   <div class="logo">Я</div>
   <div>
     <div class="header-title">Яндекс Стримы — Аналитика</div>
-    <div class="header-sub">Мониторинг Twitch-трансляций · 12 стримов</div>
+    <div class="header-sub">Мониторинг Twitch-трансляций · 13 стримов</div>
   </div>
 </div>
 
@@ -105,7 +105,7 @@
 <div class="month-nav">
   <button class="month-tab active" onclick="switchMonth('apr')">Апрель · 4 стрима</button>
   <button class="month-tab" onclick="switchMonth('may')">Май · 4 стрима</button>
-  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 4 стрима</button>
+  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 5 стримов</button>
 </div>
 
 <!-- ═══════════════ АПРЕЛЬ ═══════════════ -->
@@ -810,7 +810,8 @@
     <button class="tab" onclick="switchTab('jun',1)">3 июня — Босс самокатов</button>
     <button class="tab" onclick="switchTab('jun',2)">13 июня — Дрифт</button>
     <button class="tab" onclick="switchTab('jun',3)">19 июня — Дота с DM</button>
-    <button class="tab summary" onclick="switchTab('jun',4)">★ Итоги июня</button>
+    <button class="tab" onclick="switchTab('jun',4)">24 июня — Яндекс Дропс</button>
+    <button class="tab summary" onclick="switchTab('jun',5)">★ Итоги июня</button>
   </div>
 
 <!-- ══════════════ 2 ИЮНЯ ══════════════ -->
@@ -1139,26 +1140,116 @@
   </div>
 </div>
 
+<!-- ══════════════ 24 ИЮНЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">24 июня 2026</div>
+      <div class="card-sub">Отвечаем на вопросы про Яндекс Дропс и «Мою память»</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">51 434</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">44 529</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">95 799</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 008</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">136 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 125</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">699</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>~7 000+</span></div>
+    <div class="stat-pill">После фильтрации: <span>~2 100</span></div>
+    <div class="stat-pill">Флуд: <span>~70%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Q&A-стрим про Яндекс Дропс (наушники с Алисой AI) и функцию «Моя память». Ведущие самостоятельно выбирали вопросы из чата — в первой части несколько раз попадались троллинговые. Рейд от стримера-таксиста Azamat799 (~606 чел.) — аудитория засыпала чат нерелевантным флудом «почему @AZAMAT799 не хочет таксовать?». Стрим попадал в рекомендации Twitch, получив дополнительный органический охват. Флуд: гуси-ASCII, просьбы о работе/промокодах, жалобы на подписку и дизайн Яндекс Музыки, фича-реквесты, спам «БУДЕТ ЛИ УЛУЧШАТЬСЯ СУБТИТРОВ В ЯМ» и «@yandex будет ли Live Translation?».</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">42% · ~882 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:42%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">32% · ~672 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:32%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">26% · ~546 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:26%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="147.78 204.08" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="112.65 239.21" stroke-dashoffset="-59.82" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="91.52 260.34" stroke-dashoffset="-172.47" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~2 100</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 42%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 32%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 26%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>наушники классные, уже неделю хожу / наушники крутые! не могу вспомнить на нашем рынке вторых с таким же функционалом / Яндекс топ<div class="q-source">позитив · одобрение продукта, в том числе от реальных пользователей</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Будет ли Live Translation? / можно ли звонить с наушников на колонку? / если я потеряю наушники — Алиса поможет найти? / будут ли умные очки с Алисой?<div class="q-source">позитив · живой интерес к продукту и будущим фичам</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>стрим супер! / приятно видеть что яндекс идут в ногу с временем / Яндекс, удачи в продвижении! особенно на твиче!<div class="q-source">позитив · поддержка формата стрима</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>ПОЧЕМУ @AZAMAT799 НЕ ХОЧЕТ ТАКСОВАТЬ? (спам ~30 раз от рейда) / буль-буль азамат рейд<div class="q-source">нейтраль · нерелевантный флуд от аудитории стримера-таксиста</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>покрытие кейса — пластик или софт тач? / ОЕМ производитель кто? / поддерживают ли LDAC? / есть ли автопауза при вынимании?<div class="q-source">нейтраль · технические вопросы от аудиофилов и энтузиастов</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>БУДЕТ ЛИ УЛУЧШАТЬСЯ ФУНКЦИЯ СУБТИТРОВ В ЯНДЕКС МУЗЫКЕ? (спам 10+ раз) / Верните нормальный интерфейс яндекс музыки! / за 9к наушники с тупой алисой<div class="q-source">негатив · жалобы на дизайн ЯМ и цену наушников</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>ведущего менять надо, тупит страшно / они читают заготовленные вопросы / честные комменты чистят / замечаете только заплаченные вопросы<div class="q-source">негатив · критика формата отбора вопросов в первой части стрима</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Вопросы о функциях Дропс и «Моей памяти»</div><div class="t-track"><div class="t-fill" style="width:28%"></div></div><div class="t-pct">28%</div></div>
+    <div class="t-row"><div class="t-label">Фича-реквесты: перевод, очки, умный дом, SOS</div><div class="t-track"><div class="t-fill" style="width:20%"></div></div><div class="t-pct">20%</div></div>
+    <div class="t-row"><div class="t-label">Жалобы на Яндекс Музыку / цену подписки</div><div class="t-track"><div class="t-fill" style="width:16%"></div></div><div class="t-pct">16%</div></div>
+    <div class="t-row"><div class="t-label">Флуд рейда Azamat799 / «почему не таксует»</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">Просьбы о работе / стажировке / промокодах</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">ФСБ-шутки / прослушка / параноя о данных</div><div class="t-track"><div class="t-fill" style="width:7%"></div></div><div class="t-pct">7%</div></div>
+    <div class="t-row"><div class="t-label">Реклама Young Con / гуси ASCII / флуд</div><div class="t-track"><div class="t-fill" style="width:5%"></div></div><div class="t-pct">5%</div></div>
+  </div>
+  <div class="section-label">Обратная связь по стриму</div>
+  <div class="feedback">
+    <p>Стрим получился живым и вовлекающим — тема Яндекс Дропс и «Моя память» вызвала высокий интерес. Аудитория активно задавала вопросы и предлагала фича-реквесты на протяжении всего эфира, что говорит о подлинном интересе к продукту. Стрим также попал в рекомендации Twitch, что дало дополнительный органический охват.</p>
+    <p><strong>Проблема первой части:</strong> ведущие самостоятельно читали и выбирали вопросы из чата — несколько раз в эфир попали откровенно троллинговые или провокационные сообщения, а содержательные вопросы при этом оставались без внимания. По ходу стрима ситуация была замечена и исправлена, после чего отбор стал заметно качественнее. Это хороший кейс для дополнительного брифинга гостей перед стримами: не все спикеры знакомы со спецификой Twitch-чата и его троллинговой составляющей.</p>
+    <p><strong>Рейд от Azamat799</strong> (~606 чел.) показал: аудитория нерелевантного стримера с нерелевантной тематикой (такси) создаёт всплеск флуда и отвлекает от темы эфира, не конвертируясь в подписчиков. Важно заранее думать о том, какой контент встречает новую аудиторию в момент рейда.</p>
+    <p><strong>Что улучшить:</strong></p>
+    <ul>
+      <li>Заранее брифовать гостей по особенностям Twitch-чата и типовым сценариям троллинга.</li>
+      <li>Передавать отбор вопросов модератору или продюсеру, знакомому со спецификой платформы.</li>
+      <li>Накапливать статистику по рейдам — от кого приходит качественная аудитория, а от кого нет.</li>
+    </ul>
+  </div>
+</div>
+
 <!-- ══════════════ ИТОГИ ИЮНЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Суммарная статистика</div>
   <div class="cards">
-    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">198 235</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">168 811</div><div class="card-sub">суммарно по 4 стримам</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">496 356</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 987</div></div>
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">249 669</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">213 340</div><div class="card-sub">суммарно по 5 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">592 155</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">3 112</div></div>
     <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">2 076</div><div class="card-sub">2 июня — Разбор Станции</div></div>
-    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~821</div><div class="card-sub">по 4 стримам</div></div>
-    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">4</div></div>
+    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~793</div><div class="card-sub">по 5 стримам</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">5</div></div>
   </div>
   <hr class="divider" />
   <div class="section-label">Общая тональность комментариев</div>
   <div class="stats-row">
-    <div class="stat-pill">Значимых сообщений: <span>~7 075</span></div>
-    <div class="stat-pill">Флуд в среднем: <span>~66%</span></div>
+    <div class="stat-pill">Значимых сообщений: <span>~9 175</span></div>
+    <div class="stat-pill">Флуд в среднем: <span>~67%</span></div>
     <div class="stat-pill">Месяц продолжается</div>
   </div>
-  <div class="note"><strong>Контекст:</strong> Четыре совершенно разных формата: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с профессиональным дота-игроком DM. Июнь — самый форматно разнообразный месяц. Флуд ниже среднего (~66% vs ~80% в апреле–мае). В июне впервые зафиксирована ботовая атака (стрим 13.06). Месяц в процессе — итоги будут обновляться.</div>
+  <div class="note"><strong>Контекст:</strong> Пять совершенно разных форматов: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с дота-игроком DM и Q&A про Яндекс Дропс и «Мою память». Июнь — самый форматно разнообразный месяц. В июне впервые зафиксирована ботовая атака (13.06) и крупный нерелевантный рейд (24.06). Месяц в процессе — итоги будут обновляться.</div>
   <div class="sentiment-row">
     <div class="bar-group">
       <div class="bar-row">
@@ -1180,7 +1271,7 @@
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="144.39 207.47" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="119.65 232.21" stroke-dashoffset="-56.43" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="88.00 263.86" stroke-dashoffset="-176.08" transform="rotate(-90 82 82)"/>
-        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~7 075</text>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~9 175</text>
         <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
       </svg>
       <div class="legend">
