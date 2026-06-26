@@ -97,7 +97,7 @@
   <div class="logo">Я</div>
   <div>
     <div class="header-title">Яндекс Стримы — Аналитика</div>
-    <div class="header-sub">Мониторинг Twitch-трансляций · 13 стримов</div>
+    <div class="header-sub">Мониторинг Twitch-трансляций · 14 стримов</div>
   </div>
 </div>
 
@@ -105,7 +105,7 @@
 <div class="month-nav">
   <button class="month-tab active" onclick="switchMonth('apr')">Апрель · 4 стрима</button>
   <button class="month-tab" onclick="switchMonth('may')">Май · 4 стрима</button>
-  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 5 стримов</button>
+  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 6 стримов</button>
 </div>
 
 <!-- ═══════════════ АПРЕЛЬ ═══════════════ -->
@@ -811,7 +811,8 @@
     <button class="tab" onclick="switchTab('jun',2)">13 июня — Дрифт</button>
     <button class="tab" onclick="switchTab('jun',3)">19 июня — Дота с DM</button>
     <button class="tab" onclick="switchTab('jun',4)">24 июня — Яндекс Дропс</button>
-    <button class="tab summary" onclick="switchTab('jun',5)">★ Итоги июня</button>
+    <button class="tab" onclick="switchTab('jun',5)">25 июня — Young Con</button>
+    <button class="tab summary" onclick="switchTab('jun',6)">★ Итоги июня</button>
   </div>
 
 <!-- ══════════════ 2 ИЮНЯ ══════════════ -->
@@ -1230,26 +1231,116 @@
   </div>
 </div>
 
+<!-- ══════════════ 25 ИЮНЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">25 июня 2026</div>
+      <div class="card-sub">Гуляем по Young Con — фесту Яндекса про карьеру и технологии</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">72 623</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">55 803</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">304 305</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value accent">4 223</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">244 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 985</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">1 247</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>~80 000+</span></div>
+    <div class="stat-pill">После фильтрации: <span>~3 500</span></div>
+    <div class="stat-pill">Флуд: <span>~96%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> IRL-стрим с T2X2 на фестивале Young Con — крупнейшем студенческом ивенте Яндекса. Т2Х2 активно участвовал: ходил по стендам, паял, катался на самокате, сел в беспилотный автомобиль, встретил Utopia Show. Пиковый онлайн ~4 223 — рекорд июня и один из лучших показателей за всю историю канала. Чат состоял преимущественно из аудитории T2X2: массовый флуд «ку», «dans», «WW», «завоз», комментарии про «воздух», обсуждение Слейта, Дрейка и альтушек. Аудитория Яндекса активно задавала вопросы про стажировки, зарплаты и технологии. В конце стрима — рейд T2X2 на канал Яндекса (~5 492 чел.), резкий скачок онлайна.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">55% · ~1 925 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:55%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">33% · ~1 155 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:33%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">12% · ~420 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:12%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="193.73 158.13" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="116.24 235.62" stroke-dashoffset="-105.77" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="42.27 309.59" stroke-dashoffset="-222.01" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~3 500</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 55%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 33%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 12%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>ку тоха / пиздец круто стрим / Тоха лучший / тоха красавец / лучший стример в мире / как же он круто выглядит<div class="q-source">позитив · стандартное приветствие и поддержка T2X2</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Специально ради Тоши твич скачал / впервые попал на трансляцию / вот это сотрудничество / коллаб года<div class="q-source">позитив · новые зрители, пришедшие ради T2X2</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>ОООО УТОПИЯ / ТОПААААА / Женя легенда / встреча с Utopia Show!<div class="q-source">позитив · реакция на встречу с Utopia Show — один из хайлайтов стрима</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Яндекс лучший / ЛЮБЛЮ ЯНДЕКС / яндекс вы пиздатые / молодцы, продолжайте<div class="q-source">позитив · одобрение формата ивента аудиторией Яндекса</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>ку ку ку / WW / dans / завозик / +++ / поч микрофон не взяли / плохо слышно<div class="q-source">нейтраль · массовый флуд аудитории T2X2 и технические замечания</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Сколько ЗП? / зп скок / можно ли на стажировку? / со скольки лет? / СКОЛЬКО УЧИТСЯ?<div class="q-source">нейтраль · типовые вопросы про трудоустройство от смешанной аудитории</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>нудятина / скучно / Смените ведущего / ваш онлайн даже спящие боты не держат / всем похуй<div class="q-source">негатив · критика формата презентации Яндекса после ухода T2X2</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Флуд T2X2-аудитории (ку, WW, dans, завоз, воздух)</div><div class="t-track"><div class="t-fill" style="width:35%"></div></div><div class="t-pct">35%</div></div>
+    <div class="t-row"><div class="t-label">Вопросы про стажировку, зп, карьеру в Яндексе</div><div class="t-track"><div class="t-fill" style="width:18%"></div></div><div class="t-pct">18%</div></div>
+    <div class="t-row"><div class="t-label">Обсуждение T2X2 (походка, Слейт, Дрейк, альтушки)</div><div class="t-track"><div class="t-fill" style="width:16%"></div></div><div class="t-pct">16%</div></div>
+    <div class="t-row"><div class="t-label">Технологии Яндекса (беспилотники, роверы, пухосос, Алиса)</div><div class="t-track"><div class="t-fill" style="width:14%"></div></div><div class="t-pct">14%</div></div>
+    <div class="t-row"><div class="t-label">Реакции на Utopia Show, выступление оркестра</div><div class="t-track"><div class="t-fill" style="width:10%"></div></div><div class="t-pct">10%</div></div>
+    <div class="t-row"><div class="t-label">Критика презентаций / нудного контента без T2X2</div><div class="t-track"><div class="t-fill" style="width:7%"></div></div><div class="t-pct">7%</div></div>
+  </div>
+  <div class="section-label">Обратная связь по стриму</div>
+  <div class="feedback">
+    <p>Стрим с T2X2 на Young Con получился одним из самых масштабных и энергичных выездных эфиров: пиковый онлайн 4 223 — рекорд июня. Формат «прогулка по фестивалю» с активным участием стримера сработал отлично: аудитория была вовлечена весь эфир, T2X2 органично взаимодействовал с контентом, паял, катался на самокате, садился в беспилотный автомобиль. Встреча с Utopia Show стала одним из самых эмоциональных моментов.</p>
+    <p><strong>Ключевой паттерн:</strong> стрим наглядно показал разницу между двумя типами аудитории. Пока T2X2 находился в кадре — онлайн держался на пике, чат был живым и вовлечённым. Когда он уходил и оставались только спикеры с презентациями — онлайн быстро падал, а чат наполнялся жалобами на скуку и критикой формата. Это важный сигнал: зрители Т2Х2 приходят за ним лично, а не за контентом Яндекса.</p>
+    <p><strong>Рейд в конце стрима:</strong> T2X2 сделал рейд на канал Яндекса (~5 500 чел.) — резкий скачок онлайна. Аудитория рейда продолжала вести себя как на стриме стримера: флуд, вопросы не по теме, скепсис. Стрим Яндекса без T2X2 в кадре их удержать не смог.</p>
+    <p><strong>Что улучшить:</strong></p>
+    <ul>
+      <li>Сохранять T2X2 в кадре как можно дольше — его присутствие прямо коррелирует с онлайном.</li>
+      <li>Добавить интерактив с чатом во время длинных перемещений (голосование за следующую локацию).</li>
+      <li>Если планируется презентационная часть без стримера — заранее предупредить аудиторию и сделать её короткой (до 15 мин).</li>
+      <li>Рейд планировать на момент, когда стример ещё в кадре — чтобы новая аудитория сразу видела живой контент.</li>
+    </ul>
+  </div>
+</div>
+
 <!-- ══════════════ ИТОГИ ИЮНЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Суммарная статистика</div>
   <div class="cards">
-    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">249 669</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">213 340</div><div class="card-sub">суммарно по 5 стримам</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">592 155</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">3 112</div></div>
-    <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">2 076</div><div class="card-sub">2 июня — Разбор Станции</div></div>
-    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~793</div><div class="card-sub">по 5 стримам</div></div>
-    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">5</div></div>
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">322 292</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">269 143</div><div class="card-sub">суммарно по 6 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">896 460</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">5 097</div></div>
+    <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value accent">4 223</div><div class="card-sub">25 июня — Young Con с T2X2</div></div>
+    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~870</div><div class="card-sub">по 6 стримам</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">6</div></div>
   </div>
   <hr class="divider" />
   <div class="section-label">Общая тональность комментариев</div>
   <div class="stats-row">
-    <div class="stat-pill">Значимых сообщений: <span>~9 175</span></div>
-    <div class="stat-pill">Флуд в среднем: <span>~67%</span></div>
-    <div class="stat-pill">Месяц продолжается</div>
+    <div class="stat-pill">Значимых сообщений: <span>~12 675</span></div>
+    <div class="stat-pill">Флуд в среднем: <span>~75%</span></div>
+    <div class="stat-pill">Рекорд онлайна: <span>4 223</span></div>
   </div>
-  <div class="note"><strong>Контекст:</strong> Пять совершенно разных форматов: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с дота-игроком DM и Q&A про Яндекс Дропс и «Мою память». Июнь — самый форматно разнообразный месяц. В июне впервые зафиксирована ботовая атака (13.06) и крупный нерелевантный рейд (24.06). Месяц в процессе — итоги будут обновляться.</div>
+  <div class="note"><strong>Контекст:</strong> Шесть совершенно разных форматов: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с дота-игроком DM, Q&A про Яндекс Дропс и «Мою память», и IRL на Young Con с T2X2. Июнь — самый форматно разнообразный и результативный месяц: рекордный пиковый онлайн (4 223), рекордное число новых фолловеров (5 097), рекордный объём минут просмотра. В июне впервые зафиксирована ботовая атака (13.06), крупный нерелевантный рейд (24.06) и первая крупная коллаба с популярным стримером T2X2.</div>
   <div class="sentiment-row">
     <div class="bar-group">
       <div class="bar-row">
@@ -1271,7 +1362,7 @@
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="144.39 207.47" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="119.65 232.21" stroke-dashoffset="-56.43" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="88.00 263.86" stroke-dashoffset="-176.08" transform="rotate(-90 82 82)"/>
-        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~9 175</text>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~12 675</text>
         <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
       </svg>
       <div class="legend">
