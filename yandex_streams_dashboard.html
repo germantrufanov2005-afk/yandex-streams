@@ -97,7 +97,7 @@
   <div class="logo">Я</div>
   <div>
     <div class="header-title">Яндекс Стримы — Аналитика</div>
-    <div class="header-sub">Мониторинг Twitch-трансляций · 14 стримов</div>
+    <div class="header-sub">Мониторинг Twitch-трансляций · 15 стримов</div>
   </div>
 </div>
 
@@ -105,7 +105,7 @@
 <div class="month-nav">
   <button class="month-tab active" onclick="switchMonth('apr')">Апрель · 4 стрима</button>
   <button class="month-tab" onclick="switchMonth('may')">Май · 4 стрима</button>
-  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 6 стримов</button>
+  <button class="month-tab" onclick="switchMonth('jun')">Июнь · 7 стримов</button>
 </div>
 
 <!-- ═══════════════ АПРЕЛЬ ═══════════════ -->
@@ -812,7 +812,8 @@
     <button class="tab" onclick="switchTab('jun',3)">19 июня — Дота с DM</button>
     <button class="tab" onclick="switchTab('jun',4)">24 июня — Яндекс Дропс</button>
     <button class="tab" onclick="switchTab('jun',5)">25 июня — Young Con</button>
-    <button class="tab summary" onclick="switchTab('jun',6)">★ Итоги июня</button>
+    <button class="tab" onclick="switchTab('jun',6)">26 июня — Вайбкодинг</button>
+    <button class="tab summary" onclick="switchTab('jun',7)">★ Итоги июня</button>
   </div>
 
 <!-- ══════════════ 2 ИЮНЯ ══════════════ -->
@@ -1321,26 +1322,115 @@
   </div>
 </div>
 
+<!-- ══════════════ 26 ИЮНЯ ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">26 июня 2026</div>
+      <div class="card-sub">Вайбкодим и вайбкрафтим вместе с @MilanRodd — презентация Vibecraft / SourceCraft</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">27 034</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">23 002</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">62 520</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">673</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">153 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">316</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">398</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>~3 500</span></div>
+    <div class="stat-pill">После фильтрации: <span>~900</span></div>
+    <div class="stat-pill">Флуд/системные: <span>~74%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Совместный стрим с MilanRodd — презентация нового продукта Яндекса Vibecraft (vibe.sourcecraft.dev), платформы для вайбкодинга. Формат: живая демонстрация создания проектов через AI-агента, обсуждение возможностей, Q&A с чатом. Чат активно взаимодействовал с AiBot_ru — ботом-ассистентом в чате, который отвечал на вопросы. Розыгрыш самоката в конце стрима. Значительная часть сообщений — системные уведомления бота розыгрыша (!Самокат), рекламные сообщения Vibecraft и напоминания Яндекса. Аудитория в основном технически грамотная: вопросы про архитектуру, модели, тарифы, интеграции, конкурентов (Claude, Cursor, Codex).</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">38% · ~342 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:38%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">42% · ~378 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:42%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">20% · ~180 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:20%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="133.86 217.99" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="147.87 203.99" stroke-dashoffset="-45.90" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="70.41 281.45" stroke-dashoffset="-193.77" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~900</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 38%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 42%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 20%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>не думал, что на канале Яндекса такие разнообразные и интересные стримы, круто! / сервис классный для тестирования гипотез / газ газ вайбкрафт<div class="q-source">позитив · одобрение формата и продукта</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>тестил инструмент, оч круто, удобно для прототипирования / сегодня замотивировался, будем кодить🔥 / я создал калькулятор с подпиской<div class="q-source">позитив · аудитория уже пробует платформу</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>какие модели используются? / это аналог Cursor? / лимиты сервиса? / CLI планируется? / как выгрузить код проекта?<div class="q-source">нейтраль · технические вопросы от IT-аудитории</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>за сколько промптов он это сделал? / сколько токенов потрачено на игру? / сколько в реальных деньгах?<div class="q-source">нейтраль · интерес к экономике и эффективности платформы</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>клод лучше вашего вайбкрафта / чет мне кажется, этот сотрудник сам не верит в продукт / ясно, туду трекер, нормально презентуют новый продукт. очень мощно<div class="q-source">негатив · скептицизм по отношению к продукту и демо</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>шел 2026 год, мы делаем туду трекеры / попытка в дипсик + надпись «моё» / мда, презентация пошла не по плану<div class="q-source">негатив · разочарование от выбора демо-проекта (туду трекер вместо чего-то сложного)</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Вопросы про платформу (модели, тарифы, лимиты, CLI, деплой)</div><div class="t-track"><div class="t-fill" style="width:28%"></div></div><div class="t-pct">28%</div></div>
+    <div class="t-row"><div class="t-label">Взаимодействие с AiBot_ru (вопросы боту в чате)</div><div class="t-track"><div class="t-fill" style="width:22%"></div></div><div class="t-pct">22%</div></div>
+    <div class="t-row"><div class="t-label">Идеи для проектов (мессенджер, мини-игры, планировщик)</div><div class="t-track"><div class="t-fill" style="width:18%"></div></div><div class="t-pct">18%</div></div>
+    <div class="t-row"><div class="t-label">Критика демо / сравнение с конкурентами (Claude, Cursor, Codex)</div><div class="t-track"><div class="t-fill" style="width:16%"></div></div><div class="t-pct">16%</div></div>
+    <div class="t-row"><div class="t-label">Розыгрыш самоката (!Самокат)</div><div class="t-track"><div class="t-fill" style="width:10%"></div></div><div class="t-pct">10%</div></div>
+    <div class="t-row"><div class="t-label">Вопросы про вакансии / трудоустройство в Яндекс</div><div class="t-track"><div class="t-fill" style="width:6%"></div></div><div class="t-pct">6%</div></div>
+  </div>
+  <div class="section-label">Обратная связь по стриму</div>
+  <div class="feedback">
+    <p>Стрим стал первой публичной презентацией Vibecraft / SourceCraft — нового продукта Яндекса для вайбкодинга. Совместный формат с MilanRodd привлёк его аудиторию (технически грамотные зрители), что обеспечило качественный, насыщенный вопросами чат.</p>
+    <p><strong>Главная проблема демо:</strong> для презентации мощной AI-платформы выбрали слишком простые проекты (туду трекер, небольшая игра). Чат явно ожидал чего-то более впечатляющего — и не стеснялся это говорить. Фраза «шел 2026 год, мы делаем туду трекеры» хорошо отражает настроение скептической части аудитории. Сам продукт при этом вызвал реальный интерес — многие тут же его попробовали и задавали конкретные технические вопросы.</p>
+    <p><strong>Что сработало:</strong> бот AiBot_ru в чате создал дополнительный интерактивный слой и заметно оживил обсуждение. Розыгрыш самоката вызвал всплеск активности в чате.</p>
+    <p><strong>Что улучшить:</strong></p>
+    <ul>
+      <li>Для следующей презентации нового продукта — готовить более впечатляющее демо заранее (не туду трекер, а что-то неожиданное и сложное).</li>
+      <li>Явно обозначить позиционирование относительно конкурентов (Claude, Cursor) — аудитория задаёт этот вопрос постоянно.</li>
+      <li>Ограничить количество системных авто-сообщений в чате (рекламный спам Vibecraft + Яндекс «следите за каналом» повторялся слишком часто).</li>
+      <li>Онлайн (673 пик) заметно ниже других стримов — часть аудитории MilanRodd ушла, когда поняла, что стрим технический, а не развлекательный.</li>
+    </ul>
+  </div>
+</div>
+
 <!-- ══════════════ ИТОГИ ИЮНЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Суммарная статистика</div>
   <div class="cards">
-    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">322 292</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">269 143</div><div class="card-sub">суммарно по 6 стримам</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">896 460</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">5 097</div></div>
+    <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">349 326</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">292 145</div><div class="card-sub">суммарно по 7 стримам</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">958 980</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">5 413</div></div>
     <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value accent">4 223</div><div class="card-sub">25 июня — Young Con с T2X2</div></div>
-    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~870</div><div class="card-sub">по 6 стримам</div></div>
-    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">6</div></div>
+    <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~804</div><div class="card-sub">по 7 стримам</div></div>
+    <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">7</div></div>
   </div>
   <hr class="divider" />
   <div class="section-label">Общая тональность комментариев</div>
   <div class="stats-row">
-    <div class="stat-pill">Значимых сообщений: <span>~12 675</span></div>
-    <div class="stat-pill">Флуд в среднем: <span>~75%</span></div>
+    <div class="stat-pill">Значимых сообщений: <span>~13 575</span></div>
+    <div class="stat-pill">Флуд в среднем: <span>~74%</span></div>
     <div class="stat-pill">Рекорд онлайна: <span>4 223</span></div>
   </div>
-  <div class="note"><strong>Контекст:</strong> Шесть совершенно разных форматов: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с дота-игроком DM, Q&A про Яндекс Дропс и «Мою память», и IRL на Young Con с T2X2. Июнь — самый форматно разнообразный и результативный месяц: рекордный пиковый онлайн (4 223), рекордное число новых фолловеров (5 097), рекордный объём минут просмотра. В июне впервые зафиксирована ботовая атака (13.06), крупный нерелевантный рейд (24.06) и первая крупная коллаба с популярным стримером T2X2.</div>
+  <div class="note"><strong>Контекст:</strong> Семь совершенно разных форматов: инженерный разбор Яндекс Станции 3, IRL с энерджайзером самокатов, IRL на дрифт-ивенте с техлидом, Q&A с дота-игроком DM, Q&A про Яндекс Дропс и «Мою память», IRL на Young Con с T2X2 и презентация нового продукта Vibecraft совместно с MilanRodd. Июнь — самый форматно разнообразный и результативный месяц: рекордный пиковый онлайн (4 223), рекордное число новых фолловеров (5 413), рекордный объём минут просмотра. В июне впервые зафиксированы: ботовая атака (13.06), крупный нерелевантный рейд (24.06), первая крупная коллаба с T2X2 (25.06) и первая публичная презентация нового продукта Яндекса на стриме (26.06).</div>
   <div class="sentiment-row">
     <div class="bar-group">
       <div class="bar-row">
@@ -1362,7 +1452,7 @@
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="144.39 207.47" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="119.65 232.21" stroke-dashoffset="-56.43" transform="rotate(-90 82 82)"/>
         <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="88.00 263.86" stroke-dashoffset="-176.08" transform="rotate(-90 82 82)"/>
-        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~12 675</text>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~13 575</text>
         <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
       </svg>
       <div class="legend">
