@@ -97,7 +97,7 @@
   <div class="logo">Я</div>
   <div>
     <div class="header-title">Яндекс Стримы — Аналитика</div>
-    <div class="header-sub">Мониторинг Twitch-трансляций · 21 стрим</div>
+    <div class="header-sub">Мониторинг Twitch-трансляций · 22 стрима</div>
   </div>
 </div>
 
@@ -107,7 +107,7 @@
   <button class="month-tab" onclick="switchMonth('may')">Май · 4 стрима</button>
   <button class="month-tab" onclick="switchMonth('jun')">Июнь · 7 стримов</button>
   <button class="month-tab" onclick="switchMonth('jul')">Июль · 5 стримов</button>
-  <button class="month-tab" onclick="switchMonth('aug')">Август · 1 стрим</button>
+  <button class="month-tab" onclick="switchMonth('aug')">Август · 2 стрима</button>
   <button class="month-tab" style="border-color:var(--accent2);color:var(--accent3);" onclick="switchMonth('audience')">👥 Аудитория</button>
 </div>
 
@@ -2008,6 +2008,7 @@
 <div class="month-group" id="group-aug">
   <div class="stream-tabs">
     <button class="tab active" onclick="switchTab('aug',0)">7 августа — ИИ и код</button>
+    <button class="tab" onclick="switchTab('aug',1)">14 августа — TI Шанхай</button>
   </div>
 
 <!-- ══════════════ 7 АВГУСТА ══════════════ -->
@@ -2048,6 +2049,85 @@
       <li>Отдельно проанализировать аномальные всплески онлайна и убедиться, что рост аудитории является органическим, либо определить причины подобных скачков.</li>
     </ul>
     <p><strong>Примечание по статистике:</strong> во время трансляции был зафиксирован пиковый онлайн 1 375 зрителей. При этом есть ощущение, что часть трафика могла быть неорганической. Пока это только наблюдение без выводов — данный момент стоит отдельно отследить на следующих эфирах и сравнить динамику по источникам трафика, удержанию аудитории и поведению зрителей. VOD удалён с Twitch по итогам эфира.</p>
+  </div>
+</div>
+
+<!-- ══════════════ 14 АВГУСТА ══════════════ -->
+<div class="panel">
+  <div class="section-label">Данные стрима</div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Дата</div>
+      <div class="card-value accent" style="font-size:17px">14 августа 2026</div>
+      <div class="card-sub">The International — трансляция с командного просмотра в офисе Яндекса</div>
+    </div>
+    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">—</div></div>
+    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">—</div></div>
+    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">—</div></div>
+    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">—</div></div>
+    <div class="card"><div class="card-label">Длительность</div><div class="card-value">~303 мин</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">—</div></div>
+    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">—</div></div>
+  </div>
+  <hr class="divider" />
+  <div class="section-label">Аналитика комментариев</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>4 797</span></div>
+    <div class="stat-pill">После фильтрации: <span>~1 800</span></div>
+    <div class="stat-pill">Флуд: <span>~63%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> Командный просмотр The International (Дота 2, Шанхай) из офиса Яндекса с комментатором Саней (VooDooSh) и ведущим Кириллом. Аудитория смешанная: дота-чат + фолловеры канала. Флуд — ботовые анонсы (247 штук), короткие эмоут-сообщения («WW», «LUL», «GG», «F»), счётчики мышек. DotaTV не работал в первые минуты стрима. Параллельно шла ставка на мышки в розыгрыше.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">46% · ~828 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:46%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">38% · ~684 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:38%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">16% · ~288 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:16%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="161.92 189.94" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="133.76 218.10" stroke-dashoffset="-73.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="56.30 295.56" stroke-dashoffset="-207.72" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~1 800</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 46%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 38%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 16%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>ну кстати пацаны красавчики. саня конечно звезда, но всё мероприятие очень крутое<div class="q-source">позитив · оценка формата и комментатора</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Работаю в Яндексе, смотрю Яндекс, коллеги го целоваться<div class="q-source">позитив · вовлечённость сотрудников</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Я АЖ ПРОСНУЛСЯ НАХОЙ / клатч!!! / ЗАВОЗ WW / ДА НЕ ВЫ КУКУРИТЕ ЧТОЛИ — YANDEX ДАЖЕ ТОП 3 НЕ БУДЕТ<div class="q-source">позитив · эмоциональные реакции на игру</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>яндекс топ фирма / кого в фентези поставил сань? / в млбб болею за яндекс<div class="q-source">позитив · поддержка бренда и команды</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Саня, го вечером с сотрудниками Яндекса коней погоняем в офисном комп клубе? / класс, Сань, кухня есть у них своя?<div class="q-source">нейтраль · вопросы об офисе и жизни внутри</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Саня ты планируешь все игры Team Yandex комментить? / Спроси как Сакса общается с тиммейтами из России<div class="q-source">нейтраль · вопросы о команде и комментаторе</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Ребята подскажите во сколько матч? / спириты и экстримы уже пикают, где наши? / когда запустите трансляцию?<div class="q-source">нейтраль · технические вопросы по расписанию</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Уберите звук с доты, это ужас какой-то / Невидно / Не работает Алиса LUL / почему у меня не работает<div class="q-source">негатив · жалобы на DotaTV и технические проблемы</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Почему я в Яндекс Еде не могу карту Яндекс добавить? / Саня, мне доставку пиццы задерживают. Прими меры<div class="q-source">негатив · жалобы на сервисы Яндекса</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Комментаторы: Саня, Кирилл — реакции и вопросы</div><div class="t-track"><div class="t-fill" style="width:30%"></div></div><div class="t-pct">30%</div></div>
+    <div class="t-row"><div class="t-label">TI / матчи / Team Yandex / фентези</div><div class="t-track"><div class="t-fill" style="width:24%"></div></div><div class="t-pct">24%</div></div>
+    <div class="t-row"><div class="t-label">DotaTV / технические проблемы / звук</div><div class="t-track"><div class="t-fill" style="width:16%"></div></div><div class="t-pct">16%</div></div>
+    <div class="t-row"><div class="t-label">Офис / карьера / стажировка в Яндексе</div><div class="t-track"><div class="t-fill" style="width:12%"></div></div><div class="t-pct">12%</div></div>
+    <div class="t-row"><div class="t-label">Жалобы на сервисы Яндекса</div><div class="t-track"><div class="t-fill" style="width:10%"></div></div><div class="t-pct">10%</div></div>
+    <div class="t-row"><div class="t-label">Розыгрыш мышек / призы</div><div class="t-track"><div class="t-fill" style="width:8%"></div></div><div class="t-pct">8%</div></div>
   </div>
 </div>
 
