@@ -89,6 +89,12 @@
     .feedback ul { margin:8px 0 12px 18px; display:flex; flex-direction:column; gap:5px; }
     .feedback ul li { font-size:13px; color:var(--muted); line-height:1.6; }
     ::-webkit-scrollbar{width:6px} ::-webkit-scrollbar-track{background:transparent} ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+    .raids { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; align-items:center; }
+    .raids-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-right:4px; }
+    .raid-pill { display:flex; align-items:center; gap:6px; background:var(--surface2); border:1px solid var(--border); border-radius:20px; padding:5px 12px; font-size:12px; color:var(--text); }
+    .raid-pill .raid-who { font-weight:700; color:var(--accent3); }
+    .raid-pill .raid-num { color:var(--pos); font-weight:700; }
+    .raid-pill .raid-time { color:var(--muted); }
   </style>
 </head>
 <body>
@@ -2078,6 +2084,12 @@
     <div class="stat-pill">После фильтрации: <span>~1 800</span></div>
     <div class="stat-pill">Флуд: <span>~63%</span></div>
   </div>
+  <div class="raids">
+    <span class="raids-label">Рейды</span>
+    <div class="raid-pill"><span class="raid-who">Sigka_Im</span><span class="raid-num">+38</span><span class="raid-time">1:18</span></div>
+    <div class="raid-pill"><span class="raid-who">Riza_club</span><span class="raid-num">+18</span><span class="raid-time">2:29</span></div>
+    <div class="raid-pill"><span class="raid-who">arolfish</span><span class="raid-num">+50</span><span class="raid-time">4:11</span></div>
+  </div>
   <div class="note"><strong>Контекст:</strong> Community Cast — первый день The International (Дота 2, Шанхай) с комментатором Саней (VooDooSh) и ведущим Кириллом из офиса Яндекса. Аудитория смешанная: дота-чат + фолловеры канала. В параллель у Nix шла трансляция с онлайном до 160 тыс. зрителей. Флуд — ботовые анонсы (247 штук), эмоуты («WW», «LUL», «GG», «F»), счётчики мышек в розыгрыше. DotaTV не работал в первые минуты. На совместной трансляции суммарный онлайн превышал 2 000 зрителей.</div>
   <div class="sentiment-row">
     <div class="bar-group">
@@ -2179,6 +2191,10 @@
     <div class="stat-pill">После фильтрации: <span>~2 800</span></div>
     <div class="stat-pill">Флуд: <span>~71%</span></div>
   </div>
+  <div class="raids">
+    <span class="raids-label">Рейды</span>
+    <div class="raid-pill"><span class="raid-who">sol1st</span><span class="raid-num">+209</span><span class="raid-time">1:41</span></div>
+  </div>
   <div class="note"><strong>Контекст:</strong> 13-часовой Community Cast — День 2 The International. Команда Team Yandex проиграла второй матч, но эфир держался за счёт экскурсии по офису с Бровджеем и Вудушем (спортзал, буткемп, автосимулятор, настольный керлинг), большого разговора Артура с Вудушем о Яндексе и карьере, розыгрышей и активностей. Флуд: ботовые анонсы и реклама LUNNEN (~384 штуки), «xd», «322», «HYPE», «vsemnashim», ASCII-гуси. Пик активности чата — час 7 (1 935 сообщений).</div>
   <div class="sentiment-row">
     <div class="bar-group">
@@ -2275,6 +2291,12 @@
     <div class="stat-pill">Всего сообщений: <span>5 596</span></div>
     <div class="stat-pill">После фильтрации: <span>~1 600</span></div>
     <div class="stat-pill">Флуд: <span>~71%</span></div>
+  </div>
+  <div class="raids">
+    <span class="raids-label">Рейды</span>
+    <div class="raid-pill"><span class="raid-who">KIARAOKSI</span><span class="raid-num">+117</span><span class="raid-time">1:09</span></div>
+    <div class="raid-pill"><span class="raid-who">BrowJey</span><span class="raid-num">+755</span><span class="raid-time">3:38</span></div>
+    <div class="raid-pill"><span class="raid-who">C_a_k_e</span><span class="raid-num">+1 672</span><span class="raid-time">4:03</span></div>
   </div>
   <div class="note"><strong>Контекст:</strong> Community Cast — День 3 The International с Гудком (goodoq). Прогулка по офису Яндекса, общение с Артуром, болелки за Team Yandex. Главное событие дня — победа Team Yandex и выход команды в плей-офф. Флуд: «WW», «))», ботовые анонсы и реклама LUNNEN (~136 штук), «1984», «vsemnashim», ASCII-гуси, «aga». Самокатная паста про гусей и Шанхай — отдельный мем дня.</div>
   <div class="sentiment-row">
