@@ -3051,7 +3051,60 @@
   </div>
   <hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
-  <div class="empty">Чат будет добавлен после загрузки VOD.</div>
+  <div class="stats-row">
+    <div class="stat-pill">Всего сообщений: <span>1 966</span></div>
+    <div class="stat-pill">После фильтрации: <span>~450</span></div>
+    <div class="stat-pill">Флуд: <span>~77%</span></div>
+  </div>
+  <div class="note"><strong>Контекст:</strong> IRL-стрим из особняка Льва Толстого в Москве вместе с ДинойБлин. Продуктовая интеграция Алисы AI — виртуальная модель Толстого, говорящая его голосом. Разговор с разработчиками технологии. Технические проблемы со звуком и изображением при перемещении по зданию — оперативно решались за счёт бэкапов. Рейдов не было. Флуд: ботовые анонсы музея Толстого (~17 штук), анонсы Яндекса (~33 штуки), «+», «)», «WW», «Jebaited», эмоуты ДинаБлин.</div>
+  <div class="sentiment-row">
+    <div class="bar-group">
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--pos)">Позитив</span><span class="pct">40% · ~180 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill pos" style="width:40%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neu)">Нейтраль</span><span class="pct">59% · ~266 сообщений</span></div>
+        <div class="bar-track"><div class="bar-fill neu" style="width:59%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-meta"><span class="lbl" style="color:var(--neg)">Негатив</span><span class="pct">1% · ~4 сообщения</span></div>
+        <div class="bar-track"><div class="bar-fill neg" style="width:1%"></div></div>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      <svg width="164" height="164" viewBox="0 0 164 164">
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--surface2)" stroke-width="20"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--pos)" stroke-width="20" stroke-dasharray="140.74 211.12" stroke-dashoffset="87.96" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neu)" stroke-width="20" stroke-dasharray="207.59 144.27" stroke-dashoffset="-52.78" transform="rotate(-90 82 82)"/>
+        <circle cx="82" cy="82" r="56" fill="none" stroke="var(--neg)" stroke-width="20" stroke-dasharray="3.52 348.34" stroke-dashoffset="-260.37" transform="rotate(-90 82 82)"/>
+        <text x="82" y="78" text-anchor="middle" class="donut-center-text">~450</text>
+        <text x="82" y="93" text-anchor="middle" class="donut-center-sub">значимых</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--pos)"></div>Позитив — 40%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neu)"></div>Нейтраль — 59%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--neg)"></div>Негатив — 1%</div>
+      </div>
+    </div>
+  </div>
+  <div class="section-label">Характерные комментарии</div>
+  <div class="quotes-grid">
+    <div class="q-card"><div class="q-badge pos">+</div>Спасибо за культуру / @yandex чтоб я так жил / Мэдкид<div class="q-source">позитив · атмосфера и впечатления от особняка</div></div>
+    <div class="q-card"><div class="q-badge pos">+</div>Чтобы жить честно, надо рваться, путаться, ошибаться... (цитата Толстого в чате)<div class="q-source">позитив · зрители цитируют Толстого — вовлечённость темой</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>Смотрел ли Толстой ДинуБлин? / А Толстой знал, что его назвали в честь Лёвы 2к?<div class="q-source">нейтраль · лёгкий юмор аудитории</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>сук, Толстой не провёл нормальный вайфай в усадьбу / КУПИТЕ МУЖИКУ СТАБИЛИЗАТОР МОБИЛЫ<div class="q-source">нейтраль · шутки над техническими проблемами</div></div>
+    <div class="q-card"><div class="q-badge neu">~</div>@Slow_V !jobs / Что, если найти себя в Яндексе?<div class="q-source">нейтраль · интерес к вакансиям Яндекса</div></div>
+    <div class="q-card"><div class="q-badge neg">—</div>Пропало / Техническая шоколадка возникла<div class="q-source">негатив · реакция на технические сбои трансляции</div></div>
+  </div>
+  <div class="section-label">Топ-тематики</div>
+  <div class="topics">
+    <div class="t-row"><div class="t-label">Толстой / особняк / история / цитаты</div><div class="t-track"><div class="t-fill" style="width:36%"></div></div><div class="t-pct">36%</div></div>
+    <div class="t-row"><div class="t-label">ДинаБлин / её аудитория / эмоуты</div><div class="t-track"><div class="t-fill" style="width:28%"></div></div><div class="t-pct">28%</div></div>
+    <div class="t-row"><div class="t-label">Алиса AI / технология / разработчики</div><div class="t-track"><div class="t-fill" style="width:18%"></div></div><div class="t-pct">18%</div></div>
+    <div class="t-row"><div class="t-label">Яндекс / вакансии / вопросы</div><div class="t-track"><div class="t-fill" style="width:10%"></div></div><div class="t-pct">10%</div></div>
+    <div class="t-row"><div class="t-label">Техсбои / реакция на потерю связи</div><div class="t-track"><div class="t-fill" style="width:8%"></div></div><div class="t-pct">8%</div></div>
+  </div>
   <div class="feedback">
     <div class="feedback-title">Обратная связь по стриму</div>
     <p>Стрим получился очень атмосферным и необычным по формату. Вместо привычного студийного эфира — полноценная экскурсия по особняку Льва Толстого в центре Москвы вместе с Диной Блин: прошлись по зданию, посмотрели интерьеры и узнали историю места. Формат экскурсии оказался удачным — чат воспринимал происходящее легко и позитивно, а прогулочная составляющая хорошо удерживала интерес к эфиру.</p>
