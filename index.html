@@ -171,7 +171,7 @@
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
       <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Рейтинг</div>
       <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:22px;">Топ-5 по просмотрам</div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div style="font-size:13px;font-weight:700;color:var(--accent3);width:18px;flex-shrink:0;">1</div>
           <div style="flex:1;min-width:0;">
@@ -179,9 +179,7 @@
               <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">TI День 2 · 15.08</span>
               <span style="font-size:12px;color:var(--accent3);font-weight:700;flex-shrink:0;margin-left:8px;">96 511</span>
             </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
-              <div style="width:100%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;"></div>
-            </div>
+            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;"></div></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
@@ -191,9 +189,7 @@
               <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Young Con с Дипинсом · 20.05</span>
               <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">78 833</span>
             </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
-              <div style="width:82%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.7;"></div>
-            </div>
+            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:82%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.7;"></div></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
@@ -203,9 +199,7 @@
               <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Цифровая доступность · 26.05</span>
               <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">77 392</span>
             </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
-              <div style="width:80%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.6;"></div>
-            </div>
+            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:80%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.6;"></div></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
@@ -215,9 +209,7 @@
               <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Young Con фест · 25.06</span>
               <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">72 623</span>
             </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
-              <div style="width:75%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.5;"></div>
-            </div>
+            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:75%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.5;"></div></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
@@ -227,19 +219,97 @@
               <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Дрифт с техлидом · 13.06</span>
               <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">67 723</span>
             </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
-              <div style="width:70%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.4;"></div>
-            </div>
+            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:70%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.4;"></div></div>
           </div>
         </div>
       </div>
+      <!-- Раскрывающийся список всех стримов -->
+      <details style="margin-top:16px;">
+        <summary style="font-size:12px;color:var(--accent3);cursor:pointer;user-select:none;list-style:none;display:flex;align-items:center;gap:6px;">
+          <span style="font-size:10px;">▼</span> Все 34 стрима
+        </summary>
+        <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px;">
+          <!-- 6–34 место -->
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">6 · Роверы + Братишкин · 19.05</span><span style="color:var(--text);">49 315</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">7 · IRL Дипинс в МИРЭА · 23.04</span><span style="color:var(--text);">54 320</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">8 · Young Con фест · 25.06</span><span style="color:var(--text);">51 434</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">9 · DM Q&A Dota 2 · 19.06</span><span style="color:var(--text);">51 139</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">10 · Q&A Дропс + Моя память · 24.06</span><span style="color:var(--text);">51 434</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">11 · Станция 3 · 03.06</span><span style="color:var(--text);">40 688</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">12 · Самокаты IRL · 04.06</span><span style="color:var(--text);">38 685</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">13 · Q&A Team Yandex · 30.04</span><span style="color:var(--text);">32 666</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">14 · Вайбкодинг · 24.07</span><span style="color:var(--text);">33 116</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">15 · Роверы Q&A · 28.09</span><span style="color:var(--text);">30 578</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">16 · Стразы · 31.07</span><span style="color:var(--text);">32 658</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">17 · Вайбкодинг 2.0 · 30.07</span><span style="color:var(--text);">32 658</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">18 · Вайбкрафт · 26.06</span><span style="color:var(--text);">27 034</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">19 · Ботаем олимпиады · 14.05</span><span style="color:var(--text);">17 311</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">20 · Алиса AI D&D с Анеком · 17.09</span><span style="color:var(--text);">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">21 · Алиса AI D&D + Хайвер · 03.09</span><span style="color:var(--text);">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">22 · Толстой + ДинаБлин · 09.09</span><span style="color:var(--text);">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">23 · ДР Яндекса · 25.09</span><span style="color:var(--text);">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">24 · Крафт с Крастером RnD · 22.04</span><span style="color:var(--text);">10 848</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">25 · 16 июля</span><span style="color:var(--text);">19 571</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">26 · Автономный транспорт · 21.04</span><span style="color:var(--text);">15 681</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">27 · 13 июля</span><span style="color:var(--text);">10 940</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);">
+            <span style="color:var(--muted);">28 · Пятничные разгоны · 07.08</span><span style="color:var(--text);">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;">
+            <span style="color:var(--muted);">29–34 · TI Community Cast (5 эфиров)</span><span style="color:var(--text);">8 424–44 212</span>
+          </div>
+        </div>
+      </details>
     </div>
 
     <!-- СРЕДНИЙ ОНЛАЙН ДИНАМИКА -->
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
       <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Динамика</div>
-      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px;">Средний онлайн</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:20px;">Без коллаб с крупными стримерами</div>
+      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:20px;">Средний онлайн</div>
       <div style="display:flex;align-items:flex-end;gap:3px;height:110px;padding-bottom:0;">
         <div style="flex:1;height:11px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="21.04 · 155"></div>
         <div style="flex:1;height:13px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="22.04 · 182"></div>
@@ -322,21 +392,33 @@
       <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Форматы</div>
       <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:18px;">Что работает лучше всего</div>
       <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <span style="font-size:13px;color:var(--text);">Коллаба с крупным стримером</span>
-          <span style="font-size:12px;color:var(--accent3);font-weight:700;">×3–10 онлайн</span>
+        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+            <span style="font-size:13px;color:var(--text);font-weight:500;">Коллаба с крупным стримером</span>
+            <span style="font-size:12px;color:var(--accent3);font-weight:700;">×3–10 онлайн</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">Дипинс: 9 168 пик · Братишкин: 2 393 средний · TI: до 3 200</div>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <span style="font-size:13px;color:var(--text);">IRL / показ изнутри</span>
-          <span style="font-size:12px;color:var(--accent3);font-weight:700;">высокий чат</span>
+        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+            <span style="font-size:13px;color:var(--text);font-weight:500;">IRL / показ изнутри</span>
+            <span style="font-size:12px;color:var(--accent3);font-weight:700;">высокий чат</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">МИРЭА с Дипинсом: 54 320 просм · Роверы 28.09: 409 ср. онлайн</div>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <span style="font-size:13px;color:var(--text);">Интерактив с продуктом</span>
-          <span style="font-size:12px;color:var(--accent3);font-weight:700;">вовлечённость</span>
+        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+            <span style="font-size:13px;color:var(--text);font-weight:500;">Интерактив с продуктом</span>
+            <span style="font-size:12px;color:var(--accent3);font-weight:700;">вовлечённость</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">D&D с Алисой: рейд Juice +2 389 · Роверы Q&A: самые длинные вопросы</div>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <span style="font-size:13px;color:var(--text);">Регулярные рейды от партнёров</span>
-          <span style="font-size:12px;color:var(--accent3);font-weight:700;">пиковый онлайн</span>
+        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+            <span style="font-size:13px;color:var(--text);font-weight:500;">Рейды от партнёров</span>
+            <span style="font-size:12px;color:var(--accent3);font-weight:700;">пиковый онлайн</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">Juice +2 389 · goodoq +1 450 · Tabula +700 · tankzor +289</div>
         </div>
       </div>
     </div>
