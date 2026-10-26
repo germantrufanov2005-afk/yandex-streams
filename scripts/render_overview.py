@@ -46,6 +46,8 @@ def render(source):
                 for term in n.find('card-sub')[0].text().split('+')[1:]:
                     partners.add(re.sub(r'\s+\d[\d ]*$', '', term.strip()))
     collab_own = sum(r['own']['views'] for r in collabs)
+    partner_views = combined - collab_own
+    partner_share = rounded(partner_views / combined * 100) if combined else 0
     out = ['<div class="month-group active" id="group-overview">']
     out += [heading('Апрель — сентябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфира · показатели нашего канала за весь период')]
     out += ['<div class="ov-kpis">',
@@ -59,7 +61,7 @@ def render(source):
             heading('Август — сентябрь 2026', '<span id="ov-collabs">Масштаб коллабораций</span>', 'Статистика совместных эфиров ведётся с августа 2026 года. Данные за более ранние эфиры постепенно дополняются.'),
             '<div class="ov-collab-kpis">',
             metric('Просмотры всех каналов', fmt(combined), 'наш канал + каналы партнёров', True),
-            metric('Наш канал', fmt(collab_own), 'на этих же совместных эфирах'),
+            metric('Просмотры на каналах партнёров', fmt(partner_views), f'{partner_share}% просмотров совместных эфиров'),
             metric('Совместных эфиров', str(len(collabs)), 'с внесённой статистикой партнёров'),
             metric('Партнёрских каналов', str(len(partners)), 'уникальных каналов в этой выборке'), '</div>',
             '<div class="ov-partners">' + ''.join(f'<span>{escape(p)}</span>' for p in sorted(partners, key=str.casefold)) + '</div>',
