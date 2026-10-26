@@ -78,11 +78,11 @@ def render(source):
         out += ['</div></div>']
     out += ['</div><p class="ov-footnote">Просмотры суммируются. Средний онлайн рассчитан из средних значений эфиров в исходной таблице с весом по длительности каждого эфира. Число эфиров и длительность месяцев различаются.</p></section>']
     out += ['<section class="ov-section" aria-labelledby="ov-best">', heading('Лидеры за весь период', '<span id="ov-best">Лучшие эфиры</span>', 'По показателям нашего канала · нажмите на карточку, чтобы открыть эфир'), '<div class="ov-best-grid">']
-    for key, label, unit in [('views', 'Больше всего просмотров', 'просмотров'), ('minutes', 'Больше всего часов просмотра', 'часов просмотра'), ('follows', 'Больше всего новых фолловеров', 'новых фолловеров')]:
+    for key, label, unit in [('views', 'Больше всего просмотров', 'просмотров'), ('peak', 'Самый высокий пиковый онлайн', 'зрителей одновременно'), ('follows', 'Больше всего новых фолловеров', 'новых фолловеров')]:
         winner = max(records, key=lambda r: r['own'][key])
         month = winner['group'].removeprefix('group-')
         idx = [r for r in records if r['group'] == winner['group']].index(winner)
-        value = rounded(winner['own'][key] / 60) if key == 'minutes' else winner['own'][key]
+        value = winner['own'][key]
         title = winner['title']
         out.append(f'<button type="button" class="ov-best" onclick="switchMonth(\'{month}\');switchTab(\'{month}\',{idx})"><span class="ov-label">{label}</span><span class="ov-value">{fmt(value)}</span><span class="ov-sub">{unit}</span><span class="ov-best-title">{escape(title)}</span><span class="ov-best-date">{winner["display_date"]}</span><span class="ov-link">Открыть эфир ↗</span></button>')
     out += ['</div></section>']
