@@ -126,7 +126,7 @@ def reconcile(source):
     text, count = re.subn(
         r'(>Новых фолловеров</div>\s*<div[^>]*>)[\d ]+(</div>)',
         lambda match: match[1] + fmt(followers) + match[2], text)
-    assert count == 1, 'Overview follower card not found'
+    assert count == 1 or (count == 0 and 'Фолловеров на канале</div>' in text), 'Overview follower card not found'
     avg = percentages([sum(sentiment(p)[i] for p in with_chat) for i in range(3)])
     # Equal weight per stream preserves the overview's meaning of an average stream.
     old_values = re.findall(r'<span style="color:var\(--muted\);">~([\d.,]+)%</span>', text)

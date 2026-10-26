@@ -125,7 +125,7 @@ def reconcile(source):
     follows = sum(r['own']['follows'] for r in data['records'])
     text, count = re.subn(r'(>Новых фолловеров</div>\s*<div[^>]*>)[\d ]+(</div>)',
                          lambda m: m[1] + fmt(follows) + m[2], text)
-    assert count == 1
+    assert count == 1 or (count == 0 and 'Фолловеров на канале</div>' in text)
     if text != source[overview.start:overview.end]:
         edits.append((overview.start, overview.end, text))
     for start, end, replacement in sorted(edits, key=lambda e: (e[0], e[1]), reverse=True):

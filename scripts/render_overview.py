@@ -33,6 +33,9 @@ def heading(kicker, title, description=''):
 def render(source):
     data = json.loads((ROOT / 'data/streams.json').read_text())
     records = data['records']
+    followers = data['channel_followers']
+    followers_date = '.'.join(reversed(followers['as_of'].split('-')))
+    followers_value = ('≈' if followers['approximate'] else '') + fmt(followers['value'])
     own = lambda key: sum(r['own'][key] for r in records)
     avg = lambda rs: sum(r['own']['average'] * r['own']['duration'] for r in rs) / sum(r['own']['duration'] for r in rs)
     collabs = [r for r in records if r['sheet_date'] >= '2026-08-01' and r['historical_collaboration_cards']]
@@ -55,8 +58,8 @@ def render(source):
             metric('Просмотров', fmt(own('views')), 'на канале Яндекса'),
             metric('Часов просмотра', fmt(rounded(own('minutes') / 60)), f"{fmt(own('minutes'))} минут · округлено до часа"),
             metric('Средний онлайн', fmt(rounded(avg(records))), 'взвешен по длительности эфиров'),
-            metric('Новых фолловеров', fmt(own('follows')), 'сумма новых подписок за эфиры'), '</div>',
-            '<p class="ov-footnote">На канале ≈24 527 фолловеров — по данным команды на 23.10.2026. Текущий размер аудитории отличается от суммы новых подписок за эфиры.</p>']
+            metric('Фолловеров на канале', followers_value, f'по данным команды на {followers_date}'), '</div>',
+            '<p class="ov-footnote">Фолловеры — размер аудитории канала на указанную дату. Новые подписки за отдельные эфиры приведены на вкладках трансляций.</p>']
     out += ['<section class="ov-section" aria-labelledby="ov-collabs">',
             heading('Август — сентябрь 2026', '<span id="ov-collabs">Масштаб коллабораций</span>', 'Статистика совместных эфиров ведётся с августа 2026 года. Данные за более ранние эфиры постепенно дополняются.'),
             '<div class="ov-collab-kpis">',
