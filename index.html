@@ -36,8 +36,8 @@
 
     @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
     @keyframes overview-flow {
-      from { transform:translate3d(-8%,-5%,0) rotate(-8deg); }
-      to { transform:translate3d(8%,5%,0) rotate(8deg); }
+      from { transform:translate3d(0,0,0); }
+      to { transform:translate3d(-50%,0,0); }
     }
     .tab-special {
       position:relative;
@@ -53,11 +53,12 @@
     .tab-special::before {
       content:"";
       position:absolute;
-      inset:-100% -70%;
+      inset:0 auto 0 0;
+      width:200%;
       z-index:-1;
       pointer-events:none;
-      background:linear-gradient(115deg,#6d28d9 12%,#8b5cf6 35%,#c65cdd 52%,#a855f7 68%,#6d28d9 88%);
-      animation:overview-flow 8s ease-in-out infinite alternate;
+      background:linear-gradient(90deg,#6d28d9 0%,#8b5cf6 12.5%,#d35bd9 25%,#a855f7 37.5%,#6d28d9 50%,#8b5cf6 62.5%,#d35bd9 75%,#a855f7 87.5%,#6d28d9 100%);
+      animation:overview-flow 7s linear infinite;
       will-change:transform;
     }
     .tab-special::after {
