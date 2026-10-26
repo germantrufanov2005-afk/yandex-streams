@@ -107,6 +107,8 @@
     .raid-pill .raid-who { font-weight:700; color:var(--accent3); }
     .raid-pill .raid-num { color:var(--pos); font-weight:700; }
     .raid-pill .raid-time { color:var(--muted); }
+    .cards-own { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
+    .statistics-note { font-size:11px; color:var(--muted); line-height:1.6; margin:-20px 0 32px; }
   </style>
 </head>
 <body>
@@ -150,9 +152,9 @@
     </div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Уник. зрителей</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Сумма уник. зрителей</div>
       <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">891K</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">891 732 всего</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:5px;">891 732 по эфирам · возможны повторы</div>
     </div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
@@ -163,7 +165,7 @@
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
       <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Новых фолловеров</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">28 075</div>
+      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">27 500</div>
       <div style="font-size:11px;color:var(--muted);margin-top:5px;">сумма новых подписок за 34 эфира</div>
     </div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
@@ -175,6 +177,7 @@
   </div>
 
   <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:-14px;margin-bottom:24px;">На канале сейчас ≈24 527 фолловеров — по данным команды на 23.10.2026. Это текущая аудитория, а не сумма новых подписок за эфиры.</div>
+  <div class="note"><strong>Статистика канала Яндекса:</strong> обзор за весь период учитывает только наш канал. С августа в карточках совместных эфиров дополнительно показаны общие показатели и статистика стримеров; наши показатели размещены отдельно под ними.</div>
 
   <!-- ТОП-5 + СРЕДНИЙ ОНЛАЙН -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
@@ -393,44 +396,44 @@
 
 <!-- ══════════════ 21 АПРЕЛЯ ══════════════ -->
 <div class="panel active">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">21 апреля 2026</div>
       <div class="card-sub">Автономный транспорт</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">15 681</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">12 718</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">75 263</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">2 801</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">484 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 001</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">155</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">15 681</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">12 718</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">75 263</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">2 801</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">155</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">484 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 001</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="empty">Массив комментариев для этого стрима не предоставлен.<br>Эфир не включён в расчёт тональности; статистика просмотра и подписок учитывается.</div>
 </div>
 
 <!-- ══════════════ 22 АПРЕЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">22 апреля 2026</div>
       <div class="card-sub">Крафт с Крастером в RnD</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">10 848</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">14 287</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">41 947</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">1 551</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">229 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 232</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">182</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">10 848</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 721</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">41 947</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 173</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">182</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">229 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 909</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>2 083</span></div>
@@ -490,22 +493,22 @@
 
 <!-- ══════════════ 23 АПРЕЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">23 апреля 2026</div>
       <div class="card-sub">IRL-стрим Дипинса в МИРЭА</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">54 320</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">30 841</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">655 502</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">9 168</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">140 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">9 132</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">7 070</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">54 320</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">30 841</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">655 502</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">9 168</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">7 070</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">140 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">9 132</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>59 124</span></div>
@@ -568,22 +571,22 @@
 
 <!-- ══════════════ 30 АПРЕЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">30 апреля 2026</div>
       <div class="card-sub">Q&amp;A с командой Team Yandex</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 666</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">26 792</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">47 078</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">902</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">92 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">476</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">350</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 666</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">26 792</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">47 078</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">902</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">350</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">92 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">476</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>887</span></div>
@@ -650,7 +653,7 @@
     <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">113 515</div></div>
     <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">79 072</div><div class="card-sub">суммарно по 4 стримам</div></div>
     <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">819 790</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">13 841</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">13 518</div></div>
     <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">9 168</div><div class="card-sub">23 апреля — Дипинс</div></div>
     <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">~1 939</div><div class="card-sub">с учётом пика Дипинса</div></div>
     <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">4</div></div>
@@ -710,22 +713,22 @@
 
 <!-- ══════════════ 14 МАЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">14 мая 2026</div>
       <div class="card-sub">Ботаем олимпиады — алгоритмический стрим</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">17 311</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">17 184</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">19 178</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">567</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">220 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">287</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">80</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">17 311</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">13 603</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">19 178</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">129</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">80</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">220 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">287</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>1 266</span></div>
@@ -789,22 +792,22 @@
 
 <!-- ══════════════ 19 МАЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">19 мая 2026</div>
       <div class="card-sub">Братишкин в офисе — роверы Яндекса</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">49 315</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">32 876</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">414 955</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">3 331</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">167 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 422</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">2 293</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">49 315</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">32 876</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">414 955</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">3 331</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">2 293</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">167 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 389</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~18 000+</span></div>
@@ -868,22 +871,22 @@
 
 <!-- ══════════════ 20 МАЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">20 мая 2026</div>
       <div class="card-sub">Выбираем — музыкальный конкурс Young Con</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">78 833</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">51 099</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">461 462</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">3 200</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">201 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">824</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">2 392</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">78 833</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">51 099</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">461 462</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">3 200</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">2 392</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">201 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">684</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~22 000+</span></div>
@@ -947,22 +950,22 @@
 
 <!-- ══════════════ 26 МАЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">26 мая 2026</div>
       <div class="card-sub">Отвечаем — Q&A с командой инклюзии Яндекса</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">77 392</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">63 760</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">102 585</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 256</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">185 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">850</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">555</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">77 392</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">63 760</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">102 585</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 256</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">555</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">185 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">840</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~4 500+</span></div>
@@ -1031,7 +1034,7 @@
     <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">222 851</div></div>
     <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">161 338</div><div class="card-sub">суммарно по 4 стримам</div></div>
     <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">998 180</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">3 383</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">3 200</div></div>
     <div class="card"><div class="card-label">Пиковый онлайн</div><div class="card-value">3 331</div><div class="card-sub">19 мая — Братишкин</div></div>
     <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~1 330</div><div class="card-sub">по 4 стримам</div></div>
     <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">4</div></div>
@@ -1093,22 +1096,22 @@
 
 <!-- ══════════════ 2 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">2 июня 2026</div>
       <div class="card-sub">Разбор Яндекс Станции 3 — инженеры раскрывают секреты</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">40 688</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">35 760</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">142 691</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">2 076</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">155 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">603</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">915</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">40 688</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">35 760</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">142 691</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">2 076</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">915</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">155 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">564</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~5 000+</span></div>
@@ -1171,22 +1174,22 @@
 
 <!-- ══════════════ 3 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">3 июня 2026</div>
       <div class="card-sub">БОСС САМОКАТОВ — ИРЛ-стрим с энерджайзером Яндекс Go</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">38 685</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">31 826</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">100 263</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 005</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">156 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">347</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">643</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">38 685</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">31 826</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">100 263</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 005</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">643</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">156 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">317</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~5 500+</span></div>
@@ -1249,22 +1252,22 @@
 
 <!-- ══════════════ 13 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">13 июня 2026</div>
       <div class="card-sub">Дрифтуем вместе с техлидом Яндекса</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">67 723</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">62 400</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">144 302</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">3 644</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">144 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">484</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">1 009</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">67 723</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">56 363</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">144 302</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 482</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">1 009</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">144 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">484</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~6 000+</span></div>
@@ -1327,22 +1330,22 @@
 
 <!-- ══════════════ 19 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">19 июня 2026</div>
       <div class="card-sub">Отвечаем на вопросы и играем в Dota 2 с DM</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">51 139</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">44 862</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">109 100</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 475</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">154 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">553</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">708</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">51 139</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">44 862</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">109 100</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 475</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">708</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">154 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">553</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~4 500+</span></div>
@@ -1419,22 +1422,22 @@
 
 <!-- ══════════════ 24 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">24 июня 2026</div>
       <div class="card-sub">Отвечаем на вопросы про Яндекс Дропс и «Мою память»</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">51 434</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">44 529</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">95 799</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 008</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">136 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 125</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">699</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">51 434</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">44 529</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">95 799</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 008</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">699</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">136 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 125</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~7 000+</span></div>
@@ -1509,22 +1512,22 @@
 
 <!-- ══════════════ 25 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">25 июня 2026</div>
       <div class="card-sub">Гуляем по Young Con — фесту Яндекса про карьеру и технологии</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">72 623</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">54 336</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">304 305</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value accent">8 517</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">244 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 985</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">1 247</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">72 623</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">55 803</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">304 305</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">4 223</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">1 247</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">244 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">1 985</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~80 000+</span></div>
@@ -1599,22 +1602,22 @@
 
 <!-- ══════════════ 26 ИЮНЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">26 июня 2026</div>
       <div class="card-sub">Вайбкодим и вайбкрафтим вместе с @MilanRodd — презентация Vibecraft / SourceCraft</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">27 034</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">25 744</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">62 520</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">966</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">153 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">316</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">398</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">27 034</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">23 002</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">62 520</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">673</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">398</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">153 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">316</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~3 500</span></div>
@@ -1693,8 +1696,8 @@
     <div class="card"><div class="card-label">Просмотры (всего)</div><div class="card-value accent">349 326</div></div>
     <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">292 145</div><div class="card-sub">суммарно по 7 стримам</div></div>
     <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">958 980</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">5 413</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value accent">8 517</div><div class="card-sub">25 июня — Young Con · коллаб</div></div>
+    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">5 344</div></div>
+    <div class="card highlight"><div class="card-label">Пиковый онлайн</div><div class="card-value accent">4 223</div><div class="card-sub">25 июня — Young Con · канал Яндекса</div></div>
     <div class="card"><div class="card-label">Ср. онлайн по месяцу</div><div class="card-value">~804</div><div class="card-sub">по 7 стримам</div></div>
     <div class="card"><div class="card-label">Стримов проведено</div><div class="card-value accent">7</div></div>
   </div>
@@ -1753,22 +1756,22 @@
 
 <!-- ══════════════ 13 ИЮЛЯ ══════════════ -->
 <div class="panel active">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">13 июля 2026</div>
       <div class="card-sub">Разбор Станции Стрит</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">10 940</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 075</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">70 362</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 349</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">121 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">109</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">577</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">10 940</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 075</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">70 362</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 349</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">577</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">121 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">109</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~2 500</span></div>
@@ -1849,22 +1852,22 @@
 
 <!-- ══════════════ 16 ИЮЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">16 июля 2026</div>
       <div class="card-sub">Босс самокатов наводит порядок на улице</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">19 571</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">17 180</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">71 858</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 339</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">112 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">249</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">642</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">19 571</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">17 180</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">71 858</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 339</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">642</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">112 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">249</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~1 500</span></div>
@@ -1942,22 +1945,22 @@
 
 <!-- ══════════════ 24 ИЮЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">24 июля 2026</div>
       <div class="card-sub">Вайбкодим и вайбкрафтим игру вместе с @MilanRood</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">33 116</div></div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">30 787</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">64 967</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">771</div><div class="card-sub">включая коллаб-трансляцию</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">198 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">289</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">328</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">33 116</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">28 805</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">64 967</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">519</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">328</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">198 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">289</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~1 446</span></div>
@@ -2036,22 +2039,22 @@
 
 <!-- ══════════════ 30 ИЮЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">30 июля 2026</div>
       <div class="card-sub">Один день из жизни курьера Яндекс Еды</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 658</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">27 255</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">93 808</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">975</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">152 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">413</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">617</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 658</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">27 255</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">93 808</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">975</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">617</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">152 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">413</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~2 091</span></div>
@@ -2129,22 +2132,22 @@
 
 <!-- ══════════════ 31 ИЮЛЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">31 июля 2026</div>
       <div class="card-sub">1000 страз, полный газ! Самокат Яндекса на прокачке</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">12 437</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">10 639</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">26 543</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 395</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">114 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">120</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">229</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">12 437</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">10 639</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">26 543</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 395</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">229</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">114 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">120</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>~1 100</span></div>
@@ -2294,22 +2297,22 @@
 
 <!-- ══════════════ 7 АВГУСТА ══════════════ -->
 <div class="panel active">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">7 августа 2026</div>
       <div class="card-sub">Пятничные разгоны: ИИ пишет код, а что делает программист?</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">30 578</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">23 265</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">65 508</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 375</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">107 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">312</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">607</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">30 578</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">23 265</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">65 508</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 375</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">607</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">107 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">312</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="empty">Массив комментариев для этого стрима не предоставлен.<br>Эфир не включён в расчёт тональности; статистика просмотра и подписок учитывается.</div>
   <div class="feedback">
@@ -2336,22 +2339,29 @@
 <!-- ══════════════ 13 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">13 августа 2026</div>
       <div class="card-sub">Community Cast The International — День 1 (Шанхай) · коллаба с <strong>VooDooSh</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">57 346</div><div class="card-sub">включая коллаб · VooDooSh</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">3 206</div><div class="card-sub">включая коллаб · VooDooSh</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">137 853</div><div class="card-sub">наши 44 212 + VooDooSh 93 641</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн стримера</div><div class="card-value">1 505</div><div class="card-sub">VooDooSh · коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">136 593</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">451</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">304 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">719</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">57 346</div><div class="card-sub">включая коллаб · VooDooSh</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">3 206</div><div class="card-sub">включая коллаб · VooDooSh</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">137 853</div><div class="card-sub">наши 44 212 + VooDooSh 93 641</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн стримера</div><div class="card-value">1 505</div><div class="card-sub">VooDooSh · коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">44 212</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">33 364</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">136 593</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">956</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">451</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">304 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">719</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>4 797</span></div>
@@ -2444,23 +2454,30 @@
 <!-- ══════════════ 15 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">15 августа 2026</div>
       <div class="card-sub">Community Cast The International — День 2 (Шанхай) · коллаба с <strong>VooDooSh</strong> и <strong>BrowJey</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">102 887</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 325</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">238 524</div><div class="card-sub">наши 96 401 + VooDooSh 111 372 + BrowJey 30 751</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 002</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">348</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">206 472</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">240</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">802 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">828</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">102 887</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 325</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">238 634</div><div class="card-sub">наши 96 511 + VooDooSh 111 372 + BrowJey 30 751</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 002</div><div class="card-sub">коллаб-канал</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">348</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">96 511</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">70 475</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">206 472</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">571</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">240</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">802 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">828</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>9 804</span></div>
@@ -2547,22 +2564,29 @@
 <!-- ══════════════ 16 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">16 августа 2026</div>
       <div class="card-sub">Community Cast The International — День 3 (Шанхай). Team Yandex вышли в плей-офф! · коллаба с <strong>goodoq</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">52 427</div><div class="card-sub">включая коллаб · goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 237</div><div class="card-sub">включая коллаб · goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">78 165</div><div class="card-sub">наши 52 491 + goodoq 25 674</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">608</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">93 632</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">363</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">298 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">343</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">52 427</div><div class="card-sub">включая коллаб · goodoq</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 237</div><div class="card-sub">включая коллаб · goodoq</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">78 493</div><div class="card-sub">наши 52 819 + goodoq 25 674</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">608</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">52 819</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">43 061</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">93 632</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">784</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">363</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">298 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">343</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>5 596</span></div>
@@ -2649,22 +2673,29 @@
 <!-- ══════════════ 20 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">20 августа 2026</div>
       <div class="card-sub">Community Cast The International — Play-off. Team Yandex выигрывают и идут дальше! · коллаба с <strong>goodoq</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">17 074</div><div class="card-sub">включая коллаб · goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">838</div><div class="card-sub">включая коллаб · goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">26 317</div><div class="card-sub">наши 14 076 + goodoq 12 241</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">297</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">36 812</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">185</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">199 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">92</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">17 074</div><div class="card-sub">включая коллаб · goodoq</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">838</div><div class="card-sub">включая коллаб · goodoq</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">26 398</div><div class="card-sub">наши 14 157 + goodoq 12 241</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">297</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">14 157</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">11 539</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">36 812</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">491</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">185</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">199 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">92</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>2 223</span></div>
@@ -2749,23 +2780,30 @@
 <!-- ══════════════ 21 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">21 августа 2026</div>
       <div class="card-sub">Community Cast The International — Play-off Day 2. Team Yandex побеждают и идут дальше! · коллаба с <strong>VooDooSh</strong> и <strong>goodoq</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">53 521</div><div class="card-sub">включая коллаб · VooDooSh + goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">3 199</div><div class="card-sub">включая коллаб · VooDooSh + goodoq</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">110 881</div><div class="card-sub">наши 32 396 + VooDooSh 61 127 + goodoq 17 358</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 405</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">353</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">82 955</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">265</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">342 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">352</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">53 521</div><div class="card-sub">включая коллаб · VooDooSh + goodoq</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">3 199</div><div class="card-sub">включая коллаб · VooDooSh + goodoq</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">110 971</div><div class="card-sub">наши 32 486 + VooDooSh 61 127 + goodoq 17 358</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 405</div><div class="card-sub">коллаб-канал</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн goodoq</div><div class="card-value">353</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">32 486</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">25 506</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">82 955</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">783</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">265</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">342 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">352</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>6 748</span></div>
@@ -2838,23 +2876,30 @@
 <!-- ══════════════ 22 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">22 августа 2026</div>
       <div class="card-sub">Community Cast The International — Play-off Day 3. Team Yandex — нижняя сетка. · коллаба с <strong>VooDooSh</strong> и <strong>BrowJey</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">36 833</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 832</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">85 797</div><div class="card-sub">наши 22 119 + VooDooSh 59 595 + BrowJey 4 083</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 032</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">396</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">54 661</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">202</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">271 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">230</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">36 833</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 832</div><div class="card-sub">включая коллаб · VooDooSh + BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">85 893</div><div class="card-sub">наши 22 215 + VooDooSh 59 595 + BrowJey 4 083</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн VooDooSh</div><div class="card-value">1 032</div><div class="card-sub">коллаб-канал</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">396</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">22 215</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">17 345</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">54 661</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">357</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">202</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">271 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">230</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>4 848</span></div>
@@ -2937,22 +2982,29 @@
 <!-- ══════════════ 23 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">23 августа 2026</div>
       <div class="card-sub">Community Cast The International — Финал нижней сетки. Team Yandex — топ-3! · коллаба с <strong>BrowJey</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">10 456</div><div class="card-sub">включая коллаб · BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">701</div><div class="card-sub">включая коллаб · BrowJey</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">15 509</div><div class="card-sub">наши 11 433 + BrowJey 4 076</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">304</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">18 367</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">119</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">155 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">163</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">10 456</div><div class="card-sub">включая коллаб · BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">701</div><div class="card-sub">включая коллаб · BrowJey</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">15 679</div><div class="card-sub">наши 11 603 + BrowJey 4 076</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн BrowJey</div><div class="card-value">304</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">11 603</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">9 100</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">18 367</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">247</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">119</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">155 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">163</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>1 760</span></div>
@@ -3034,22 +3086,29 @@
 <!-- ══════════════ 28 АВГУСТА ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">28 августа 2026</div>
       <div class="card-sub">День олимпиадников в Яндексе · коллаба с <strong>Дипинсом</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">22 799</div><div class="card-sub">включая коллаб · Дипинс</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">16 230</div><div class="card-sub">включая коллаб · Дипинс</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">178 082</div><div class="card-sub">наши 10 857 + Дипинс 167 225</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн Дипинса</div><div class="card-value">7 492</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">23 547</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">154</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">153 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">747</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">22 799</div><div class="card-sub">включая коллаб · Дипинс</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">16 230</div><div class="card-sub">включая коллаб · Дипинс</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">178 229</div><div class="card-sub">наши 11 004 + Дипинс 167 225</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн Дипинса</div><div class="card-value">7 492</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">11 004</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 588</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">23 547</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">264</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">154</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">153 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">747</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>48 557</span></div>
@@ -3129,9 +3188,9 @@
 <div class="panel">
   <div class="section-label">Суммарная статистика — Community Cast The International</div>
   <div class="cards">
-    <div class="card highlight"><div class="card-label">Просмотры (всего с коллабами)</div><div class="card-value accent">693 046</div><div class="card-sub">суммарно по всем каналам</div></div>
+    <div class="card highlight"><div class="card-label">Просмотры (всего с коллабами)</div><div class="card-value accent">693 921</div><div class="card-sub">суммарно по всем каналам</div></div>
     <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value accent">330 544</div><div class="card-sub">включая коллаб · суммарно</div></div>
-    <div class="card"><div class="card-label">Просмотры (наш канал)</div><div class="card-value">273 238</div></div>
+    <div class="card"><div class="card-label">Просмотры (наш канал)</div><div class="card-value">274 003</div></div>
     <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value accent">629 492</div></div>
     <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">2 727</div></div>
     <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value accent">3 206</div><div class="card-sub">13.08 — День 1 · коллаб</div></div>
@@ -3209,22 +3268,29 @@
 <!-- ══════════════ 3 СЕНТЯБРЯ ══════════════ -->
 <div class="panel active">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">3 сентября 2026</div>
       <div class="card-sub">Алиса AI — Мастер подземелий! Вечер квестов · коллаба с <strong>HYVER</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">16 911</div><div class="card-sub">включая коллаб · HYVER</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 018</div><div class="card-sub">включая коллаб · HYVER</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">28 117</div><div class="card-sub">наши 9 815 + HYVER 18 302</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн HYVER</div><div class="card-value">596</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">64 613</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">304</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">214 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">109</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">16 911</div><div class="card-sub">включая коллаб · HYVER</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">2 018</div><div class="card-sub">включая коллаб · HYVER</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">28 185</div><div class="card-sub">наши 9 883 + HYVER 18 302</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн HYVER</div><div class="card-value">596</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">9 883</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">8 060</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">64 613</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 382</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">304</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">214 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">109</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>2 823</span></div>
@@ -3303,22 +3369,29 @@
 <!-- ══════════════ 9 СЕНТЯБРЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">9 сентября 2026</div>
       <div class="card-sub">Стрим со Льва Толстого с ДинойБлин · коллаба с <strong>ДинаБлин</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">11 421</div><div class="card-sub">включая коллаб · ДинаБлин</div></div>
-    <div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">1 337</div><div class="card-sub">включая коллаб · ДинаБлин</div></div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">27 799</div><div class="card-sub">наши 3 816 + ДинаБлин 23 983</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн ДинаБлин</div><div class="card-value">1 012</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">8 938</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">73</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">122 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">37</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Уникальные общие зрители</div><div class="card-value">11 421</div><div class="card-sub">включая коллаб · ДинаБлин</div></div>
+<div class="card highlight"><div class="card-label">Макс. общий онлайн</div><div class="card-value">1 337</div><div class="card-sub">включая коллаб · ДинаБлин</div></div>
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">27 799</div><div class="card-sub">наши 3 816 + ДинаБлин 23 983</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн ДинаБлин</div><div class="card-value">1 012</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">3 816</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">3 264</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">8 938</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">92</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">73</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">122 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">37</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>1 966</span></div>
@@ -3399,23 +3472,29 @@
 <!-- ══════════════ 17 СЕНТЯБРЯ ══════════════ -->
 <div class="panel">
   <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">17 сентября 2026</div>
       <div class="card-sub">Алиса AI — Мастер подземелий! Вечер квестов · коллаба с <strong>Анеком</strong></div>
     </div>
-    <div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">21 795</div><div class="card-sub">наши 5 654 + Анек 16 141</div></div>
-    <div class="card highlight"><div class="card-label">Макс. онлайн Анека</div><div class="card-value">1 100</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card highlight"><div class="card-label">Уник. зрители Анека</div><div class="card-value">9 734</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card highlight"><div class="card-label">Сред. онлайн Анека</div><div class="card-value">457</div><div class="card-sub">коллаб-канал</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">13 018</div></div>
-    <div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">65</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн (наш канал)</div><div class="card-value">147</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">200 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">172</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card highlight"><div class="card-label">Просмотры (всего)</div><div class="card-value">21 795</div><div class="card-sub">наши 5 654 + Анек 16 141</div></div>
+<div class="card highlight"><div class="card-label">Макс. онлайн Анека</div><div class="card-value">1 100</div><div class="card-sub">коллаб-канал</div></div>
+<div class="card highlight"><div class="card-label">Уник. зрители Анека</div><div class="card-value">9 734</div><div class="card-sub">коллаб-канал</div></div>
+<div class="card highlight"><div class="card-label">Сред. онлайн Анека</div><div class="card-value">457</div><div class="card-sub">коллаб-канал</div></div>
+</div>
+<div class="section-label">Канал Яндекса</div>
+<div class="cards cards-own">
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">5 654</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">4 513</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">13 018</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">147</div></div>
+<div class="card"><div class="card-label">Средний онлайн (наш канал)</div><div class="card-value">65</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">200 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">172</div></div>
+</div>
+<div class="statistics-note">Общие показатели учитывают коллаборацию. Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. Показатели канала Яндекса приведены отдельно по сводной таблице.</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>8 574</span></div>
@@ -3492,23 +3571,23 @@
 
 <!-- ══════════════ 25 СЕНТЯБРЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">25 сентября 2026</div>
       <div class="card-sub">Стрим ко Дню рождения Яндекса — «Горящий стул»</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">2 483</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">1 860</div></div>
-    <div class="card"><div class="card-label">Уник. зрители (чат)</div><div class="card-value">67</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">5 685</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">74</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">96 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">11</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">59</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">2 483</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">1 860</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">5 685</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">74</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">59</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">96 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">11</div></div>
+<div class="card"><div class="card-label">Уник. зрители (чат)</div><div class="card-value">67</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>350</span></div>
@@ -3586,22 +3665,22 @@
 
 <!-- ══════════════ 28 СЕНТЯБРЯ ══════════════ -->
 <div class="panel">
-  <div class="section-label">Данные стрима</div>
-  <div class="cards">
-    <div class="card">
+  <div class="section-label">Данные стрима · канал Яндекса</div>
+<div class="cards">
+<div class="card">
       <div class="card-label">Дата</div>
       <div class="card-value accent" style="font-size:17px">28 сентября 2026</div>
       <div class="card-sub">Управляем роботами-доставщиками в прямом эфире. Гость — Марат Мавлютин, руководитель подразделения</div>
     </div>
-    <div class="card"><div class="card-label">Просмотры</div><div class="card-value">8 424</div></div>
-    <div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">7 283</div></div>
-    <div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">49 082</div></div>
-    <div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 083</div></div>
-    <div class="card"><div class="card-label">Длительность</div><div class="card-value">121 мин</div></div>
-    <div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">143</div></div>
-    <div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">409</div></div>
-  </div>
-  <hr class="divider" />
+<div class="card"><div class="card-label">Просмотры</div><div class="card-value">8 424</div></div>
+<div class="card"><div class="card-label">Уникальные зрители</div><div class="card-value">7 283</div></div>
+<div class="card"><div class="card-label">Минут просмотра</div><div class="card-value">49 082</div></div>
+<div class="card"><div class="card-label">Макс. онлайн</div><div class="card-value">1 083</div></div>
+<div class="card"><div class="card-label">Средний онлайн</div><div class="card-value">409</div></div>
+<div class="card"><div class="card-label">Длительность</div><div class="card-value">121 мин</div></div>
+<div class="card"><div class="card-label">Новые фолловеры</div><div class="card-value">143</div></div>
+</div>
+<hr class="divider" />
   <div class="section-label">Аналитика комментариев</div>
   <div class="stats-row">
     <div class="stat-pill">Всего сообщений: <span>1 400</span></div>

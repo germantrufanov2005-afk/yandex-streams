@@ -1,0 +1,745 @@
+{
+  "source_url": "https://docs.google.com/spreadsheets/d/1Pg1Z9qwxsY-d92MkwxHC6nhbDk0q3SueC9DB816KtDo/edit?gid=1231339815",
+  "sheet": "Статистика TWITCH ",
+  "source_checked_on": "2026-10-23",
+  "records": [
+    {
+      "id": "sheet-row-28",
+      "group": "group-apr",
+      "display_date": "21 апреля 2026",
+      "sheet_date": "2026-04-21",
+      "sheet_row": 28,
+      "title": "Автономный Авто",
+      "own": {
+        "views": 15681,
+        "unique": 12718,
+        "chat_unique": null,
+        "minutes": 75263,
+        "peak": 2801,
+        "duration": 484,
+        "follows": 2001,
+        "average": 155
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-34",
+      "group": "group-apr",
+      "display_date": "22 апреля 2026",
+      "sheet_date": "2026-04-22",
+      "sheet_row": 34,
+      "title": "Крафт с Крастером",
+      "own": {
+        "views": 10848,
+        "unique": 8721,
+        "chat_unique": 534,
+        "minutes": 41947,
+        "peak": 1173,
+        "duration": 229,
+        "follows": 1909,
+        "average": 182
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-11",
+      "group": "group-apr",
+      "display_date": "23 апреля 2026",
+      "sheet_date": "2026-04-23",
+      "sheet_row": 11,
+      "title": "Вечеринка с Дипинсом",
+      "own": {
+        "views": 54320,
+        "unique": 30841,
+        "chat_unique": 5019,
+        "minutes": 655502,
+        "peak": 9168,
+        "duration": 140,
+        "follows": 9132,
+        "average": 7070
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-20",
+      "group": "group-apr",
+      "display_date": "30 апреля 2026",
+      "sheet_date": "2026-04-30",
+      "sheet_row": 20,
+      "title": "вопрос ответ тим яндекс",
+      "own": {
+        "views": 32666,
+        "unique": 26792,
+        "chat_unique": null,
+        "minutes": 47078,
+        "peak": 902,
+        "duration": 92,
+        "follows": 476,
+        "average": 350
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-27",
+      "group": "group-may",
+      "display_date": "14 мая 2026",
+      "sheet_date": "2026-05-14",
+      "sheet_row": 27,
+      "title": "БОТАЕМ ОЛИМПИАДНЫЕ АЛГОСЫ ВМЕСТЕ С @milanrodd",
+      "own": {
+        "views": 17311,
+        "unique": 13603,
+        "chat_unique": 279,
+        "minutes": 19178,
+        "peak": 129,
+        "duration": 220,
+        "follows": 287,
+        "average": 80
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-15",
+      "group": "group-may",
+      "display_date": "19 мая 2026",
+      "sheet_date": "2026-05-19",
+      "sheet_row": 15,
+      "title": "Братишкин в логове роботов Яндекса",
+      "own": {
+        "views": 49315,
+        "unique": 32876,
+        "chat_unique": 1500,
+        "minutes": 414955,
+        "peak": 3331,
+        "duration": 167,
+        "follows": 1389,
+        "average": 2293
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-7",
+      "group": "group-may",
+      "display_date": "20 мая 2026",
+      "sheet_date": "2026-05-20",
+      "sheet_row": 7,
+      "title": "ВЫБИРАЕМ СТУДЕНЧЕСКИЕ МУЗЫКАЛЬНЫЕ ГРУППЫ НА YOUNG CON",
+      "own": {
+        "views": 78833,
+        "unique": 51099,
+        "chat_unique": 2496,
+        "minutes": 461462,
+        "peak": 3200,
+        "duration": 201,
+        "follows": 684,
+        "average": 2392
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-8",
+      "group": "group-may",
+      "display_date": "26 мая 2026",
+      "sheet_date": "2026-05-26",
+      "sheet_row": 8,
+      "title": "ОТВЕЧАЕМ НА ВОПРОСЫ ПРО ЦИФРОВУЮ ДОСТУПНОСТЬ В ЯНДЕКСЕ",
+      "own": {
+        "views": 77392,
+        "unique": 63760,
+        "chat_unique": 769,
+        "minutes": 102585,
+        "peak": 1256,
+        "duration": 185,
+        "follows": 840,
+        "average": 555
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-17",
+      "group": "group-jun",
+      "display_date": "2 июня 2026",
+      "sheet_date": "2026-06-03",
+      "sheet_row": 17,
+      "title": "Разбор Яндекс Станции",
+      "own": {
+        "views": 40688,
+        "unique": 35760,
+        "chat_unique": 900,
+        "minutes": 142691,
+        "peak": 2076,
+        "duration": 155,
+        "follows": 564,
+        "average": 915
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-18",
+      "group": "group-jun",
+      "display_date": "3 июня 2026",
+      "sheet_date": "2026-06-04",
+      "sheet_row": 18,
+      "title": "БОСС САМОКАТОВ ЯНДЕКСА ОТПРАВЛЯЕТСЯ В ПОЛЯ И СТАНОВИТСЯ ЭНЕРДЖАЙЗЕРОМ",
+      "own": {
+        "views": 38685,
+        "unique": 31826,
+        "chat_unique": 523,
+        "minutes": 100263,
+        "peak": 1005,
+        "duration": 156,
+        "follows": 317,
+        "average": 643
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-10",
+      "group": "group-jun",
+      "display_date": "13 июня 2026",
+      "sheet_date": "2026-06-13",
+      "sheet_row": 10,
+      "title": "дрифтуем вместе с техлидом из Яндекса",
+      "own": {
+        "views": 67723,
+        "unique": 56363,
+        "chat_unique": 662,
+        "minutes": 144302,
+        "peak": 1482,
+        "duration": 144,
+        "follows": 484,
+        "average": 1009
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-14",
+      "group": "group-jun",
+      "display_date": "19 июня 2026",
+      "sheet_date": "2026-06-19",
+      "sheet_row": 14,
+      "title": "ОТВЕЧАЕМ НА ВАШИ ВОПРОСЫ И ИГРАЕМ В DOTA-ТУРБО ВМЕСТЕ С ДМОМ ИЗ TEAM YANDEX",
+      "own": {
+        "views": 51139,
+        "unique": 44862,
+        "chat_unique": 312,
+        "minutes": 109100,
+        "peak": 1475,
+        "duration": 154,
+        "follows": 553,
+        "average": 708
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-13",
+      "group": "group-jun",
+      "display_date": "24 июня 2026",
+      "sheet_date": "2026-06-24",
+      "sheet_row": 13,
+      "title": "ОТВЕЧАЕМ НА ВАШИ ВОПРОСЫ ПРО ЯНДЕКС ДРОПС И «МОЮ ПАМЯТЬ»",
+      "own": {
+        "views": 51434,
+        "unique": 44529,
+        "chat_unique": 670,
+        "minutes": 95799,
+        "peak": 1008,
+        "duration": 136,
+        "follows": 1125,
+        "average": 699
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-9",
+      "group": "group-jun",
+      "display_date": "25 июня 2026",
+      "sheet_date": "2026-06-25",
+      "sheet_row": 9,
+      "title": "ГУЛЯЕМ ПО YOUNG CON — ФЕСТУ ЯНДЕКСА ПРО КАРЬЕРУ И ТЕХНОЛОГИИ",
+      "own": {
+        "views": 72623,
+        "unique": 55803,
+        "chat_unique": 4439,
+        "minutes": 304305,
+        "peak": 4223,
+        "duration": 244,
+        "follows": 1985,
+        "average": 1247
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-24",
+      "group": "group-jun",
+      "display_date": "26 июня 2026",
+      "sheet_date": "2026-06-26",
+      "sheet_row": 24,
+      "title": "ВАЙБКОДИМ И ВАЙБКРАФТИМ ВМЕСТЕ С @MILANRODD",
+      "own": {
+        "views": 27034,
+        "unique": 23002,
+        "chat_unique": 343,
+        "minutes": 62520,
+        "peak": 673,
+        "duration": 153,
+        "follows": 316,
+        "average": 398
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-33",
+      "group": "group-jul",
+      "display_date": "13 июля 2026",
+      "sheet_date": "2026-07-13",
+      "sheet_row": 33,
+      "title": "ЧТО ВНУТРИ СТАНЦИИ СТРИТ? РАЗБИРАЕМ УМНЫЕ УСТРОЙСТВА ЯНДЕКСА",
+      "own": {
+        "views": 10940,
+        "unique": 8075,
+        "chat_unique": 258,
+        "minutes": 70362,
+        "peak": 1349,
+        "duration": 121,
+        "follows": 109,
+        "average": 577
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-26",
+      "group": "group-jul",
+      "display_date": "16 июля 2026",
+      "sheet_date": "2026-07-16",
+      "sheet_row": 26,
+      "title": "БОСС САМОКАТОВ НАВОДИТ ПОРЯДОК НА УЛИЦАХ ГОРОДА",
+      "own": {
+        "views": 19571,
+        "unique": 17180,
+        "chat_unique": 210,
+        "minutes": 71858,
+        "peak": 1339,
+        "duration": 112,
+        "follows": 249,
+        "average": 642
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-19",
+      "group": "group-jul",
+      "display_date": "24 июля 2026",
+      "sheet_date": "2026-07-24",
+      "sheet_row": 19,
+      "title": "ВАЙБКОДИМ И ВАЙБКРАФТИМ ИГРУ ВМЕСТЕ С @MILANRODD",
+      "own": {
+        "views": 33116,
+        "unique": 28805,
+        "chat_unique": 284,
+        "minutes": 64967,
+        "peak": 519,
+        "duration": 198,
+        "follows": 289,
+        "average": 328
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-21",
+      "group": "group-jul",
+      "display_date": "30 июля 2026",
+      "sheet_date": "2026-07-30",
+      "sheet_row": 21,
+      "title": "ОДИН ДЕНЬ ИЗ ЖИЗНИ КУРЬЕРА ЯНДЕКС ЕДЫ",
+      "own": {
+        "views": 32658,
+        "unique": 27255,
+        "chat_unique": 333,
+        "minutes": 93808,
+        "peak": 975,
+        "duration": 152,
+        "follows": 413,
+        "average": 617
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-30",
+      "group": "group-jul",
+      "display_date": "31 июля 2026",
+      "sheet_date": "2026-07-31",
+      "sheet_row": 30,
+      "title": "1000 СТРАЗ, ПОЛНЫЙ ГАЗ! САМОКАТ ЯНДЕКСА НА ПРОКАЧКЕ",
+      "own": {
+        "views": 12437,
+        "unique": 10639,
+        "chat_unique": 124,
+        "minutes": 26543,
+        "peak": 1395,
+        "duration": 114,
+        "follows": 120,
+        "average": 229
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-23",
+      "group": "group-aug",
+      "display_date": "7 августа 2026",
+      "sheet_date": "2026-08-07",
+      "sheet_row": 23,
+      "title": "Пятничные разгоны: ИИ пишет код, а что делает программист?",
+      "own": {
+        "views": 30578,
+        "unique": 23265,
+        "chat_unique": 156,
+        "minutes": 65508,
+        "peak": 1375,
+        "duration": 107,
+        "follows": 312,
+        "average": 607
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-16",
+      "group": "group-aug",
+      "display_date": "13 августа 2026",
+      "sheet_date": "2026-08-13",
+      "sheet_row": 16,
+      "title": "Первый день The International",
+      "own": {
+        "views": 44212,
+        "unique": 33364,
+        "chat_unique": 1098,
+        "minutes": 136593,
+        "peak": 956,
+        "duration": 304,
+        "follows": 719,
+        "average": 451
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">57 346</div><div class=\"card-sub\">включая коллаб · VooDooSh</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">3 206</div><div class=\"card-sub\">включая коллаб · VooDooSh</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">137 853</div><div class=\"card-sub\">наши 44 212 + VooDooSh 93 641</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн стримера</div><div class=\"card-value\">1 505</div><div class=\"card-sub\">VooDooSh · коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-6",
+      "group": "group-aug",
+      "display_date": "15 августа 2026",
+      "sheet_date": "2026-08-15",
+      "sheet_row": 6,
+      "title": "Второй день The International",
+      "own": {
+        "views": 96511,
+        "unique": 70475,
+        "chat_unique": 1514,
+        "minutes": 206472,
+        "peak": 571,
+        "duration": 802,
+        "follows": 828,
+        "average": 240
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">102 887</div><div class=\"card-sub\">включая коллаб · VooDooSh + BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">2 325</div><div class=\"card-sub\">включая коллаб · VooDooSh + BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">238 524</div><div class=\"card-sub\">наши 96 401 + VooDooSh 111 372 + BrowJey 30 751</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн VooDooSh</div><div class=\"card-value\">1 002</div><div class=\"card-sub\">коллаб-канал</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн BrowJey</div><div class=\"card-value\">348</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-12",
+      "group": "group-aug",
+      "display_date": "16 августа 2026",
+      "sheet_date": "2026-08-17",
+      "sheet_row": 12,
+      "title": "Третий день The International",
+      "own": {
+        "views": 52819,
+        "unique": 43061,
+        "chat_unique": 823,
+        "minutes": 93632,
+        "peak": 784,
+        "duration": 298,
+        "follows": 343,
+        "average": 363
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">52 427</div><div class=\"card-sub\">включая коллаб · goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">2 237</div><div class=\"card-sub\">включая коллаб · goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">78 165</div><div class=\"card-sub\">наши 52 491 + goodoq 25 674</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн goodoq</div><div class=\"card-value\">608</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-29",
+      "group": "group-aug",
+      "display_date": "20 августа 2026",
+      "sheet_date": "2026-08-20",
+      "sheet_row": 29,
+      "title": "The International Play-off",
+      "own": {
+        "views": 14157,
+        "unique": 11539,
+        "chat_unique": 412,
+        "minutes": 36812,
+        "peak": 491,
+        "duration": 199,
+        "follows": 92,
+        "average": 185
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">17 074</div><div class=\"card-sub\">включая коллаб · goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">838</div><div class=\"card-sub\">включая коллаб · goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">26 317</div><div class=\"card-sub\">наши 14 076 + goodoq 12 241</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн goodoq</div><div class=\"card-value\">297</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-22",
+      "group": "group-aug",
+      "display_date": "21 августа 2026",
+      "sheet_date": "2026-08-21",
+      "sheet_row": 22,
+      "title": "The International Play-off day 2",
+      "own": {
+        "views": 32486,
+        "unique": 25506,
+        "chat_unique": 1294,
+        "minutes": 82955,
+        "peak": 783,
+        "duration": 342,
+        "follows": 352,
+        "average": 265
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">53 521</div><div class=\"card-sub\">включая коллаб · VooDooSh + goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">3 199</div><div class=\"card-sub\">включая коллаб · VooDooSh + goodoq</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">110 881</div><div class=\"card-sub\">наши 32 396 + VooDooSh 61 127 + goodoq 17 358</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн VooDooSh</div><div class=\"card-value\">1 405</div><div class=\"card-sub\">коллаб-канал</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн goodoq</div><div class=\"card-value\">353</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-25",
+      "group": "group-aug",
+      "display_date": "22 августа 2026",
+      "sheet_date": "2026-08-22",
+      "sheet_row": 25,
+      "title": "The International Play-off day 3",
+      "own": {
+        "views": 22215,
+        "unique": 17345,
+        "chat_unique": 1061,
+        "minutes": 54661,
+        "peak": 357,
+        "duration": 271,
+        "follows": 230,
+        "average": 202
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">36 833</div><div class=\"card-sub\">включая коллаб · VooDooSh + BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">2 832</div><div class=\"card-sub\">включая коллаб · VooDooSh + BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">85 797</div><div class=\"card-sub\">наши 22 119 + VooDooSh 59 595 + BrowJey 4 083</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн VooDooSh</div><div class=\"card-value\">1 032</div><div class=\"card-sub\">коллаб-канал</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн BrowJey</div><div class=\"card-value\">396</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-31",
+      "group": "group-aug",
+      "display_date": "23 августа 2026",
+      "sheet_date": "2026-08-23",
+      "sheet_row": 31,
+      "title": "The International final",
+      "own": {
+        "views": 11603,
+        "unique": 9100,
+        "chat_unique": 270,
+        "minutes": 18367,
+        "peak": 247,
+        "duration": 155,
+        "follows": 163,
+        "average": 119
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">10 456</div><div class=\"card-sub\">включая коллаб · BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">701</div><div class=\"card-sub\">включая коллаб · BrowJey</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">15 509</div><div class=\"card-sub\">наши 11 433 + BrowJey 4 076</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн BrowJey</div><div class=\"card-value\">304</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-32",
+      "group": "group-aug",
+      "display_date": "28 августа 2026",
+      "sheet_date": "2026-08-28",
+      "sheet_row": 32,
+      "title": "ДЕНЬ ОЛИМПИАДНИКОВ В ЯНДЕКСЕ",
+      "own": {
+        "views": 11004,
+        "unique": 8588,
+        "chat_unique": 8339,
+        "minutes": 23547,
+        "peak": 264,
+        "duration": 153,
+        "follows": 747,
+        "average": 154
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">22 799</div><div class=\"card-sub\">включая коллаб · Дипинс</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">16 230</div><div class=\"card-sub\">включая коллаб · Дипинс</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">178 082</div><div class=\"card-sub\">наши 10 857 + Дипинс 167 225</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн Дипинса</div><div class=\"card-value\">7 492</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-35",
+      "group": "group-sep",
+      "display_date": "3 сентября 2026",
+      "sheet_date": "2026-09-03",
+      "sheet_row": 35,
+      "title": "АЛИСА AI — МАСТЕР ПОДЗЕМЕЛИЙ! ВЕЧЕР КВЕСТОВ С Хайвером",
+      "own": {
+        "views": 9883,
+        "unique": 8060,
+        "chat_unique": 360,
+        "minutes": 64613,
+        "peak": 1382,
+        "duration": 214,
+        "follows": 109,
+        "average": 304
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">16 911</div><div class=\"card-sub\">включая коллаб · HYVER</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">2 018</div><div class=\"card-sub\">включая коллаб · HYVER</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">28 117</div><div class=\"card-sub\">наши 9 815 + HYVER 18 302</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн HYVER</div><div class=\"card-value\">596</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-38",
+      "group": "group-sep",
+      "display_date": "9 сентября 2026",
+      "sheet_date": "2026-09-09",
+      "sheet_row": 38,
+      "title": "Стрим СО ЛЬВА ТОЛСТОГО",
+      "own": {
+        "views": 3816,
+        "unique": 3264,
+        "chat_unique": 210,
+        "minutes": 8938,
+        "peak": 92,
+        "duration": 122,
+        "follows": 37,
+        "average": 73
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Уникальные общие зрители</div><div class=\"card-value\">11 421</div><div class=\"card-sub\">включая коллаб · ДинаБлин</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. общий онлайн</div><div class=\"card-value\">1 337</div><div class=\"card-sub\">включая коллаб · ДинаБлин</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">27 799</div><div class=\"card-sub\">наши 3 816 + ДинаБлин 23 983</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн ДинаБлин</div><div class=\"card-value\">1 012</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-37",
+      "group": "group-sep",
+      "display_date": "17 сентября 2026",
+      "sheet_date": "2026-09-17",
+      "sheet_row": 37,
+      "title": "АЛИСА AI — МАСТЕР ПОДЗЕМЕЛИЙ! ВЕЧЕР КВЕСТОВ С Анек",
+      "own": {
+        "views": 5654,
+        "unique": 4513,
+        "chat_unique": 817,
+        "minutes": 13018,
+        "peak": 147,
+        "duration": 200,
+        "follows": 172,
+        "average": 65
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": [
+        "<div class=\"card highlight\"><div class=\"card-label\">Просмотры (всего)</div><div class=\"card-value\">21 795</div><div class=\"card-sub\">наши 5 654 + Анек 16 141</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Макс. онлайн Анека</div><div class=\"card-value\">1 100</div><div class=\"card-sub\">коллаб-канал</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Уник. зрители Анека</div><div class=\"card-value\">9 734</div><div class=\"card-sub\">коллаб-канал</div></div>",
+        "<div class=\"card highlight\"><div class=\"card-label\">Сред. онлайн Анека</div><div class=\"card-value\">457</div><div class=\"card-sub\">коллаб-канал</div></div>"
+      ]
+    },
+    {
+      "id": "sheet-row-39",
+      "group": "group-sep",
+      "display_date": "25 сентября 2026",
+      "sheet_date": "2026-09-25",
+      "sheet_row": 39,
+      "title": "СТРИМ КО ДНЮ РОЖДЕНИЮ ЯНДЕКСА!",
+      "own": {
+        "views": 2483,
+        "unique": 1860,
+        "chat_unique": 67,
+        "minutes": 5685,
+        "peak": 74,
+        "duration": 96,
+        "follows": 11,
+        "average": 59
+      },
+      "show_chat_unique": true,
+      "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-36",
+      "group": "group-sep",
+      "display_date": "28 сентября 2026",
+      "sheet_date": "2026-09-28",
+      "sheet_row": 36,
+      "title": "УПРАВЛЯЕМ РОБОТАМИ-ДОСТАВЩИКАМИ В ПРЯМОМ ЭФИРЕ",
+      "own": {
+        "views": 8424,
+        "unique": 7283,
+        "chat_unique": 195,
+        "minutes": 49082,
+        "peak": 1083,
+        "duration": 121,
+        "follows": 143,
+        "average": 409
+      },
+      "show_chat_unique": false,
+      "historical_collaboration_cards": []
+    }
+  ]
+}
