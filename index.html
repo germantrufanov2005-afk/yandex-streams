@@ -109,6 +109,71 @@
     .raid-pill .raid-time { color:var(--muted); }
     .cards-own { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
     .statistics-note { font-size:11px; color:var(--muted); line-height:1.6; margin:-20px 0 32px; }
+
+    /* Overview styles are scoped so all other tabs keep their appearance. */
+    #group-overview .ov-heading { margin-bottom:22px; }
+    #group-overview .ov-heading .section-label { margin-bottom:8px; }
+    #group-overview h2 { font-size:25px; line-height:1.25; font-weight:700; letter-spacing:-.025em; }
+    #group-overview .ov-heading p { font-size:13px; color:var(--muted); margin-top:9px; line-height:1.6; }
+    #group-overview .ov-kpis { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+    #group-overview .ov-metric { min-width:0; padding:22px 18px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
+    #group-overview .ov-label { display:block; color:var(--muted); font-size:12px; font-weight:500; line-height:1.4; margin-bottom:12px; }
+    #group-overview .ov-value { display:block; font-size:30px; line-height:1.1; font-weight:750; letter-spacing:-.035em; font-variant-numeric:tabular-nums; white-space:nowrap; }
+    #group-overview .ov-sub { display:block; font-size:11px; line-height:1.6; color:var(--muted); margin-top:9px; }
+    #group-overview .ov-footnote { font-size:11px; line-height:1.65; color:var(--muted); margin-top:16px; max-width:1050px; }
+    #group-overview .ov-section { margin-top:38px; padding-top:32px; border-top:1px solid var(--border); }
+    #group-overview .ov-collab-kpis { display:grid; grid-template-columns:1.35fr 1fr 1fr 1fr; gap:12px; }
+    #group-overview .ov-accent { border-color:var(--accent2); background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(168,85,247,.04)); }
+    #group-overview .ov-accent .ov-label { color:var(--accent3); }
+    #group-overview .ov-accent .ov-value { color:var(--accent3); }
+    #group-overview .ov-partners { display:flex; gap:7px; flex-wrap:wrap; margin-top:16px; }
+    #group-overview .ov-partners span { border:1px solid var(--border); border-radius:20px; background:var(--surface2); padding:5px 12px; font-size:11px; color:var(--text); }
+    #group-overview .ov-chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    #group-overview .ov-chart { min-width:0; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 20px; }
+    #group-overview h3 { font-size:15px; line-height:1.4; font-weight:600; }
+    #group-overview .ov-bars { display:flex; gap:10px; margin-top:24px; }
+    #group-overview .ov-bar { flex:1; min-width:0; border:0; background:transparent; color:var(--text); font-family:inherit; cursor:pointer; text-align:center; }
+    #group-overview .ov-bar-value { display:block; font-size:11px; font-weight:650; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    #group-overview .ov-bar-area { display:flex; align-items:flex-end; justify-content:center; height:140px; margin-top:10px; border-bottom:1px solid var(--border); }
+    #group-overview .ov-bar-fill { display:block; width:65%; min-height:3px; background:linear-gradient(0deg,var(--accent),var(--accent3)); border-radius:5px 5px 0 0; transition:filter .18s; }
+    #group-overview .ov-bar:hover .ov-bar-fill { filter:brightness(1.25); }
+    #group-overview .ov-bar-month { display:block; font-size:11px; color:var(--text); margin-top:12px; }
+    #group-overview .ov-bar-count { display:block; font-size:10px; color:var(--muted); margin-top:4px; }
+    #group-overview .ov-best-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    #group-overview .ov-best { font-family:inherit; color:var(--text); cursor:pointer; text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; align-items:flex-start; min-width:0; transition:border-color .18s; }
+    #group-overview .ov-best:hover { border-color:var(--accent2); }
+    #group-overview .ov-best .ov-value { color:var(--accent3); }
+    #group-overview .ov-best .ov-label { min-height:34px; }
+    #group-overview .ov-best-title { display:block; font-size:15px; font-weight:600; line-height:1.5; margin-top:22px; }
+    #group-overview .ov-best-date { display:block; color:var(--muted); font-size:12px; margin-top:6px; }
+    #group-overview .ov-link { display:block; font-size:12px; color:var(--accent3); padding-top:22px; margin-top:auto; }
+    #group-overview button:focus-visible { outline:2px solid var(--accent3); outline-offset:5px; border-radius:5px; }
+    #group-overview .ov-sentiment { display:grid; grid-template-columns:1fr 1fr; gap:36px; padding:24px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
+    #group-overview .ov-sentiment-bars { display:flex; flex-direction:column; gap:20px; }
+    #group-overview .ov-sentiment-meta { display:flex; justify-content:space-between; gap:12px; font-size:13px; margin-bottom:9px; }
+    #group-overview .ov-sentiment-track { height:8px; border-radius:4px; overflow:hidden; background:var(--surface2); }
+    #group-overview .ov-sentiment-context p { color:var(--muted); font-size:12px; line-height:1.7; margin-top:10px; }
+    @media(max-width:1050px) {
+      #group-overview .ov-kpis { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      #group-overview .ov-collab-kpis { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      #group-overview .ov-chart-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:600px) {
+      #group-overview h2 { font-size:22px; }
+      #group-overview .ov-kpis { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      #group-overview .ov-kpis .ov-metric:nth-child(2) { grid-column:1 / -1; grid-row:1; }
+      #group-overview .ov-metric { padding:18px 14px; }
+      #group-overview .ov-value { font-size:26px; }
+      #group-overview .ov-best-grid, #group-overview .ov-sentiment { grid-template-columns:1fr; }
+      #group-overview .ov-best .ov-label { min-height:0; }
+      #group-overview .ov-chart { padding:18px 10px; }
+      #group-overview .ov-chart h3 { padding-left:4px; }
+      #group-overview .ov-bars { gap:4px; }
+      #group-overview .ov-bar-value { font-size:9px; }
+      #group-overview .ov-bar-month { font-size:9px; }
+      #group-overview .ov-bar-count { font-size:9px; }
+      #group-overview .ov-sentiment { padding:20px; gap:26px; }
+    }
   </style>
 </head>
 <body>
@@ -135,253 +200,60 @@
 
 <!-- ═══════════════ ОБЗОР ═══════════════ -->
 <div class="month-group active" id="group-overview">
-
-  <!-- КЛЮЧЕВЫЕ ЦИФРЫ -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-bottom:28px;">
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Стримов</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">34</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">апрель — сентябрь 2026</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Просмотров</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">1,14M</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">1 140 259 всего</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Сумма уник. зрителей</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">891K</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">891 732 по эфирам · возможны повторы</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Минут просмотра</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">3,96M</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">≈ 66 000 часов</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Новых фолловеров</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">27 500</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">сумма новых подписок за 34 эфира</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,.06),transparent);pointer-events:none;"></div>
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Пиковый онлайн</div>
-      <div style="font-size:28px;font-weight:700;color:var(--text);line-height:1;">9 168</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:5px;">23.04 — Вечеринка с Дипинсом</div>
-    </div>
-  </div>
-
-  <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:-14px;margin-bottom:24px;">На канале сейчас ≈24 527 фолловеров — по данным команды на 23.10.2026. Это текущая аудитория, а не сумма новых подписок за эфиры.</div>
-  <div class="note"><strong>Статистика канала Яндекса:</strong> обзор за весь период учитывает только наш канал. С августа в карточках совместных эфиров дополнительно показаны общие показатели и статистика стримеров; наши показатели размещены отдельно под ними.</div>
-
-  <!-- ТОП-5 + СРЕДНИЙ ОНЛАЙН -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
-
-    <!-- ТОП-5 по просмотрам -->
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Рейтинг</div>
-      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:22px;">Топ-5 по просмотрам</div>
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="font-size:13px;font-weight:700;color:var(--accent3);width:18px;flex-shrink:0;">1</div>
-          <div style="flex:1;min-width:0;">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
-              <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">TI День 2 · 15.08</span>
-              <span style="font-size:12px;color:var(--accent3);font-weight:700;flex-shrink:0;margin-left:8px;">96 511</span>
-            </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;"></div></div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="font-size:13px;font-weight:700;color:var(--muted);width:18px;flex-shrink:0;">2</div>
-          <div style="flex:1;min-width:0;">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
-              <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Young Con с Дипинсом · 20.05</span>
-              <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">78 833</span>
-            </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:82%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.7;"></div></div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="font-size:13px;font-weight:700;color:var(--muted);width:18px;flex-shrink:0;">3</div>
-          <div style="flex:1;min-width:0;">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
-              <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Цифровая доступность · 26.05</span>
-              <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">77 392</span>
-            </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:80%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.6;"></div></div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="font-size:13px;font-weight:700;color:var(--muted);width:18px;flex-shrink:0;">4</div>
-          <div style="flex:1;min-width:0;">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
-              <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Young Con фест · 25.06</span>
-              <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">72 623</span>
-            </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:75%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.5;"></div></div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="font-size:13px;font-weight:700;color:var(--muted);width:18px;flex-shrink:0;">5</div>
-          <div style="flex:1;min-width:0;">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;">
-              <span style="font-size:13px;color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">Дрифт с техлидом · 13.06</span>
-              <span style="font-size:12px;color:var(--muted);flex-shrink:0;margin-left:8px;">67 723</span>
-            </div>
-            <div style="height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;"><div style="width:70%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:2px;opacity:.4;"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- СРЕДНИЙ ОНЛАЙН ДИНАМИКА -->
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Динамика</div>
-      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;">Средний онлайн</div>
-      <!-- График с осью Y -->
-      <div style="display:flex;gap:8px;">
-        <!-- Ось Y -->
-        <div style="display:flex;flex-direction:column;justify-content:space-between;height:110px;padding-bottom:0;flex-shrink:0;">
-          <div style="font-size:9px;color:var(--muted);line-height:1;">2k</div>
-          <div style="font-size:9px;color:var(--muted);line-height:1;">1.5k</div>
-          <div style="font-size:9px;color:var(--muted);line-height:1;">1k</div>
-          <div style="font-size:9px;color:var(--muted);line-height:1;">500</div>
-          <div style="font-size:9px;color:var(--muted);line-height:1;">0</div>
-        </div>
-        <!-- Бары + горизонтальные линии сетки -->
-        <div style="flex:1;position:relative;">
-          <!-- Сетка -->
-          <div style="position:absolute;left:0;right:0;bottom:92px;height:1px;background:var(--border);opacity:.5;"></div>
-          <div style="position:absolute;left:0;right:0;bottom:69px;height:1px;background:var(--border);opacity:.4;"></div>
-          <div style="position:absolute;left:0;right:0;bottom:46px;height:1px;background:var(--border);opacity:.4;"></div>
-          <div style="position:absolute;left:0;right:0;bottom:23px;height:1px;background:var(--border);opacity:.4;"></div>
-          <!-- Бары -->
-          <div style="display:flex;align-items:flex-end;gap:3px;height:110px;">
-            <div style="flex:1;height:7px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="21.04 · 155"></div>
-            <div style="flex:1;height:8px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="22.04 · 182"></div>
-            <div style="flex:1;height:110px;background:rgba(168,85,247,.6);border-radius:2px 2px 0 0;position:relative;" title="23.04 · 7 070 (Дипинс) — обрезан, масштаб до 2400">
-              <div style="position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:8px;color:rgba(255,255,255,.7);white-space:nowrap;">7k★</div>
-            </div>
-            <div style="flex:1;height:16px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.7;" title="30.04 · 350"></div>
-            <div style="flex:1;height:4px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.6;" title="14.05 · 80"></div>
-            <div style="flex:1;height:105px;background:rgba(168,85,247,.5);border-radius:2px 2px 0 0;" title="19.05 · 2 293 (Братишкин)"></div>
-            <div style="flex:1;height:110px;background:rgba(168,85,247,.5);border-radius:2px 2px 0 0;" title="20.05 · 2 392 (Дипинс Young Con)"></div>
-            <div style="flex:1;height:25px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.7;" title="26.05 · 555"></div>
-            <div style="flex:1;height:42px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.8;" title="03.06 · 915"></div>
-            <div style="flex:1;height:29px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="04.06 · 643"></div>
-            <div style="flex:1;height:46px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.85;" title="13.06 · 1 009"></div>
-            <div style="flex:1;height:32px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="19.06 · 708"></div>
-            <div style="flex:1;height:32px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="24.06 · 699"></div>
-            <div style="flex:1;height:57px;background:rgba(168,85,247,.5);border-radius:2px 2px 0 0;" title="25.06 · 1 247 (Young Con фест)"></div>
-            <div style="flex:1;height:18px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.7;" title="26.06 · 398"></div>
-            <div style="flex:1;height:26px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="13.07 · 577"></div>
-            <div style="flex:1;height:29px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="16.07 · 642"></div>
-            <div style="flex:1;height:15px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.7;" title="24.07 · 328"></div>
-            <div style="flex:1;height:28px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="30.07 · 617"></div>
-            <div style="flex:1;height:10px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="31.07 · 229"></div>
-            <div style="flex:1;height:28px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="07.08 · 607"></div>
-            <div style="flex:1;height:21px;background:rgba(168,85,247,.4);border-radius:2px 2px 0 0;" title="TI 13–23.08 · ~450 (коллаб)"></div>
-            <div style="flex:1;height:7px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.65;" title="28.08 · 154"></div>
-            <div style="flex:1;height:14px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.7;" title="03.09 · 304"></div>
-            <div style="flex:1;height:3px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.6;" title="09.09 · 73"></div>
-            <div style="flex:1;height:3px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.6;" title="17.09 · 65"></div>
-            <div style="flex:1;height:3px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.6;" title="25.09 · 59"></div>
-            <div style="flex:1;height:19px;background:var(--accent2);border-radius:2px 2px 0 0;opacity:.75;" title="28.09 · 409"></div>
-          </div>
-        </div>
-      </div>
-      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:6px;padding-left:24px;">
-        <span>Апр</span><span>Май</span><span>Июнь</span><span>Июль</span><span>Авг</span><span>Сен</span>
-      </div>
-      <div style="display:flex;gap:14px;margin-top:10px;flex-wrap:wrap;align-items:center;">
-        <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);">
-          <div style="width:10px;height:6px;border-radius:2px;background:var(--accent2);"></div>собственный
-        </div>
-        <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);">
-          <div style="width:10px;height:6px;border-radius:2px;background:rgba(168,85,247,.5);"></div>коллаб
-        </div>
-        <div style="font-size:10px;color:var(--muted);">★ масштаб до 2 400, Дипинс 23.04 — 7 070</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ТОНАЛЬНОСТЬ И ФОРМАТЫ -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Атмосфера</div>
-      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:18px;">Тональность чатов</div>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;">
-            <span style="color:var(--pos);font-weight:600;">Позитив</span><span style="color:var(--muted);">~42,0%</span>
-          </div>
-          <div style="height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;">
-            <div style="width:42.0%;height:100%;background:var(--pos);border-radius:3px;"></div>
-          </div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;">
-            <span style="color:var(--neu);font-weight:600;">Нейтраль</span><span style="color:var(--muted);">~42,3%</span>
-          </div>
-          <div style="height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;">
-            <div style="width:42.3%;height:100%;background:var(--neu);border-radius:3px;"></div>
-          </div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;">
-            <span style="color:var(--neg);font-weight:600;">Негатив</span><span style="color:var(--muted);">~15,7%</span>
-          </div>
-          <div style="height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;">
-            <div style="width:15.7%;height:100%;background:var(--neg);border-radius:3px;"></div>
-          </div>
-        </div>
-      </div>
-      <div style="background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.18);border-radius:8px;padding:10px 14px;margin-top:16px;font-size:12px;color:var(--muted);line-height:1.5;">
-        Среднее процентов по 32 эфирам с аналитикой чата; каждый эфир имеет одинаковый вес. Чаты 21.04 и 07.08 отсутствуют и не учтены. Исторические проценты — оценки общей тональности чата, включая реакции на гостей, игру и эфир.
-      </div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Форматы</div>
-      <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:18px;">Что работает лучше всего</div>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
-            <span style="font-size:13px;color:var(--text);font-weight:500;">Коллаба с крупным стримером</span>
-            <span style="font-size:12px;color:var(--accent3);font-weight:700;">×3–10 онлайн</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);">Дипинс: 9 168 пик · Братишкин: 2 393 средний · TI: до 3 200</div>
-        </div>
-        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
-            <span style="font-size:13px;color:var(--text);font-weight:500;">IRL / показ изнутри</span>
-            <span style="font-size:12px;color:var(--accent3);font-weight:700;">высокий чат</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);">МИРЭА с Дипинсом: 54 320 просм · Роверы 28.09: 409 ср. онлайн</div>
-        </div>
-        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
-            <span style="font-size:13px;color:var(--text);font-weight:500;">Интерактив с продуктом</span>
-            <span style="font-size:12px;color:var(--accent3);font-weight:700;">вовлечённость</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);">D&D с Алисой: рейд Juice +2 389 · Роверы Q&A: самые длинные вопросы</div>
-        </div>
-        <div style="padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
-            <span style="font-size:13px;color:var(--text);font-weight:500;">Рейды от партнёров</span>
-            <span style="font-size:12px;color:var(--accent3);font-weight:700;">пиковый онлайн</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);">Juice +2 389 · goodoq +1 450 · Tabula +700 · tankzor +289</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="ov-heading"><div class="section-label">Апрель — сентябрь 2026</div><h2>Результаты канала Яндекса</h2><p>34 эфира · показатели нашего канала за весь период</p></div>
+<div class="ov-kpis">
+<div class="ov-metric"><div class="ov-label">Эфиров</div><div class="ov-value">34</div><div class="ov-sub">апрель — сентябрь 2026</div></div>
+<div class="ov-metric"><div class="ov-label">Просмотров</div><div class="ov-value">1 140 259</div><div class="ov-sub">на канале Яндекса</div></div>
+<div class="ov-metric"><div class="ov-label">Часов просмотра</div><div class="ov-value">66 073</div><div class="ov-sub">3 964 371 минут · округлено до часа</div></div>
+<div class="ov-metric"><div class="ov-label">Средний онлайн</div><div class="ov-value">616</div><div class="ov-sub">взвешен по длительности эфиров</div></div>
+<div class="ov-metric"><div class="ov-label">Новых фолловеров</div><div class="ov-value">27 500</div><div class="ov-sub">сумма новых подписок за эфиры</div></div>
+</div>
+<p class="ov-footnote">На канале ≈24 527 фолловеров — по данным команды на 23.10.2026. Текущий размер аудитории отличается от суммы новых подписок за эфиры.</p>
+<section class="ov-section" aria-labelledby="ov-collabs">
+<div class="ov-heading"><div class="section-label">Август — сентябрь 2026</div><h2><span id="ov-collabs">Масштаб коллабораций</span></h2><p>Совместные эфиры, для которых внесены просмотры партнёрских каналов</p></div>
+<div class="ov-collab-kpis">
+<div class="ov-metric ov-accent"><div class="ov-label">Просмотры всех каналов</div><div class="ov-value">949 929</div><div class="ov-sub">наш канал + каналы партнёров</div></div>
+<div class="ov-metric"><div class="ov-label">Наш канал</div><div class="ov-value">304 360</div><div class="ov-sub">на этих же совместных эфирах</div></div>
+<div class="ov-metric"><div class="ov-label">Совместных эфиров</div><div class="ov-value">11</div><div class="ov-sub">с внесённой статистикой партнёров</div></div>
+<div class="ov-metric"><div class="ov-label">Партнёрских каналов</div><div class="ov-value">7</div><div class="ov-sub">уникальных каналов в этой выборке</div></div>
+</div>
+<div class="ov-partners"><span>BrowJey</span><span>goodoq</span><span>HYVER</span><span>VooDooSh</span><span>Анек</span><span>ДинаБлин</span><span>Дипинс</span></div>
+<p class="ov-footnote">Общие просмотры уже включают наш канал: их нельзя прибавлять к просмотрам в верхнем блоке. Это сумма просмотров, а не уникальный охват. Коллаборации до августа в этот блок не входят.</p></section>
+<section class="ov-section" aria-labelledby="ov-dynamics">
+<div class="ov-heading"><div class="section-label">По месяцам</div><h2><span id="ov-dynamics">Динамика нашего канала</span></h2><p>Одинаковая методика за весь период · без показателей партнёров</p></div>
+<div class="ov-chart-grid">
+<div class="ov-chart"><h3>Просмотры</h3><div class="ov-bars" role="group" aria-label="Просмотры по месяцам">
+<button type="button" class="ov-bar" onclick="switchMonth('apr')" aria-label="Апрель: 113 515 просмотров, эфиров: 4. Открыть месяц" title="Апрель: 113 515 просмотров, эфиров: 4"><span class="ov-bar-value">113 515</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:32.50%"></span></span><span class="ov-bar-month">Апрель</span><span class="ov-bar-count">4 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('may')" aria-label="Май: 222 851 просмотров, эфиров: 4. Открыть месяц" title="Май: 222 851 просмотров, эфиров: 4"><span class="ov-bar-value">222 851</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:63.79%"></span></span><span class="ov-bar-month">Май</span><span class="ov-bar-count">4 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('jun')" aria-label="Июнь: 349 326 просмотров, эфиров: 7. Открыть месяц" title="Июнь: 349 326 просмотров, эфиров: 7"><span class="ov-bar-value">349 326</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:100.00%"></span></span><span class="ov-bar-month">Июнь</span><span class="ov-bar-count">7 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('jul')" aria-label="Июль: 108 722 просмотров, эфиров: 5. Открыть месяц" title="Июль: 108 722 просмотров, эфиров: 5"><span class="ov-bar-value">108 722</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:31.12%"></span></span><span class="ov-bar-month">Июль</span><span class="ov-bar-count">5 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('aug')" aria-label="Август: 315 585 просмотров, эфиров: 9. Открыть месяц" title="Август: 315 585 просмотров, эфиров: 9"><span class="ov-bar-value">315 585</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:90.34%"></span></span><span class="ov-bar-month">Август</span><span class="ov-bar-count">9 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('sep')" aria-label="Сентябрь: 30 260 просмотров, эфиров: 5. Открыть месяц" title="Сентябрь: 30 260 просмотров, эфиров: 5"><span class="ov-bar-value">30 260</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:8.66%"></span></span><span class="ov-bar-month">Сентябрь</span><span class="ov-bar-count">5 эф.</span></button>
+</div></div>
+<div class="ov-chart"><h3>Средний онлайн</h3><div class="ov-bars" role="group" aria-label="Средний онлайн по месяцам">
+<button type="button" class="ov-bar" onclick="switchMonth('apr')" aria-label="Апрель: 1 205 зрителей, эфиров: 4. Открыть месяц" title="Апрель: 1 205 зрителей, эфиров: 4"><span class="ov-bar-value">1 205</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:94.66%"></span></span><span class="ov-bar-month">Апрель</span><span class="ov-bar-count">4 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('may')" aria-label="Май: 1 273 зрителей, эфиров: 4. Открыть месяц" title="Май: 1 273 зрителей, эфиров: 4"><span class="ov-bar-value">1 273</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:100.00%"></span></span><span class="ov-bar-month">Май</span><span class="ov-bar-count">4 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('jun')" aria-label="Июнь: 838 зрителей, эфиров: 7. Открыть месяц" title="Июнь: 838 зрителей, эфиров: 7"><span class="ov-bar-value">838</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:65.83%"></span></span><span class="ov-bar-month">Июнь</span><span class="ov-bar-count">7 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('jul')" aria-label="Июль: 469 зрителей, эфиров: 5. Открыть месяц" title="Июль: 469 зрителей, эфиров: 5"><span class="ov-bar-value">469</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:36.84%"></span></span><span class="ov-bar-month">Июль</span><span class="ov-bar-count">5 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('aug')" aria-label="Август: 276 зрителей, эфиров: 9. Открыть месяц" title="Август: 276 зрителей, эфиров: 9"><span class="ov-bar-value">276</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:21.68%"></span></span><span class="ov-bar-month">Август</span><span class="ov-bar-count">9 эф.</span></button>
+<button type="button" class="ov-bar" onclick="switchMonth('sep')" aria-label="Сентябрь: 189 зрителей, эфиров: 5. Открыть месяц" title="Сентябрь: 189 зрителей, эфиров: 5"><span class="ov-bar-value">189</span><span class="ov-bar-area"><span class="ov-bar-fill" style="height:14.85%"></span></span><span class="ov-bar-month">Сентябрь</span><span class="ov-bar-count">5 эф.</span></button>
+</div></div>
+</div><p class="ov-footnote">Просмотры суммируются. Средний онлайн рассчитан из средних значений эфиров в исходной таблице с весом по длительности каждого эфира. Число эфиров и длительность месяцев различаются.</p></section>
+<section class="ov-section" aria-labelledby="ov-best">
+<div class="ov-heading"><div class="section-label">Лидеры за весь период</div><h2><span id="ov-best">Лучшие эфиры</span></h2><p>По показателям нашего канала · нажмите на карточку, чтобы открыть эфир</p></div>
+<div class="ov-best-grid">
+<button type="button" class="ov-best" onclick="switchMonth('aug');switchTab('aug',2)"><span class="ov-label">Больше всего просмотров</span><span class="ov-value">96 511</span><span class="ov-sub">просмотров</span><span class="ov-best-title">Второй день The International</span><span class="ov-best-date">15 августа 2026</span><span class="ov-link">Открыть эфир ↗</span></button>
+<button type="button" class="ov-best" onclick="switchMonth('apr');switchTab('apr',2)"><span class="ov-label">Больше всего часов просмотра</span><span class="ov-value">10 925</span><span class="ov-sub">часов просмотра</span><span class="ov-best-title">Вечеринка с Дипинсом</span><span class="ov-best-date">23 апреля 2026</span><span class="ov-link">Открыть эфир ↗</span></button>
+<button type="button" class="ov-best" onclick="switchMonth('apr');switchTab('apr',2)"><span class="ov-label">Больше всего новых фолловеров</span><span class="ov-value">9 132</span><span class="ov-sub">новых фолловеров</span><span class="ov-best-title">Вечеринка с Дипинсом</span><span class="ov-best-date">23 апреля 2026</span><span class="ov-link">Открыть эфир ↗</span></button>
+</div></section>
+<section class="ov-section" aria-labelledby="ov-sentiment">
+<div class="ov-heading"><div class="section-label">Общая реакция аудитории</div><h2><span id="ov-sentiment">Тональность чатов</span></h2><p>32 из 34 эфиров с аналитикой чата · исторические оценки</p></div>
+<div class="ov-sentiment">
+<div class="ov-sentiment-bars">
+<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--pos)">Позитив</span><span style="color:var(--muted);">~42,0%</span></div><div class="ov-sentiment-track"><div style="width:42.0%;height:100%;background:var(--pos)"></div></div></div>
+<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--neu)">Нейтраль</span><span style="color:var(--muted);">~42,3%</span></div><div class="ov-sentiment-track"><div style="width:42.3%;height:100%;background:var(--neu)"></div></div></div>
+<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--neg)">Негатив</span><span style="color:var(--muted);">~15,7%</span></div><div class="ov-sentiment-track"><div style="width:15.7%;height:100%;background:var(--neg)"></div></div></div>
+</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по эфирам: каждый эфир имеет одинаковый вес. Это общая тональность чата — реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки сохранены; повторная разметка в рамках этого обновления не проводилась.</p></div></div></section>
 </div><!-- /group-overview -->
 
 <!-- ═══════════════ АПРЕЛЬ ═══════════════ -->
