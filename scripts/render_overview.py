@@ -49,7 +49,7 @@ def render(source):
     partner_views = combined - collab_own
     partner_share = rounded(partner_views / combined * 100) if combined else 0
     out = ['<div class="month-group active" id="group-overview">']
-    out += [heading('Апрель — сентябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфира · показатели нашего канала за весь период')]
+    out += [heading('Апрель — сентябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфира · показатели <strong>ТОЛЬКО НАШЕГО</strong> канала за весь период')]
     out += ['<div class="ov-kpis">',
             metric('Эфиров', str(len(records)), 'апрель — сентябрь 2026'),
             metric('Просмотров', fmt(own('views')), 'на канале Яндекса'),
