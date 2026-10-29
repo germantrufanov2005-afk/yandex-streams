@@ -57,7 +57,7 @@ def render(source):
             metric('Эфиров', str(len(records)), 'апрель — сентябрь 2026'),
             metric('Просмотров', fmt(own('views')), 'на канале Яндекса'),
             metric('Часов просмотра', fmt(rounded(own('minutes') / 60)), f"{fmt(own('minutes'))} минут · округлено до часа"),
-            metric('Средний онлайн', fmt(rounded(avg(records))), 'взвешен по длительности эфиров'),
+            metric('Средний онлайн', fmt(rounded(own('average') / len(records))), f'среднее по {len(records)} эфирам'),
             metric('Фолловеров на канале', followers_value, f'по данным команды на {followers_date}'), '</div>',
             '<p class="ov-footnote">Фолловеры — размер аудитории канала на указанную дату. Новые подписки за отдельные эфиры приведены на вкладках трансляций.</p>']
     out += ['<section class="ov-section" aria-labelledby="ov-collabs">',
