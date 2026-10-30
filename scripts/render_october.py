@@ -28,7 +28,7 @@ def chat_section(chat):
     chart = render_sentiment(values, fmt(sum(counts))).replace('≈','')
     for value, count in zip(values,counts):
         chart = chart.replace(f'<span class="pct">{pct(value)}%</span>', f'<span class="pct">{pct(value)}% · {fmt(count)} сообщений</span>')
-    out += [chart, '<div class="note"><strong>Нейтраль и вовлечение:</strong> нейтральные сообщения включают вопросы, обсуждение поиска самокатов, устройства техники и работы команды.</div>']
+    out += [chart, '<div class="note"><strong>Нейтраль и вовлечение:</strong> Доля нейтральных сообщений выше, поскольку зрители активно задавали вопросы о самокатах, поисках и работе команды. Такие сообщения показывают интерес к происходящему, но без явной эмоциональной оценки относятся к нейтральным.</div>']
     return '\n'.join(out)
 
 
@@ -49,10 +49,10 @@ def render(source):
         m,s=divmod(rem,60)
         time=f'{h}:{m:02}:{s:02}' if h else f'{m}:{s:02}'
         out.append(f'<span class="raid-pill"><span class="raid-who">{escape(raid["channel"])}</span><span class="raid-num">{fmt(raid["viewers_reported_by_twitch"])}</span><span class="raid-time">{time}</span></span>')
-    out += ['</div>',chat_section(chat),'<div class="section-label">Примеры сообщений</div>','<div class="quotes-grid">']
+    out += ['</div>',chat_section(chat),'<div class="section-label">Характерные комментарии</div>','<div class="quotes-grid">']
     for q in chat['quotes']:
         label={'pos':'+','neu':'○','neg':'−'}[q['label']]
-        out.append(f'<div class="q-card"><span class="q-badge {q["label"]}">{label}</span>{escape(q["text"])}</div>')
+        out.append(f'<div class="q-card"><span class="q-badge {q["label"]}">{label}</span>{escape(q["text"])}<div class="q-source">{escape(q["caption"])}</div></div>')
     out += ['</div>','<div class="feedback"><div class="feedback-title">Обратная связь команды</div>']
     out += [f'<p>{escape(p)}</p>' for p in chat['feedback']]
     out += ['</div>','</div>','<div class="panel" data-chat-exact="true">','<div class="section-label">Итоги октября · канал Яндекса</div>','<div class="cards">', card('Эфиров','1'), card('Просмотры (наш канал)',fmt(r['own']['views'])),card('Минут просмотра',fmt(r['own']['minutes'])),card('Пиковый онлайн',fmt(r['own']['peak'])),card('Средний онлайн',fmt(r['own']['average'])),card('Новые фолловеры',fmt(r['own']['follows'])),'</div>','<hr class="divider">','<div class="note">В дашборд внесён один октябрьский эфир, 29 октября. Сводка отражает только этот эфир и обновится при добавлении следующих.</div>',chat_section(chat),'</div>','</div>']
