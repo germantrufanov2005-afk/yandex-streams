@@ -28,7 +28,7 @@ def chat_section(chat):
     chart = render_sentiment(values, fmt(sum(counts))).replace('≈','')
     for value, count in zip(values,counts):
         chart = chart.replace(f'<span class="pct">{pct(value)}%</span>', f'<span class="pct">{pct(value)}% · {fmt(count)} сообщений</span>')
-    out += [chart, '<div class="note"><strong>Нейтраль и вовлечение:</strong> нейтральные сообщения включают вопросы, обсуждение поиска самокатов, устройства техники и работы команды. В 441 из 954 нейтральных сообщений есть вопросительный знак. Это формальный признак вопроса, а не отдельная оценка позитивной реакции. Проценты округлены до десятых с сохранением суммы 100%.</div>']
+    out += [chart, '<div class="note"><strong>Нейтраль и вовлечение:</strong> нейтральные сообщения включают вопросы, обсуждение поиска самокатов, устройства техники и работы команды.</div>']
     return '\n'.join(out)
 
 
@@ -55,7 +55,7 @@ def render(source):
         out.append(f'<div class="q-card"><span class="q-badge {q["label"]}">{label}</span>{escape(q["text"])}</div>')
     out += ['</div>','<div class="feedback"><div class="feedback-title">Обратная связь команды</div>']
     out += [f'<p>{escape(p)}</p>' for p in chat['feedback']]
-    out += ['</div>','<div class="note">Источники: строка 40 таблицы команды, запись и чат Twitch, обратная связь по эфиру. Сверено 30.10.2026. Средний онлайн взят из таблицы (324); в документе обратной связи указано 327. Разметка чата включает повторную проверку нейтральных сообщений.</div>','</div>','<div class="panel" data-chat-exact="true">','<div class="section-label">Итоги октября · канал Яндекса</div>','<div class="cards">', card('Эфиров','1'), card('Просмотры (наш канал)',fmt(r['own']['views'])),card('Минут просмотра',fmt(r['own']['minutes'])),card('Пиковый онлайн',fmt(r['own']['peak'])),card('Средний онлайн',fmt(r['own']['average'])),card('Новые фолловеры',fmt(r['own']['follows'])),'</div>','<hr class="divider">','<div class="note">В дашборд внесён один октябрьский эфир, 29 октября. Сводка отражает только этот эфир и обновится при добавлении следующих.</div>',chat_section(chat),'</div>','</div>']
+    out += ['</div>','</div>','<div class="panel" data-chat-exact="true">','<div class="section-label">Итоги октября · канал Яндекса</div>','<div class="cards">', card('Эфиров','1'), card('Просмотры (наш канал)',fmt(r['own']['views'])),card('Минут просмотра',fmt(r['own']['minutes'])),card('Пиковый онлайн',fmt(r['own']['peak'])),card('Средний онлайн',fmt(r['own']['average'])),card('Новые фолловеры',fmt(r['own']['follows'])),'</div>','<hr class="divider">','<div class="note">В дашборд внесён один октябрьский эфир, 29 октября. Сводка отражает только этот эфир и обновится при добавлении следующих.</div>',chat_section(chat),'</div>','</div>']
     html='\n'.join(out)
     old=groups(source).get('group-oct')
     if old:
