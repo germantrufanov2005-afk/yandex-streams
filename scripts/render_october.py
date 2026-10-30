@@ -40,7 +40,7 @@ def render(source):
     chat=json.loads((ROOT/'data/stream-2026-10-29.json').read_text())
     assert chat['status']=='approved' and chat['stream_id']==r['id']
     title=escape(r['title'])
-    date=card('Дата',r['display_date'],title)
+    date=card('Дата',r['display_date'],title).replace('class="card-value"', 'class="card-value accent" style="font-size:17px"', 1)
     out=['<div class="month-group" id="group-oct">', '<div class="stream-tabs">',f'<button class="tab active" onclick="switchTab(\'oct\',0)">29 октября · {title}</button>', '<button class="tab summary" onclick="switchTab(\'oct\',1)">Итоги октября</button>', '</div>', '<div class="panel active" data-chat-exact="true">', statistics(r,date).rstrip(), '<hr class="divider">',f'<div class="note"><strong>{title}.</strong> IRL-поиск и извлечение потерянных самокатов. <a href="{chat["video_url"]}" target="_blank" rel="noopener noreferrer" style="color:var(--accent3)">Смотреть запись ↗</a></div>','<div class="raids"><span class="raids-label">Рейды</span>']
     for raid in chat['raids']:
         if raid['channel'] not in {'evikey', 'Terablade'}:
