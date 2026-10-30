@@ -1,0 +1,96 @@
+{
+  "analysis_date": "2026-10-30",
+  "video_url": "https://www.twitch.tv/videos/2913840319",
+  "source_sha256": "1b2c245369a50f00ff65004a4c734541b967545dfb525ce807de228b5dc3a884",
+  "raw_messages": 1956,
+  "excluded_messages": 708,
+  "retained_messages": 1248,
+  "retained_authors": 209,
+  "counts": {
+    "positive": 150,
+    "neutral": 954,
+    "negative": 144
+  },
+  "exclusion_reasons": {
+    "standalone_greeting_or_non_substantive_reaction": 51,
+    "greeting_farewell_or_raid_greeting": 28,
+    "non_substantive_fragment_or_noise": 72,
+    "emotes_symbols_or_numbers_only": 122,
+    "official_channel_reply": 113,
+    "bot_announcement": 196,
+    "non_substantive_meme_or_copypasta": 16,
+    "same_author_repeat": 68,
+    "non_substantive_reaction": 2,
+    "semantic_repeat_same_author": 15,
+    "system_event": 20,
+    "bot_command": 1,
+    "subscription_acknowledgement": 4
+  },
+  "raids": [
+    {
+      "channel": "evikey",
+      "viewers_reported_by_twitch": 579,
+      "offset_seconds": 1478
+    },
+    {
+      "channel": "与丹从凵尺丹工",
+      "viewers_reported_by_twitch": 1,
+      "offset_seconds": 1594
+    },
+    {
+      "channel": "Terablade",
+      "viewers_reported_by_twitch": 613,
+      "offset_seconds": 4213
+    },
+    {
+      "channel": "lunehowl",
+      "viewers_reported_by_twitch": 1,
+      "offset_seconds": 8923
+    },
+    {
+      "channel": "Riza_club",
+      "viewers_reported_by_twitch": 17,
+      "offset_seconds": 9754
+    }
+  ],
+  "neutral_messages_with_question_mark": 441,
+  "stream_id": "sheet-row-40",
+  "revision": "neutral-review-v2",
+  "status": "approved",
+  "approved_on": "2026-10-30",
+  "reviewed_neutral_messages": 982,
+  "reclassified_neutral_to_positive": 28,
+  "feedback_url": "https://docs.google.com/document/d/1KjNJG0iJQVOpNgwBRT_7kl4_ZNrpETJHECnAjaM2qMQ?tab=t.jnlw8ucdky5c",
+  "quotes": [
+    {
+      "label": "pos",
+      "text": "Андрюха, держу кулачки за тебя"
+    },
+    {
+      "label": "pos",
+      "text": "Такие приятные ведущие, спасибо"
+    },
+    {
+      "label": "pos",
+      "text": "@yandex вам бы камеру дать ихтиандру, было бы интересно"
+    },
+    {
+      "label": "neu",
+      "text": "Как вы находите самокаты которые кинули в реку?"
+    },
+    {
+      "label": "neg",
+      "text": "Звук лагает"
+    },
+    {
+      "label": "neg",
+      "text": "Ясно, вопросы просто игнорят"
+    }
+  ],
+  "feedback": [
+    "Стрим получился атмосферным благодаря необычному IRL-сценарию. Команда доставала самокаты из красных зон и водоёмов, в том числе с участием водолаза. По ходу эфира рассказывали об устройстве техники и особенностях работы специалистов.",
+    "Реальное действие, понятная цель и неожиданные ситуации поддерживали интерес к происходящему. Кульминацией стал финальный выезд к заброшенному зданию, где удалось достать утопленный самокат.",
+    "В обратной связи команда отмечает удачное возвращение после перерыва, поддержку зрителей и лёгкую атмосферу. Это качественная оценка команды; доли тональности выше рассчитаны отдельно по сообщениям чата.",
+    "В отдельные моменты проседали звук и изображение при перемещениях между локациями. Для следующих эфиров стоит развивать сценарии с реальными действиями и результатом, которого зритель ждёт до конца."
+  ]
+}

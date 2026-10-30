@@ -11,7 +11,7 @@ from reconcile_dashboard import sentiment, percentages, pct
 from sync_statistics import collaboration_cards
 
 ROOT = Path(__file__).resolve().parents[1]
-MONTHS = {'apr': 'Апрель', 'may': 'Май', 'jun': 'Июнь', 'jul': 'Июль', 'aug': 'Август', 'sep': 'Сентябрь'}
+MONTHS = {'apr': 'Апрель', 'may': 'Май', 'jun': 'Июнь', 'jul': 'Июль', 'aug': 'Август', 'sep': 'Сентябрь', 'oct': 'Октябрь'}
 
 
 def fmt(n):
@@ -52,9 +52,9 @@ def render(source):
     partner_views = combined - collab_own
     partner_share = rounded(partner_views / combined * 100) if combined else 0
     out = ['<div class="month-group active" id="group-overview">']
-    out += [heading('Апрель — сентябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфира · показатели <strong>только нашего</strong> канала за весь период')]
+    out += [heading('Апрель — октябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфиров · показатели <strong>только нашего</strong> канала за весь период')]
     out += ['<div class="ov-kpis">',
-            metric('Эфиров', str(len(records)), 'апрель — сентябрь 2026'),
+            metric('Эфиров', str(len(records)), 'апрель — октябрь 2026'),
             metric('Просмотров', fmt(own('views')), 'на канале Яндекса'),
             metric('Часов просмотра', fmt(rounded(own('minutes') / 60)), f"{fmt(own('minutes'))} минут · округлено до часа"),
             metric('Средний онлайн', fmt(rounded(own('average') / len(records))), f'среднее по {len(records)} эфирам'),
@@ -92,10 +92,10 @@ def render(source):
     streams = [p for gid,g in groups(source).items() if gid != 'group-overview' for p in g.find('panel') if 'Дата' in cards(p)]
     with_chat = [p for p in streams if p.find('bar-meta')]
     values = percentages([sum(sentiment(p)[i] for p in with_chat) for i in range(3)])
-    out += ['<section class="ov-section" aria-labelledby="ov-sentiment">', heading('Общая реакция аудитории', '<span id="ov-sentiment">Тональность чатов</span>', f'{len(with_chat)} из {len(records)} эфиров с аналитикой чата · исторические оценки'), '<div class="ov-sentiment">', '<div class="ov-sentiment-bars">']
+    out += ['<section class="ov-section" aria-labelledby="ov-sentiment">', heading('Общая реакция аудитории', '<span id="ov-sentiment">Тональность чатов</span>', f'{len(with_chat)} из {len(records)} эфиров с аналитикой чата'), '<div class="ov-sentiment">', '<div class="ov-sentiment-bars">']
     for label,color,value in zip(['Позитив','Нейтраль','Негатив'],['pos','neu','neg'],values):
         out.append(f'<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--{color})">{label}</span><span style="color:var(--muted);">~{pct(value)}%</span></div><div class="ov-sentiment-track"><div style="width:{value:.1f}%;height:100%;background:var(--{color})"></div></div></div>')
-    out += ['</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по эфирам: каждый эфир имеет одинаковый вес. Это общая тональность чата — реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки сохранены; повторная разметка в рамках этого обновления не проводилась.</p></div></div></section>', '</div>']
+    out += ['</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по эфирам: каждый эфир имеет одинаковый вес. Это общая тональность чата — реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки за апрель–сентябрь сохранены. Для эфира 29 октября выполнены очистка и разметка сообщений, включая повторную проверку нейтральных реакций. Итог сочетает исторические оценки и новый анализ.</p></div></div></section>', '</div>']
     old = groups(source)['group-overview']
     return source[:old.start] + '\n'.join(out) + source[old.end:]
 

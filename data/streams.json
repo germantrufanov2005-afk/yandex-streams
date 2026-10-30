@@ -740,6 +740,27 @@
       },
       "show_chat_unique": false,
       "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-40",
+      "group": "group-oct",
+      "display_date": "29 октября 2026",
+      "sheet_date": "2026-10-29",
+      "sheet_row": 40,
+      "source_checked_on": "2026-10-30",
+      "title": "В поисках потерянных самокатов",
+      "own": {
+        "views": 8825,
+        "unique": 6428,
+        "chat_unique": 251,
+        "minutes": 71542,
+        "peak": 643,
+        "duration": 221,
+        "follows": 125,
+        "average": 324
+      },
+      "show_chat_unique": true,
+      "historical_collaboration_cards": []
     }
   ],
   "channel_followers": {

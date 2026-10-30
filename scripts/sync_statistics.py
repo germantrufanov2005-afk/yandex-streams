@@ -153,4 +153,4 @@ if __name__ == '__main__':
     elif after != before:
         raise SystemExit('Statistics differ from data/streams.json. Run with --write.')
     else:
-        print('All 34 stream statistics and derived totals agree with source data.')
+        print('All stream statistics and derived totals agree with source data.')

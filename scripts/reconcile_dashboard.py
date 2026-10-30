@@ -83,6 +83,8 @@ def reconcile(source):
         stream_panels.extend(streams)
         summaries = [p for p in panels if 'Дата' not in cards(p)]
         for summary in summaries:
+            if summary.attrs.get("data-chat-exact") == "true":
+                continue  # Exact summaries are rendered directly from message counts.
             # August's summary is explicitly the seven Community Cast streams.
             selected = streams[1:8] if key == 'group-aug' else streams
             selected = [p for p in selected if p.find('bar-meta')]
