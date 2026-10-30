@@ -43,11 +43,13 @@ def render(source):
     date=card('Дата',r['display_date'],title)
     out=['<div class="month-group" id="group-oct">', '<div class="stream-tabs">',f'<button class="tab active" onclick="switchTab(\'oct\',0)">29 октября · {title}</button>', '<button class="tab summary" onclick="switchTab(\'oct\',1)">Итоги октября</button>', '</div>', '<div class="panel active" data-chat-exact="true">', statistics(r,date).rstrip(), '<hr class="divider">',f'<div class="note"><strong>{title}.</strong> IRL-поиск и извлечение потерянных самокатов. <a href="{chat["video_url"]}" target="_blank" rel="noopener noreferrer" style="color:var(--accent3)">Смотреть запись ↗</a></div>','<div class="raids"><span class="raids-label">Рейды</span>']
     for raid in chat['raids']:
+        if raid['channel'] not in {'evikey', 'Terablade'}:
+            continue  # Only the two selected raids are displayed.
         h, rem=divmod(raid['offset_seconds'],3600)
         m,s=divmod(rem,60)
         time=f'{h}:{m:02}:{s:02}' if h else f'{m}:{s:02}'
         out.append(f'<span class="raid-pill"><span class="raid-who">{escape(raid["channel"])}</span><span class="raid-num">{fmt(raid["viewers_reported_by_twitch"])}</span><span class="raid-time">{time}</span></span>')
-    out += ['</div>','<div class="note">Размеры рейдов приведены по системным уведомлениям Twitch. Это не уникальный охват и не прирост онлайна; показатели партнёрских трансляций сюда не добавлены.</div>',chat_section(chat),'<div class="section-label">Примеры сообщений</div>','<div class="quotes-grid">']
+    out += ['</div>',chat_section(chat),'<div class="section-label">Примеры сообщений</div>','<div class="quotes-grid">']
     for q in chat['quotes']:
         label={'pos':'+','neu':'○','neg':'−'}[q['label']]
         out.append(f'<div class="q-card"><span class="q-badge {q["label"]}">{label}</span>{escape(q["text"])}</div>')
