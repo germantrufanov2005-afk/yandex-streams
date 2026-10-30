@@ -759,7 +759,7 @@
         "follows": 125,
         "average": 324
       },
-      "show_chat_unique": true,
+      "show_chat_unique": false,
       "historical_collaboration_cards": []
     }
   ],
