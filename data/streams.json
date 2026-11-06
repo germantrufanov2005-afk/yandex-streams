@@ -761,6 +761,28 @@
       },
       "show_chat_unique": false,
       "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-41",
+      "group": "group-nov",
+      "display_date": "5 ноября 2026",
+      "sheet_date": "2026-11-05",
+      "sheet_row": 41,
+      "source_checked_on": "2026-11-06",
+      "title": "По ту сторону Яндекс Лавки",
+      "own": {
+        "views": 32446,
+        "unique": 20858,
+        "chat_unique": 292,
+        "minutes": 115179,
+        "peak": 1796,
+        "duration": 128,
+        "follows": 478,
+        "average": 901
+      },
+      "show_chat_unique": true,
+      "chat_unique_label": "Авторов чата",
+      "historical_collaboration_cards": []
     }
   ],
   "channel_followers": {

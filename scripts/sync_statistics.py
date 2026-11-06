@@ -58,7 +58,7 @@ def statistics(record, date_card):
                 fmt(record['own'][key]) + (' мин' if key == 'duration' else ''))
            for key, label in OWN_LABELS]
     if record['show_chat_unique'] and record['own']['chat_unique'] is not None:
-        own.append(card('Уник. зрители (чат)', fmt(record['own']['chat_unique'])))
+        own.append(card(record.get('chat_unique_label', 'Уник. зрители (чат)'), fmt(record['own']['chat_unique'])))
     if collaboration:
         return ('<div class="section-label">Данные стрима</div>\n'
                 '<div class="cards">\n' + date_card + '\n' + '\n'.join(collaboration) + '\n</div>\n'

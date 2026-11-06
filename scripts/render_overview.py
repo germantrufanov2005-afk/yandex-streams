@@ -11,7 +11,7 @@ from reconcile_dashboard import sentiment, percentages, pct
 from sync_statistics import collaboration_cards
 
 ROOT = Path(__file__).resolve().parents[1]
-MONTHS = {'apr': 'Апрель', 'may': 'Май', 'jun': 'Июнь', 'jul': 'Июль', 'aug': 'Август', 'sep': 'Сентябрь', 'oct': 'Октябрь'}
+MONTHS = {'apr': 'Апрель', 'may': 'Май', 'jun': 'Июнь', 'jul': 'Июль', 'aug': 'Август', 'sep': 'Сентябрь', 'oct': 'Октябрь', 'nov': 'Ноябрь'}
 
 
 def fmt(n):
@@ -52,9 +52,9 @@ def render(source):
     partner_views = combined - collab_own
     partner_share = rounded(partner_views / combined * 100) if combined else 0
     out = ['<div class="month-group active" id="group-overview">']
-    out += [heading('Апрель — октябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфиров · показатели <strong>только нашего</strong> канала за весь период')]
+    out += [heading('Апрель — ноябрь 2026', 'Результаты канала Яндекса', f'{len(records)} эфиров · показатели <strong>только нашего</strong> канала за весь период')]
     out += ['<div class="ov-kpis">',
-            metric('Эфиров', str(len(records)), 'апрель — октябрь 2026'),
+            metric('Эфиров', str(len(records)), 'апрель — ноябрь 2026'),
             metric('Просмотров', fmt(own('views')), 'на канале Яндекса'),
             metric('Часов просмотра', fmt(rounded(own('minutes') / 60)), f"{fmt(own('minutes'))} минут · округлено до часа"),
             metric('Средний онлайн', fmt(rounded(own('average') / len(records))), f'среднее по {len(records)} эфирам'),
@@ -71,6 +71,7 @@ def render(source):
             '<p class="ov-footnote">Общие просмотры уже включают наш канал: их нельзя прибавлять к просмотрам в верхнем блоке. Это сумма просмотров, а не уникальный охват. Коллаборации до августа в этот блок не входят.</p></section>']
     out += ['<section class="ov-section" aria-labelledby="ov-dynamics">', heading('По месяцам', '<span id="ov-dynamics">Динамика нашего канала</span>', 'Одинаковая методика за весь период · без показателей партнёров'), '<div class="ov-chart-grid">']
     buckets = [(month, [r for r in records if r['group'] == 'group-' + month]) for month in MONTHS]
+    buckets = [(month, rs) for month, rs in buckets if rs]
     for key, title, unit in [('views', 'Просмотры', 'просмотров'), ('average', 'Средний онлайн', 'зрителей')]:
         values = [sum(r['own']['views'] for r in rs) if key == 'views' else rounded(avg(rs)) for _, rs in buckets]
         maximum = max(values)
@@ -90,12 +91,24 @@ def render(source):
         out.append(f'<button type="button" class="ov-best" onclick="switchMonth(\'{month}\');switchTab(\'{month}\',{idx})"><span class="ov-label">{label}</span><span class="ov-value">{fmt(value)}</span><span class="ov-sub">{unit}</span><span class="ov-best-title">{escape(title)}</span><span class="ov-best-date">{winner["display_date"]}</span><span class="ov-link">Открыть эфир ↗</span></button>')
     out += ['</div></section>']
     streams = [p for gid,g in groups(source).items() if gid != 'group-overview' for p in g.find('panel') if 'Дата' in cards(p)]
-    with_chat = [p for p in streams if p.find('bar-meta')]
+    with_chat = [p for p in streams if p.find('bar-meta') and p.attrs.get('data-chat-method') != 'positive-engagement']
+    engagement_streams = [p for p in streams if p.attrs.get('data-chat-method') == 'positive-engagement']
     values = percentages([sum(sentiment(p)[i] for p in with_chat) for i in range(3)])
-    out += ['<section class="ov-section" aria-labelledby="ov-sentiment">', heading('Общая реакция аудитории', '<span id="ov-sentiment">Тональность чатов</span>', f'{len(with_chat)} из {len(records)} эфиров с аналитикой чата'), '<div class="ov-sentiment">', '<div class="ov-sentiment-bars">']
+    out += ['<section class="ov-section" aria-labelledby="ov-sentiment">', heading('Апрель — октябрь · общая реакция аудитории', '<span id="ov-sentiment">Тональность чатов</span>', f'{len(with_chat) + len(engagement_streams)} из {len(records)} эфиров с аналитикой чата · ноябрьская реакция показана отдельно ниже'), '<div class="ov-sentiment">', '<div class="ov-sentiment-bars">']
     for label,color,value in zip(['Позитив','Нейтраль','Негатив'],['pos','neu','neg'],values):
         out.append(f'<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--{color})">{label}</span><span style="color:var(--muted);">~{pct(value)}%</span></div><div class="ov-sentiment-track"><div style="width:{value:.1f}%;height:100%;background:var(--{color})"></div></div></div>')
-    out += ['</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по эфирам: каждый эфир имеет одинаковый вес. Это общая тональность чата — реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки за апрель–сентябрь сохранены. Для эфира 29 октября выполнены очистка и разметка сообщений, включая повторную проверку нейтральных реакций. Итог сочетает исторические оценки и новый анализ.</p></div></div></section>', '</div>']
+    out += [f'</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по {len(with_chat)} эфирам апреля–октября: каждый эфир имеет одинаковый вес. Это общая тональность чата: реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки за апрель–сентябрь сохранены. Для эфира 29 октября выполнены очистка и разметка сообщений. С ноября расширен учёт вовлечения; результаты по новой методике показаны отдельным блоком.</p></div></div></section>']
+    if engagement_streams:
+        chat = json.loads((ROOT / 'data/stream-2026-11-05.json').read_text())
+        values = percentages([chat['counts'][k] for k in ['positive', 'neutral', 'negative']])
+        out += ['<section class="ov-section" aria-labelledby="ov-engagement">',
+                heading('5 ноября · По ту сторону Яндекс Лавки', '<span id="ov-engagement">Позитив и вовлечение</span>', 'Расширенный учёт реакции аудитории: положительные оценки, содержательные вопросы, предложения и участие в интерактиве'),
+                '<div class="ov-best-grid">']
+        for label, key, value in zip(['Позитив и вовлечение', 'Нейтраль', 'Негатив'], ['positive', 'neutral', 'negative'], values):
+            out.append(metric(label, pct(value) + '%', f'{fmt(chat["counts"][key])} сообщений', key == 'positive'))
+        out += ['</div>', f'<p class="ov-footnote">В первой категории {chat["positive_breakdown"]["emotional_positive"]} позитивных сообщений и {chat["positive_breakdown"]["constructive_engagement"]} сообщений с конструктивным участием. Доли рассчитаны по {fmt(chat["retained_messages"])} сообщениям после очистки; округление сохраняет сумму 100%.</p>',
+                '<button type="button" class="tab" onclick="switchMonth(\'nov\');switchTab(\'nov\',0)">Открыть эфир 5 ноября ↗</button>', '</section>']
+    out += ['</div>']
     old = groups(source)['group-overview']
     return source[:old.start] + '\n'.join(out) + source[old.end:]
 
