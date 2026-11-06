@@ -102,11 +102,11 @@ def render(source):
         chat = json.loads((ROOT / 'data/stream-2026-11-05.json').read_text())
         values = percentages([chat['counts'][k] for k in ['positive', 'neutral', 'negative']])
         out += ['<section class="ov-section" aria-labelledby="ov-engagement">',
-                heading('5 ноября · По ту сторону Яндекс Лавки', '<span id="ov-engagement">Позитив и вовлечение</span>', 'Расширенный учёт реакции аудитории: положительные оценки, содержательные вопросы, предложения и участие в интерактиве'),
+                heading('5 ноября · По ту сторону Яндекс Лавки', '<span id="ov-engagement">Позитив и вовлечение</span>', 'Положительные оценки, поддержка участников и позитивное вовлечение в происходящее'),
                 '<div class="ov-best-grid">']
         for label, key, value in zip(['Позитив и вовлечение', 'Нейтраль', 'Негатив'], ['positive', 'neutral', 'negative'], values):
             out.append(metric(label, pct(value) + '%', f'{fmt(chat["counts"][key])} сообщений', key == 'positive'))
-        out += ['</div>', f'<p class="ov-footnote">В первой категории {chat["positive_breakdown"]["emotional_positive"]} позитивных сообщений и {chat["positive_breakdown"]["constructive_engagement"]} сообщений с конструктивным участием. Доли рассчитаны по {fmt(chat["retained_messages"])} сообщениям после очистки; округление сохраняет сумму 100%.</p>',
+        out += ['</div>', f'<p class="ov-footnote">Положительных оценок: {chat["positive_breakdown"]["emotional_positive"]}. Сообщений с позитивным вовлечением: {chat["positive_breakdown"]["constructive_engagement"]}. Доли рассчитаны по {fmt(chat["retained_messages"])} сообщениям после очистки; округление сохраняет сумму 100%.</p>',
                 '<button type="button" class="tab" onclick="switchMonth(\'nov\');switchTab(\'nov\',0)">Открыть эфир 5 ноября ↗</button>', '</section>']
     out += ['</div>']
     old = groups(source)['group-overview']
