@@ -29,8 +29,10 @@ def chat_section(chat):
     chart = chart.replace('Позитив', 'Позитив и вовлечение').replace('Оценка тональности сообщений', 'Реакция чата: позитив и вовлечение, нейтраль, негатив')
     for value, count in zip(values, counts):
         chart = chart.replace(f'<span class="pct">{pct(value)}%</span>', f'<span class="pct">{pct(value)}% · {fmt(count)} сообщений</span>')
-    out += [chart, f'<div class="note"><strong>Учёт вовлечения:</strong> {escape(chat["methodology_note"])}</div>',
-            '<details class="note"><summary>Очистка чата и особенности анализа</summary>',
+    out.append(chart)
+    if chat.get('method_version') != 'broad-participation':
+        out.append(f'<div class="note"><strong>Учёт вовлечения:</strong> {escape(chat["methodology_note"])}</div>')
+    out += ['<details class="note"><summary>Очистка чата и особенности анализа</summary>',
             f'<p>{escape(chat["cleanup_note"])}</p><p>{escape(chat["limitation_note"])}</p></details>']
     return '\n'.join(out)
 
