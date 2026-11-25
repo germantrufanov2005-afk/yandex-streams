@@ -783,6 +783,29 @@
       "show_chat_unique": true,
       "chat_unique_label": "Авторов чата",
       "historical_collaboration_cards": []
+    },
+    {
+      "id": "sheet-row-42",
+      "group": "group-nov",
+      "display_date": "24 ноября 2026",
+      "sheet_date": "2026-11-24",
+      "sheet_row": 42,
+      "source_checked_on": "2026-11-25",
+      "title": "Дежурный по Яндексу",
+      "own": {
+        "views": 12289,
+        "unique": 9511,
+        "chat_unique": 345,
+        "minutes": 176531,
+        "peak": 2356,
+        "duration": 110,
+        "follows": 504,
+        "average": 1576
+      },
+      "show_chat_unique": true,
+      "chat_unique_label": "Авторов чата",
+      "historical_collaboration_cards": [],
+      "views_source": "Уточнение команды от 25.11.2026; в таблице при сверке 11 831"
     }
   ],
   "channel_followers": {

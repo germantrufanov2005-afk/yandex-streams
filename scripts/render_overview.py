@@ -98,16 +98,21 @@ def render(source):
     for label,color,value in zip(['Позитив','Нейтраль','Негатив'],['pos','neu','neg'],values):
         out.append(f'<div class="ov-sentiment-item"><div class="ov-sentiment-meta"><span style="color:var(--{color})">{label}</span><span style="color:var(--muted);">~{pct(value)}%</span></div><div class="ov-sentiment-track"><div style="width:{value:.1f}%;height:100%;background:var(--{color})"></div></div></div>')
     out += [f'</div><div class="ov-sentiment-context"><h3>Что означают эти доли</h3><p>Среднее процентов по {len(with_chat)} эфирам апреля–октября: каждый эфир имеет одинаковый вес. Это общая тональность чата: реакции на гостей, игру, содержание и качество эфира.</p><p>Чаты 21 апреля и 7 августа отсутствуют и не учтены. Исторические оценки за апрель–сентябрь сохранены. Для эфира 29 октября выполнены очистка и разметка сообщений. С ноября расширен учёт вовлечения; результаты по новой методике показаны отдельным блоком.</p></div></div></section>']
-    if engagement_streams:
-        chat = json.loads((ROOT / 'data/stream-2026-11-05.json').read_text())
+    engagement_records = [r for r in records if r['group'] == 'group-nov']
+    for idx, record in enumerate(engagement_records):
+        chat = json.loads((ROOT / f'data/stream-{record["sheet_date"]}.json').read_text())
         values = percentages([chat['counts'][k] for k in ['positive', 'neutral', 'negative']])
-        out += ['<section class="ov-section" aria-labelledby="ov-engagement">',
-                heading('5 ноября · По ту сторону Яндекс Лавки', '<span id="ov-engagement">Позитив и вовлечение</span>', 'Положительные оценки, поддержка участников и позитивное вовлечение в происходящее'),
+        identifier = f'ov-engagement-{record["sheet_date"]}'
+        description = ('Положительные оценки и вовлечение, включая участие в заданиях ведущего' if chat.get('method_version') == 'broad-participation' else 'Положительные оценки, поддержка участников и позитивное вовлечение в происходящее')
+        out += [f'<section class="ov-section" aria-labelledby="{identifier}">',
+                heading(record['display_date'].removesuffix(' 2026') + ' · ' + escape(record['title']), f'<span id="{identifier}">Позитив и вовлечение</span>', description),
                 '<div class="ov-best-grid">']
         for label, key, value in zip(['Позитив и вовлечение', 'Нейтраль', 'Негатив'], ['positive', 'neutral', 'negative'], values):
             out.append(metric(label, pct(value) + '%', f'{fmt(chat["counts"][key])} сообщений', key == 'positive'))
-        out += ['</div>', f'<p class="ov-footnote">Положительных оценок: {chat["positive_breakdown"]["emotional_positive"]}. Сообщений с позитивным вовлечением: {chat["positive_breakdown"]["constructive_engagement"]}. Доли рассчитаны по {fmt(chat["retained_messages"])} сообщениям после очистки; округление сохраняет сумму 100%.</p>',
-                '<button type="button" class="tab" onclick="switchMonth(\'nov\');switchTab(\'nov\',0)">Открыть эфир 5 ноября ↗</button>', '</section>']
+        out += ['</div>', f'<p class="ov-footnote">Положительных оценок: {chat["positive_breakdown"]["emotional_positive"]}. Сообщений с вовлечением: {chat["positive_breakdown"]["constructive_engagement"]}. Доли рассчитаны по {fmt(chat["retained_messages"])} сообщениям после очистки; округление сохраняет сумму 100%.</p>']
+        if chat.get('method_version') == 'broad-participation':
+            out.append('<p class="ov-footnote">24 ноября учёт вовлечения расширен: включены нейтральные ответы на задания и сценарии применения. Это не рост эмоционального позитива; показатель не усредняется с предыдущими эфирами.</p>')
+        out += [f'<button type="button" class="tab" onclick="switchMonth(\'nov\');switchTab(\'nov\',{idx})">Открыть эфир {escape(record["display_date"].removesuffix(" 2026"))} ↗</button>', '</section>']
     out += ['</div>']
     old = groups(source)['group-overview']
     return source[:old.start] + '\n'.join(out) + source[old.end:]
