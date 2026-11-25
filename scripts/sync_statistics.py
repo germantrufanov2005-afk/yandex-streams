@@ -57,6 +57,14 @@ def statistics(record, date_card):
     own = [card(label + (' (наш канал)' if key == 'average' and collaboration else ''),
                 fmt(record['own'][key]) + (' мин' if key == 'duration' else ''))
            for key, label in OWN_LABELS]
+    co_streams = record.get('co_stream_views', [])
+    if co_streams:
+        assert OWN_LABELS[0][0] == 'views'
+        assert all(c['views'] >= 0 for c in co_streams)
+        total = record['own']['views'] + sum(c['views'] for c in co_streams)
+        breakdown = [f"{fmt(record['own']['views'])} на Twitch"]
+        breakdown += [f"{fmt(c['views'])} с ко-трансляции в {c['platform']}" for c in co_streams]
+        own[0] = card('Просмотры (всего)', fmt(total), ' + '.join(breakdown))
     if record['show_chat_unique'] and record['own']['chat_unique'] is not None:
         own.append(card(record.get('chat_unique_label', 'Уник. зрители (чат)'), fmt(record['own']['chat_unique'])))
     if collaboration:
@@ -67,7 +75,8 @@ def statistics(record, date_card):
                 '<div class="statistics-note">Общие показатели учитывают коллаборацию. '
                 'Уникальные зрители разных каналов могут пересекаться, а пики онлайна — приходиться на разное время. '
                 'Показатели канала Яндекса приведены отдельно по сводной таблице.</div>\n')
-    return ('<div class="section-label">Данные стрима · канал Яндекса</div>\n'
+    heading = 'Данные стрима · Twitch и VK' if co_streams else 'Данные стрима · канал Яндекса'
+    return (f'<div class="section-label">{heading}</div>\n'
             '<div class="cards">\n' + date_card + '\n' + '\n'.join(own) + '\n</div>\n')
 
 

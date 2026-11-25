@@ -805,7 +805,14 @@
       "show_chat_unique": true,
       "chat_unique_label": "Авторов чата",
       "historical_collaboration_cards": [],
-      "views_source": "Уточнение команды от 25.11.2026; в таблице при сверке 11 831"
+      "views_source": "Уточнение команды от 25.11.2026; в таблице при сверке 11 831",
+      "co_stream_views": [
+        {
+          "platform": "VK",
+          "views": 2000,
+          "source": "Уточнение команды от 25.11.2026"
+        }
+      ]
     }
   ],
   "channel_followers": {
